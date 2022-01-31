@@ -2,17 +2,19 @@ History of Stem cells
 ---------------------
 
 - Intro to the course
-  
+
   + Introduce the team
   + Before and after
   + Course mechanics
   + Topics
 
 - Where we are today? 
+
   + Diabetes as an example
   + Ramzy et al Cell Stem Cell 2021
 
 - How did we get here?
+
   + Stevens and Little 1954
   + 129 inbred strain of mice -> teratoma 
 
@@ -31,6 +33,7 @@ History of Stem cells
 - Induced pluripotent stem cells (Yamanaka 2006)
 
 - iPSCs for ...
+
   + disease modeling
   + drug screening
 
