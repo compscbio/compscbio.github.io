@@ -1,4 +1,4 @@
-History of Stem cells
+History of Stem Cells
 ---------------------
 
 - Intro to the course
@@ -42,17 +42,3 @@ History of Stem cells
 - What is next?
 
 ----
-
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Contents:
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

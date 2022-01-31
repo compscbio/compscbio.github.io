@@ -3,6 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+
 Computational Stem Cell Biology EN580.447/647
 =============================================
 
@@ -52,6 +53,12 @@ Some college-level biology is assumed. Familiarity with Python is preferred, but
 Policies
 --------
 
+- Lecture materials
+   - Slides posted to Blackboard
+   - Videos of lectures posted to Blackboard
+   - Materials posted to Blackboard are only for registered students (including those auditing)
+   - Lectures notes & Jupyter Notebooks are on this site (see navigation bar)
+
 - Homework:
     - Weekly
     - Posted Friday morning
@@ -63,19 +70,30 @@ Policies
         - ``lastname_firstname_1.1.html``
     - You need to annotate your code to explain your reasoning and interpretation.
     - If expectations are not clear from the assignment, ask the TAs.
+    - We only count the top 10 homeworks toward your final grade
 
 - Collaboration
     - Feel free to *discuss* homeworks with your classmates. But, the work that you turn in must be your own work. If you collaborate with a classmate(s), please list them in your submission. We define collaborate here to mean to discuss solutions. Searching for answers from prior years or from similar exercises on the web is not allowed.
 
 - 'No questions asked' free days
-    - You have a total of 6 'grace' days for your homeworks. What this means is that you can turn in a homework after the due date, as long as you have not expended all of your grace days. If you turn in a homework 1 hour late,  you have used one of your grace days. If you turn in a homework after all of your grace days have been expended, you will receive a 0 for that homework. We do not ask for explanations when you use grace days.
+    - You have a total of 6 'grace' days for your homeworks. What this means is that you can turn in a homework after the due date, as long as you have not expended all of your grace days. If you turn in a homework 1 hour late,  you have used one of your grace days. If you turn in a homework after all of your grace days have been expended, you will receive a 0 for that homework. We do not ask for explanations when you use grace days. *Grace days do not apply to the final project*
 
 - Extentuating circumstances
-    - We live in a new world, and there are circumstances that precipitate despite our best laid plans. If you find yourself a victim of the whims of the universe (e.g. health-related issues), please email the team to get an 'extenuating circumstances' extension.
+    - We live in a new world, and there are circumstances that precipitate despite our best laid plans. If you find yourself a victim of the whims of the universe (e.g. health-related issues), please email the team to get an 'extenuating circumstances' extension. *No extensions will be granted for the final project*
+
+----
 
 .. toctree::
    :maxdepth: 1
-   :caption: Day:
+   :caption: Schedule
+
+   schedule
+
+----
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Lectures:
 
    day/01_history_of_stem_cells
    day/02_introduction_to_python_part_1
@@ -102,6 +120,8 @@ Policies
    day/23_cancer_stem_cells
    day/24_stem_cell_controversies
 
+----
+
 .. toctree::
    :maxdepth: 1
    :caption: Homework
@@ -119,9 +139,5 @@ Policies
    homework/11/index
    homework/final_project/index
 
-.. toctree::
-   :maxdepth: 1
-   :caption: Schedule
-
-   schedule
+----
 
