@@ -14,7 +14,8 @@
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="History of Stem cells" href="day/01_history_of_stem_cells.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -32,15 +33,16 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">Computational Stem Cell Biology EN580.447/647</a><ul>
-<li><a class="reference internal" href="#people">People</a></li>
+              <p class="caption"><span class="caption-text">Day:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="day/01_history_of_stem_cells.html">History of Stem cells</a></li>
 </ul>
-</li>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+<p class="caption"><span class="caption-text">Schedule</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="schedule.html">Schedule overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schedule.html#homework-due-dates">Homework due dates</a></li>
 </ul>
-</div>
+
         </div>
       </div>
     </nav>
@@ -67,9 +69,31 @@
              
   <div class="section" id="computational-stem-cell-biology-en580-447-647">
 <h1>Computational Stem Cell Biology EN580.447/647<a class="headerlink" href="#computational-stem-cell-biology-en580-447-647" title="Permalink to this headline">¶</a></h1>
-<p>This course provides a mechanistic and systems biology-based understanding of two defining features of stem cells: multipotency and self-renewal. We explore these concepts across several contexts and perspectives, emphasizing seminal and new studies in development and stem cell biology, and the critical role that computational approaches have played. The course will start with an introduction to stem cells and a tutorial covering computational basics. The biological contexts that we will cover thereafter include “Cell Identity”, “Pluripotency and multipotency”, “Stem cells and their niche”, “Modeling cell fate decisions”, and “Engineering cell fate”.</p>
-<div class="section" id="people">
-<h2>People<a class="headerlink" href="#people" title="Permalink to this headline">¶</a></h2>
+<p>This is the fifth year we have offered this course. In the past, it was designed to provide a mechanistic and systems biology-based understanding of the two defining features of stem cells: multipotency and self-renewal. We explored these concepts across several contexts and perspectives, emphasizing seminal and new studies in development and stem cell biology, and the critical role that computational approaches have played. Now, we are shifting the content to a more equal balance between computational and biological content. We will teach you how to analyze single cell OMICs data, using questions and data from stem cell biology and developmental biology to provide the motivatational background. Upon sucessful completion of this course, you will be a ninja of sc omics analysis.</p>
+<div class="section" id="topics-in-no-particular-order">
+<h2>Topics (in no particular order)<a class="headerlink" href="#topics-in-no-particular-order" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>History of stem cells</p></li>
+<li><p>Introduction to Python</p></li>
+<li><p>Central dogma &amp; gene regulation</p></li>
+<li><p>Single cell RNA-Seq</p></li>
+<li><p>Cell type identity</p></li>
+<li><p>Stem cell niche</p></li>
+<li><p>Cell-cell interactions</p></li>
+<li><p>Spatial transcriptomics</p></li>
+<li><p>Lineage tracing</p></li>
+<li><p>“Stemness”</p></li>
+<li><p>Trajectory infererence</p></li>
+<li><p>RNA velocity</p></li>
+<li><p>Gene regulatory networks</p></li>
+<li><p>Cell fate engineering</p></li>
+<li><p>Single cell epigenomics</p></li>
+<li><p>Cancer stem cells</p></li>
+<li><p>Stem cell controversies</p></li>
+</ul>
+</div>
+<div class="section" id="the-team">
+<h2>The Team<a class="headerlink" href="#the-team" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p>Instructors</p>
 <blockquote>
@@ -87,24 +111,85 @@
 </div></blockquote>
 </li>
 </ul>
-<p>This class is heavily weighted by individual computational assignments. The motivation for this strategy is that regularly occurring, moderately-sized computational projects are the most efficient way to impart an understanding of our models of this extraordinary class of cells, and to inspire a sense of excitement and empowerment. Preferred background: familiarity with R and the UNIX shell.</p>
+</div>
+<div class="section" id="grading">
+<h2>Grading<a class="headerlink" href="#grading" title="Permalink to this headline">¶</a></h2>
+<p>This class is heavily weighted by weekly individual computational homeworks (75%). There is one final team project that has written, coding, and verbal presentiation components (25%).</p>
+</div>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>Some college-level biology is assumed. Familiarity with Python is preferred, but we will try to teach you enough Python to be dangerous.</p>
+</div>
+<div class="section" id="policies">
+<h2>Policies<a class="headerlink" href="#policies" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Homework:</dt><dd><ul>
+<li><p>Weekly</p></li>
+<li><p>Posted Friday morning</p></li>
+<li><p>Due following Wed by 11:59pm</p></li>
+<li><p>Submit homeworks via email to <a class="reference external" href="mailto:compscbio&#37;&#52;&#48;gmail&#46;com">compscbio<span>&#64;</span>gmail<span>&#46;</span>com</a></p></li>
+<li><p>Submit both Jupyter Notebooks <em>and</em> HTML</p></li>
+<li><dl class="simple">
+<dt>Name your files according to HW and sub-problem. So homework 1.1 should be named:</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">lastname_firstname_1.1.ipynb</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lastname_firstname_1.1.html</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>You need to annotate your code to explain your reasoning and interpretation.</p></li>
+<li><p>If expectations are not clear from the assignment, ask the TAs.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Collaboration</dt><dd><ul>
+<li><p>Feel free to <em>discuss</em> homeworks with your classmates. But, the work that you turn in must be your own work. If you collaborate with a classmate(s), please list them in your submission. We define collaborate here to mean to discuss solutions. Searching for answers from prior years or from similar exercises on the web is not allowed.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘No questions asked’ free days</dt><dd><ul>
+<li><p>You have a total of 6 ‘grace’ days for your homeworks. What this means is that you can turn in a homework after the due date, as long as you have not expended all of your grace days. If you turn in a homework 1 hour late,  you have used one of your grace days. If you turn in a homework after all of your grace days have been expended, you will receive a 0 for that homework. We do not ask for explanations when you use grace days.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Extentuating circumstances</dt><dd><ul>
+<li><p>We live in a new world, and there are circumstances that precipitate despite our best laid plans. If you find yourself a victim of the whims of the universe (e.g. health-related issues), please email the team to get an ‘extenuating circumstances’ extension.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Day:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="day/01_history_of_stem_cells.html">History of Stem cells</a></li>
+</ul>
+</div>
 <div class="toctree-wrapper compound">
 </div>
-</div>
-</div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
-<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
-<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Schedule</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="schedule.html">Schedule overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schedule.html#homework-due-dates">Homework due dates</a></li>
 </ul>
+</div>
+</div>
 </div>
 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="day/01_history_of_stem_cells.html" class="btn btn-neutral float-right" title="History of Stem cells" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 
