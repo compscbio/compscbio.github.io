@@ -51,6 +51,10 @@ html_logo = "_static/CSCB_logo2.png"
 #
 #html_theme = 'alabaster'
 html_theme = 'sphinx_rtd_theme'
+html_theme_options = {
+	'logo_only': False,
+	'analytics_id': "G-LFQLTP4DZG"
+}
 
 logo_only = True
 

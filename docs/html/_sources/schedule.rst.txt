@@ -1,17 +1,9 @@
 Schedule overview
 -----------------
 
-The weekly schedule is below. 
-
 - Lecture: Tuesdays, Thursdays 12noon–1:15 pm EST
-
-- Instructor & TA office hours
-
-   + Patrick: By appointment
-   + Eric: By appointment
-   + Dan: By appointment
-
-Lectures are recorded and posted on Blackboard.
+- Lectures are recorded and posted on `Blackboard <https://blackboard.jhu.edu/webapps/blackboard/content/listContentEditable.jsp?content_id=_10855302_1&course_id=_250971_1&mode=reset>`_
+- Instructor & TA office hours by appointment
 
 ----
 

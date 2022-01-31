@@ -33,7 +33,7 @@ Topics (in no particular order)
 The Team
 --------
 
-- Instructors
+- Instructor
 
    + `Patrick Cahan <https://cahanlab.org>`_ (`patrick dot cahan at jhmi dot edu`)
 
@@ -54,8 +54,8 @@ Policies
 --------
 
 - Lecture materials
-   - Slides posted to Blackboard
-   - Videos of lectures posted to Blackboard
+   - Slides posted to `Blackboard <https://blackboard.jhu.edu/webapps/blackboard/content/listContentEditable.jsp?content_id=_10855302_1&course_id=_250971_1&mode=reset>`_
+   - Videos of lectures posted to Blackboard (see link above)
    - Materials posted to Blackboard are only for registered students (including those auditing)
    - Lectures notes & Jupyter Notebooks are on this site (see navigation bar)
 
@@ -140,4 +140,5 @@ Policies
    homework/final_project/index
 
 ----
+
 
