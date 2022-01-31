@@ -41,7 +41,7 @@ templates_path = ['_templates']
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
-html_logo = "_static/cscb_logo2.png"
+html_logo = "_static/CSCB_logo2.png"
 
 
 # -- Options for HTML output -------------------------------------------------
