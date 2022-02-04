@@ -32,8 +32,8 @@ The schedule below is tentative. We will keep you updated as the content and sch
 
 #. Jan 25: :doc:`day/01_history_of_stem_cells`
 #. Jan 27: :doc:`day/02_introduction_to_python_part_1`
-#. Feb 1: Intro to Python Part II
-#. Feb 3: Till and McCulloch
+#. Feb 1: :doc:`day/03_introduction_to_python_part_2`
+#. Feb 3: :doc:`day/04_Till_McCulloch`
 #. Feb 8: single cell RNA-Seq data generation
 #. Feb 10: scRNAseq data analysis
 #. Feb 15: Cell identity
