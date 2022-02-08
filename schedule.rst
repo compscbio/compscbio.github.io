@@ -4,13 +4,14 @@ Schedule overview
 - Lecture: Tuesdays, Thursdays 12noon–1:15 pm EST
 - Lectures are recorded and posted on `Blackboard <https://blackboard.jhu.edu/webapps/blackboard/content/listContentEditable.jsp?content_id=_10855302_1&course_id=_250971_1&mode=reset>`_
 - Instructor & TA office hours by appointment
+- Attendance is required. However, if you are sick or have potentially been exposed to COVID19, you may join via Zoom. However, you must authenticate via Hopkins SSO first. Zoom link is on Blackboard.
 
 ----
 
 Homework and final project due dates
 ------------------------------------
 
-- :ref:`Homework 1<Homework 1>`: due 11:59 pm EST, Feb 9
+- :ref:`Homework 1<Homework 1>`: due 11:59 pm EST, <b>Sunday Feb 13th</b>
 - :ref:`Homework 2<Homework 2>`: due 11:59 pm EST, Feb 16
 - :ref:`Homework 3<Homework 3>`: due 11:59 pm EST, Feb 16
 - :ref:`Homework 4<Homework 4>`: due 11:59 pm EST, Feb 23
@@ -34,7 +35,7 @@ The schedule below is tentative. We will keep you updated as the content and sch
 #. Jan 27: :doc:`day/02_introduction_to_python_part_1`
 #. Feb 1: :doc:`day/03_introduction_to_python_part_2`
 #. Feb 3: :doc:`day/04_Till_McCulloch`
-#. Feb 8: single cell RNA-Seq data generation
+#. Feb 8: :doc:`day/05_scRNAseq_data_generation`
 #. Feb 10: scRNAseq data analysis
 #. Feb 15: Cell identity
 #. Feb 17: Integration and classification

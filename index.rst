@@ -65,9 +65,9 @@ Policies
     - Due following Wed by 11:59pm
     - Submit homeworks via email to compscbio@gmail.com
     - Submit both Jupyter Notebooks *and* HTML 
-    - Name your files according to HW and sub-problem. So homework 1.1 should be named:
-        - ``lastname_firstname_1.1.ipynb``
-        - ``lastname_firstname_1.1.html``
+    - Name your files according to HW number. So your files for homework 1 should be named:
+        - ``lastname_firstname_1.ipynb``
+        - ``lastname_firstname_1.html``
     - You need to annotate your code to explain your reasoning and interpretation.
     - If expectations are not clear from the assignment, ask the TAs.
     - We only count the top 10 homeworks toward your final grade
