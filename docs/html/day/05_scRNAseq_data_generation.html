@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Till and McCulloch &mdash; cscb2022  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>scRNAseq data generation &mdash; cscb2022  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -18,8 +18,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="scRNAseq data generation" href="05_scRNAseq_data_generation.html" />
-    <link rel="prev" title="Comp Lesson 2: Introduction to Python" href="03_introduction_to_python_part_2.html" /> 
+    <link rel="next" title="Homework #1" href="../homework/HW_01.html" />
+    <link rel="prev" title="Till and McCulloch" href="04_Till_McCulloch.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,8 +48,8 @@
 <li class="toctree-l1"><a class="reference internal" href="01_history_of_stem_cells.html">History of Stem Cells</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02_introduction_to_python_part_1.html">Comp Lesson 1: Introduction to Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03_introduction_to_python_part_2.html">Comp Lesson 2: Introduction to Python</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Till and McCulloch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05_scRNAseq_data_generation.html">scRNAseq data generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_Till_McCulloch.html">Till and McCulloch</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">scRNAseq data generation</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Homework</span></p>
 <ul>
@@ -70,9 +70,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Till and McCulloch</li>
+      <li>scRNAseq data generation</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/day/04_Till_McCulloch.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/day/05_scRNAseq_data_generation.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -104,42 +104,48 @@
     text-align: unset;
 }
 </style>
-<div class="section" id="till-and-mcculloch">
-<h1>Till and McCulloch<a class="headerlink" href="#till-and-mcculloch" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="scrnaseq-data-generation">
+<h1>scRNAseq data generation<a class="headerlink" href="#scrnaseq-data-generation" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><p>The dawn of experimental measurement of stem cells</p></li>
-<li><p>Brief biographies of</p>
+<li><p>Eukaryotic cell composition</p></li>
+<li><p>Cell behavior / function</p></li>
+<li><p>Central dogma</p>
 <ul>
-<li><p>Ernest McCulloch MD (1925 – 2011)</p></li>
-<li><p>James Till PhD (1931 - ), physics/biophysics</p></li>
-<li><p>Andrew Becker MD/PhD (1935 - 2015)</p></li>
-<li><p>Lou Siminovitch PhD (1920 - 2021)</p></li>
+<li><p>DNA</p></li>
+<li><p>RNA</p></li>
+<li><p>Protein</p></li>
 </ul>
 </li>
-<li><p>Background on radiation sensitivity</p></li>
-<li><p>Colony forming unit - spleen assay</p></li>
-<li><p>in vitro CFU assays</p></li>
-<li><p>1st paper in 1961</p>
+<li><p>Why RNA-seq?</p></li>
+<li><p>Applications of scRNSeq</p>
 <ul>
-<li><p>nodules</p></li>
-<li><p>multilineages</p></li>
-<li><p>suspected clonal origin</p></li>
-<li><p>Estimate CFUs per donor cell</p></li>
-<li><p>impact of radiation on CFU</p></li>
+<li><p>Identity, states, atlases</p></li>
+<li><p>Spatial information</p></li>
+<li><p>Dynamics via TI</p></li>
+<li><p>Lineage potency</p></li>
 </ul>
 </li>
-<li><p>1963</p>
+<li><p>Examples</p>
 <ul>
-<li><p>Use radiation-induced chromosomal changes etst hypothesis of clonal origin of nodules</p></li>
+<li><p>Tang et al Cell Stem Cell 2010</p></li>
+<li><p>Kumar et al Nature 2014</p></li>
 </ul>
 </li>
-<li><p>1964/65: test self-renewal capacity of CFUs</p></li>
-<li><p>Number and type of colonies as a function of incubation time</p></li>
-<li><p>Number of colonies highly heterogeneous</p>
+<li><p>Brief history of scRNAseq</p></li>
+<li><p>DropSeq</p>
 <ul>
-<li><p>Not soley due to technical artificats or spleen variation</p></li>
+<li><p>overview</p></li>
+<li><p>barcoding</p></li>
+<li><p>bead &amp; cell capture</p></li>
+<li><p>cDNA</p></li>
+<li><p>Sequence anatomy</p></li>
+<li><p>doublets</p></li>
+<li><p>cell cycle</p></li>
+<li><p>Retina cell type census</p></li>
+<li><p>How many cells are needed?</p></li>
 </ul>
 </li>
+<li><p>Homework 1</p></li>
 </ul>
 <hr class="docutils" />
 </div>
@@ -148,8 +154,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="03_introduction_to_python_part_2.html" class="btn btn-neutral float-left" title="Comp Lesson 2: Introduction to Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="05_scRNAseq_data_generation.html" class="btn btn-neutral float-right" title="scRNAseq data generation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="04_Till_McCulloch.html" class="btn btn-neutral float-left" title="Till and McCulloch" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../homework/HW_01.html" class="btn btn-neutral float-right" title="Homework #1" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

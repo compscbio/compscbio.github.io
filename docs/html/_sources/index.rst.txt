@@ -126,7 +126,7 @@ Policies
    :maxdepth: 1
    :caption: Homework
 
-   homework/01/index
+   homework/HW_01
    homework/02/index
    homework/03/index
    homework/04/index
