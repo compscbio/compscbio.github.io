@@ -36,7 +36,7 @@ The schedule below is tentative. We will keep you updated as the content and sch
 #. Feb 1: :doc:`day/03_introduction_to_python_part_2`
 #. Feb 3: :doc:`day/04_Till_McCulloch`
 #. Feb 8: :doc:`day/05_scRNAseq_data_generation`
-#. Feb 10: scRNAseq data analysis
+#. Feb 10: :doc:`day/06_scRNAseq_analysis`
 #. Feb 15: Cell identity
 #. Feb 17: Integration and classification
 #. Feb 22: Stem cell niche
