@@ -11,7 +11,7 @@ Schedule overview
 Homework and final project due dates
 ------------------------------------
 
-- :ref:`Homework 1<Homework 1>`: due 11:59 pm EST, <b>Sunday Feb 13th</b>
+- :ref:`Homework 1<Homework 1>`: due 11:59 pm EST, **Sunday Feb 13th**
 - :ref:`Homework 2<Homework 2>`: due 11:59 pm EST, Feb 16
 - :ref:`Homework 3<Homework 3>`: due 11:59 pm EST, Feb 16
 - :ref:`Homework 4<Homework 4>`: due 11:59 pm EST, Feb 23
@@ -37,8 +37,8 @@ The schedule below is tentative. We will keep you updated as the content and sch
 #. Feb 3: :doc:`day/04_Till_McCulloch`
 #. Feb 8: :doc:`day/05_scRNAseq_data_generation`
 #. Feb 10: :doc:`day/06_scRNAseq_analysis`
-#. Feb 15: Cell identity
-#. Feb 17: Integration and classification
+#. Feb 15: :doc:`day/07_scRNAseq_analysis_part_2`
+#. Feb 17: Cell identity Integration and classification
 #. Feb 22: Stem cell niche
 #. Feb 24: Spatial transcriptomics
 #. Mar 1: Intro to trajectory inference (TI)

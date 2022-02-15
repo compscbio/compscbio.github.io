@@ -101,8 +101,8 @@ Policies
    day/04_Till_McCulloch
    day/05_scRNAseq_data_generation
    day/06_scRNAseq_analysis
-   day/07_cell_identity
-   day/08_integration_classification
+   day/07_scRNAseq_analysis_part_2
+   day/08_cell_identity_integration_classification
    day/09_stem_cell_niche
    day/10_spatial_transcriptomics
    day/11_trajectory_inference_intro

@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>scRNAseq analysis &mdash; cscb2022  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>scRNAseq analysis &mdash; cscb2022  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Homework #1" href="../homework/HW_01.html" />
+    <link rel="next" title="scRNAseq analysis part 2" href="07_scRNAseq_analysis_part_2.html" />
     <link rel="prev" title="scRNAseq data generation" href="05_scRNAseq_data_generation.html" /> 
 </head>
 
@@ -30,8 +27,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> cscb2022
-            <img src="../_static/CSCB_logo2.png" class="logo" alt="Logo"/>
+            <a href="../index.html" class="icon icon-home"> cscb2022<img src="../_static/CSCB_logo2.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -41,13 +37,13 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Schedule</span></p>
+              <p class="caption"><span class="caption-text">Schedule</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../schedule.html">Schedule overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../schedule.html#homework-and-final-project-due-dates">Homework and final project due dates</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../schedule.html#lecture-schedule">Lecture schedule</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Lectures:</span></p>
+<p class="caption"><span class="caption-text">Lectures:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="01_history_of_stem_cells.html">History of Stem Cells</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02_introduction_to_python_part_1.html">Comp Lesson 1: Introduction to Python</a></li>
@@ -66,8 +62,9 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="07_scRNAseq_analysis_part_2.html">scRNAseq analysis part 2</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Homework</span></p>
+<p class="caption"><span class="caption-text">Homework</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../homework/HW_01.html">Homework #1</a></li>
 </ul>
@@ -366,8 +363,8 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<section id="scRNAseq-analysis">
-<h1>scRNAseq analysis<a class="headerlink" href="#scRNAseq-analysis" title="Permalink to this headline"></a></h1>
+<div class="section" id="scRNAseq-analysis">
+<h1>scRNAseq analysis<a class="headerlink" href="#scRNAseq-analysis" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li><p><a class="reference external" href="https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger">https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger</a></p></li>
 <li><p>cellranger <code class="docutils literal notranslate"><span class="pre">count</span></code>: Counts cell barcodes, aligns to genome/transcriptome, counts UMIs</p></li>
@@ -414,14 +411,14 @@ Saving pipestance info to &quot;tiny/tiny.mri.tgz&quot;
 <li><p>handles reads mapping to &gt;1 locus</p></li>
 </ul>
 <p>How does it handle reads that hit different parts of the genome?</p>
-<p><img alt="be193f4f7f1f45ffa2311165506ed652" src="../_images/gex-processing-introns.png" /></p>
+<p><img alt="7815c077319d4f73b2c0df857b6e77a5" src="../_images/gex-processing-introns.png" /></p>
 <ul class="simple">
 <li><p>aligned reads for UMI counting, by default, are ’ transcriptomic’ (blue) reads</p></li>
 <li><p>Often useful an more appropriate to include exonic and intronic aligned reads, too</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">include-introns</span></code>: use all but antisense reads for UMI counting</p></li>
 </ul>
-<section id="UMI-counting:">
-<h2>UMI counting:<a class="headerlink" href="#UMI-counting:" title="Permalink to this headline"></a></h2>
+<div class="section" id="UMI-counting:">
+<h2>UMI counting:<a class="headerlink" href="#UMI-counting:" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>group reads with same cell bc, umi, gene</p></li>
 <li><p>correct umis (one base off)</p></li>
@@ -430,29 +427,29 @@ Saving pipestance info to &quot;tiny/tiny.mri.tgz&quot;
 <li><p>all reads with same cell bc, umi, gene are counted as one UMI</p></li>
 <li><p>number of reads contributing to that UMI are stored in molecule info file (useful later)</p></li>
 </ul>
-</section>
-<section id="Detecting-cells">
-<h2>Detecting cells<a class="headerlink" href="#Detecting-cells" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="Detecting-cells">
+<h2>Detecting cells<a class="headerlink" href="#Detecting-cells" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>EmptyDrops method (Lun et al 2018)</p></li>
 <li><p>ID true positives with total UMI threshold determine based on total UMIs in top fraction of expected numvber of barcodes</p></li>
 <li><p>Select set of true negatives and compare complexity of remaining barcodes to it</p></li>
 </ul>
-<p><img alt="44d8e8b8e53b4806b891b6d7d9531aa2" src="../_images/knee-plot-old-cell-calling.png" /></p>
-<p><img alt="6b1129ce4c61414ebf49d2cfb3630588" src="../_images/knee-plot-new-cell-calling.png" /></p>
-<section id="CellRanger-output-status-(web-summary)">
-<h3>CellRanger output status (web summary)<a class="headerlink" href="#CellRanger-output-status-(web-summary)" title="Permalink to this headline"></a></h3>
-<p><img alt="800340824c7546b9b41cf6b31c185ecd" src="../_images/web-summary-gex-3.1a.png" /></p>
-</section>
-</section>
-<section id="Sequencing-saturation:">
-<h2>Sequencing saturation:<a class="headerlink" href="#Sequencing-saturation:" title="Permalink to this headline"></a></h2>
+<p><img alt="1bd60390d7c249228fce6318b9cdda89" src="../_images/knee-plot-old-cell-calling.png" /></p>
+<p><img alt="7cf0b853a83f4371840ec88c47552514" src="../_images/knee-plot-new-cell-calling.png" /></p>
+<div class="section" id="CellRanger-output-status-(web-summary)">
+<h3>CellRanger output status (web summary)<a class="headerlink" href="#CellRanger-output-status-(web-summary)" title="Permalink to this headline">¶</a></h3>
+<p><img alt="9e644d19cf2a4a0a9e4f5eb1365143d7" src="../_images/web-summary-gex-3.1a.png" /></p>
+</div>
+</div>
+<div class="section" id="Sequencing-saturation:">
+<h2>Sequencing saturation:<a class="headerlink" href="#Sequencing-saturation:" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>“If sequencing saturation is at 50%, it means that every 2 new reads will result in 1 new UMI count (unique transcript) detected.”</p></li>
 <li><p>Calcualted based on the ratio of unique to duplicate UMIs</p></li>
 </ul>
-<hr><section id="Post-UMI-counting-analysis">
-<h3>Post UMI counting analysis<a class="headerlink" href="#Post-UMI-counting-analysis" title="Permalink to this headline"></a></h3>
+<hr><div class="section" id="Post-UMI-counting-analysis">
+<h3>Post UMI counting analysis<a class="headerlink" href="#Post-UMI-counting-analysis" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Loading data</p></li>
 <li><p>Standard quality control</p></li>
@@ -508,7 +505,7 @@ AnnData object with n_obs × n_vars = 5405 × 27998
 </pre></div></div>
 </div>
 <p>What is an anndata?</p>
-<p><img alt="efdfa3cc79db49d39478b83c3cb81070" src="../_images/anndata.png" /></p>
+<p><img alt="6b4c2983413840b1890cdd5866766231" src="../_images/anndata.png" /></p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
@@ -746,7 +743,7 @@ Index([&#39;Xkr4&#39;, &#39;Gm1992&#39;, &#39;Gm37381&#39;, &#39;Rp1&#39;, &#39;
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">highest_expr_genes</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span> <span class="n">n_top</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;Blues&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">.3</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">highest_expr_genes</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span> <span class="n">n_top</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;Blues&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=.</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -770,7 +767,7 @@ Index([&#39;Xkr4&#39;, &#39;Gm1992&#39;, &#39;Gm37381&#39;, &#39;Rp1&#39;, &#39;
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">highest_expr_genes</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span> <span class="n">n_top</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;Blues&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">.3</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">highest_expr_genes</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span> <span class="n">n_top</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;Blues&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=.</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1172,16 +1169,16 @@ Index([&#39;Xkr4&#39;, &#39;Gm1992&#39;, &#39;Gm37381&#39;, &#39;Rp1&#39;, &#39;
 </div>
 </div>
 <p>This is where we finished class. We will pick up here on Tuesday</p>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="05_scRNAseq_data_generation.html" class="btn btn-neutral float-left" title="scRNAseq data generation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../homework/HW_01.html" class="btn btn-neutral float-right" title="Homework #1" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="07_scRNAseq_analysis_part_2.html" class="btn btn-neutral float-right" title="scRNAseq analysis part 2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
