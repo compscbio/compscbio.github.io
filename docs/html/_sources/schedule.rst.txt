@@ -36,16 +36,16 @@ The schedule below is tentative. We will keep you updated as the content and sch
 #. Feb 10: :doc:`day/06_scRNAseq_analysis`
 #. Feb 15: :doc:`day/07_scRNAseq_analysis_part_2`
 #. Feb 17: :doc:`day/08_cell_identity`
-#. Feb 22: :doc:`day/09_ctrajectory_inference`
-#. Feb 24: Spatial transcriptomics
-#. Mar 1: Intro to trajectory inference (TI)
-#. Mar 3: TI how-to
-#. Mar 8: Intro to Stemness
-#. Mar 10: How to do Stemness analysis
-#. Mar 15: Intro to RNA velocity
-#. Mar 17: How to do RNA velcoity analysis
-#. Mar 29: Intro to lineage tracing
-#. Mar 31: How to analyze lineage tracing data
+#. Feb 22: :doc:`day/09_trajectory_inference`
+#. Feb 24: TI how-to
+#. Mar 1: Intro to Stemness
+#. Mar 3: How to do Stemness analysis
+#. Mar 8: Intro to RNA velocity
+#. Mar 10: How to do RNA velocity analysis
+#. Mar 15: Intro to lineage tracing
+#. Mar 17: How to analyze lineage tracing data
+#. Mar 29: Stem cell niche
+#. Mar 31: Spatial transcriptomics
 #. Apr 5: Gene regulatory networks
 #. Apr 7: Cell fate engineering
 #. Apr 12: Cell fate simulations
