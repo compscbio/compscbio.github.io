@@ -73,7 +73,7 @@
 <p class="caption" role="heading"><span class="caption-text">Homework</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../homework/HW_01.html">Homework #1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../homework/HW_02.html">Homework #1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/HW_02.html">Homework #2</a></li>
 </ul>
 
         </div>
@@ -418,7 +418,7 @@ Saving pipestance info to &quot;tiny/tiny.mri.tgz&quot;
 <li><p>handles reads mapping to &gt;1 locus</p></li>
 </ul>
 <p>How does it handle reads that hit different parts of the genome?</p>
-<p><img alt="c7d7b37b9bd14f95bbd5e67d476d2f5f" src="../_images/gex-processing-introns.png" /></p>
+<p><img alt="4e98b3de34d44d3ea0bb51ff8982cce5" src="../_images/gex-processing-introns.png" /></p>
 <ul class="simple">
 <li><p>aligned reads for UMI counting, by default, are ’ transcriptomic’ (blue) reads</p></li>
 <li><p>Often useful an more appropriate to include exonic and intronic aligned reads, too</p></li>
@@ -442,11 +442,11 @@ Saving pipestance info to &quot;tiny/tiny.mri.tgz&quot;
 <li><p>ID true positives with total UMI threshold determine based on total UMIs in top fraction of expected numvber of barcodes</p></li>
 <li><p>Select set of true negatives and compare complexity of remaining barcodes to it</p></li>
 </ul>
-<p><img alt="712f5b186d9a452594637a8b12a45f9d" src="../_images/knee-plot-old-cell-calling.png" /></p>
-<p><img alt="921fae525e9c4328a3eb6311aca18061" src="../_images/knee-plot-new-cell-calling.png" /></p>
+<p><img alt="1246732ab25c48ceb443b536341db1be" src="../_images/knee-plot-old-cell-calling.png" /></p>
+<p><img alt="a97ddf819fc245e4b76cc1f4dd4b714b" src="../_images/knee-plot-new-cell-calling.png" /></p>
 <section id="CellRanger-output-status-(web-summary)">
 <h3>CellRanger output status (web summary)<a class="headerlink" href="#CellRanger-output-status-(web-summary)" title="Permalink to this headline"></a></h3>
-<p><img alt="89270bebfa7b4fa3bdb66df1a4bd9c8a" src="../_images/web-summary-gex-3.1a.png" /></p>
+<p><img alt="786d8699586f404e975c1989223ca3af" src="../_images/web-summary-gex-3.1a.png" /></p>
 </section>
 </section>
 <section id="Sequencing-saturation:">
@@ -485,6 +485,7 @@ Saving pipestance info to &quot;tiny/tiny.mri.tgz&quot;
 </div>
 </div>
 <p>You can download the data used below from here. It is a zip file containing the market matrix files that I showed you in class: genes.tsv, matrix.mtx, and barcodes.tsv. You will need to unzip it, and then change the path argument below so that it is pointing to wherever you unzipped the 3 files.</p>
+<p><a class="reference external" href="https://compstemcellbio.s3.amazonaws.com/2022/data/d4_scRNAseq_data.zip">link to data if not appearing above</a></p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
@@ -512,7 +513,7 @@ AnnData object with n_obs × n_vars = 5405 × 27998
 </pre></div></div>
 </div>
 <p>What is an anndata?</p>
-<p><img alt="dc7c81799b6d482e8e564298fbf23a98" src="../_images/anndata.png" /></p>
+<p><img alt="2bc56d939ecc4345a653880f22628f42" src="../_images/anndata.png" /></p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>

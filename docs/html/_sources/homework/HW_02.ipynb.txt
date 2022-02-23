@@ -5,7 +5,7 @@
    "id": "489d5555-d13c-4e2a-9c16-366fa8dec0f8",
    "metadata": {},
    "source": [
-    "# Homework #1\n",
+    "# Homework #2\n",
     "Due 11:59 pm EST, Tuesday March 1st, 2022.\n",
     "\n",
     "Email your solutions (both .ipnb and .html files) to: compscbio@gmail.com."
@@ -99,7 +99,7 @@
    "source": [
     "### Your mission: Part 2\n",
     "\n",
-    "Clean the data as we discussed in class, including but not only filtering out potential doublets and low quality barcodes, and excluding undetected genes."
+    "Clean the data as we discussed in class, including, but not limited to, filtering out potential doublets and low quality barcodes, and excluding undetected genes."
    ]
   },
   {
