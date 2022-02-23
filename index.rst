@@ -102,8 +102,8 @@ Policies
    day/05_scRNAseq_data_generation
    day/06_scRNAseq_analysis
    day/07_scRNAseq_analysis_part_2
-   day/08_cell_identity_integration_classification
-   day/09_stem_cell_niche
+   day/08_cell_identity
+   day/09_trajectory_inference
    day/10_spatial_transcriptomics
    day/11_trajectory_inference_intro
    day/12_trajectory_inference_howto
@@ -127,16 +127,13 @@ Policies
    :caption: Homework
 
    homework/HW_01
-   homework/02/index
+   homework/HW_02
    homework/03/index
    homework/04/index
    homework/05/index
    homework/06/index
    homework/07/index
    homework/08/index
-   homework/09/index
-   homework/10/index
-   homework/11/index
    homework/final_project/index
 
 ----
