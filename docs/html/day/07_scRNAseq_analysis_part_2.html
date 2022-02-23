@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>scRNAseq analysis part 2 &mdash; cscb2022  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <title>scRNAseq analysis part 2 &mdash; cscb2022  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Homework #1" href="../homework/HW_01.html" />
+    <link rel="next" title="Cell identity" href="08_cell_identity.html" />
     <link rel="prev" title="scRNAseq analysis" href="06_scRNAseq_analysis.html" /> 
 </head>
 
@@ -27,7 +30,8 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> cscb2022<img src="../_static/CSCB_logo2.png" class="logo" alt="Logo"/>
+            <a href="../index.html" class="icon icon-home"> cscb2022
+            <img src="../_static/CSCB_logo2.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -37,13 +41,13 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">Schedule</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Schedule</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../schedule.html">Schedule overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../schedule.html#homework-and-final-project-due-dates">Homework and final project due dates</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../schedule.html#lecture-schedule">Lecture schedule</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Lectures:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Lectures:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="01_history_of_stem_cells.html">History of Stem Cells</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02_introduction_to_python_part_1.html">Comp Lesson 1: Introduction to Python</a></li>
@@ -65,10 +69,13 @@
 <li class="toctree-l2"><a class="reference internal" href="#Clustering">Clustering</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="08_cell_identity.html">Cell identity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_trajectory_inference.html">Trajectory inference</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Homework</span></p>
+<p class="caption" role="heading"><span class="caption-text">Homework</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../homework/HW_01.html">Homework #1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/HW_02.html">Homework #1</a></li>
 </ul>
 
         </div>
@@ -365,10 +372,10 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<div class="section" id="scRNAseq-analysis-part-2">
-<h1>scRNAseq analysis part 2<a class="headerlink" href="#scRNAseq-analysis-part-2" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="Outline">
-<h2>Outline<a class="headerlink" href="#Outline" title="Permalink to this headline">¶</a></h2>
+<section id="scRNAseq-analysis-part-2">
+<h1>scRNAseq analysis part 2<a class="headerlink" href="#scRNAseq-analysis-part-2" title="Permalink to this headline"></a></h1>
+<section id="Outline">
+<h2>Outline<a class="headerlink" href="#Outline" title="Permalink to this headline"></a></h2>
 <p>HW2 will be posted by tomorrow morning.</p>
 <p>Today, we are going to continue where we left off last Thursday. We will cover the following:</p>
 <ul class="simple">
@@ -383,14 +390,14 @@ div.rendered_html tbody tr:hover {
 <li><p>kNN</p></li>
 <li><p>leiden clustering</p></li>
 </ul>
-</div>
-<div class="section" id="Background">
-<h2>Background<a class="headerlink" href="#Background" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Background">
+<h2>Background<a class="headerlink" href="#Background" title="Permalink to this headline"></a></h2>
 <p>First, let’s start with a bit of background on the data that we have been using. In lecture 1, we talked about gastrulation:</p>
-<figure><p><img alt="afae7768c24a4667b6720a687ffb9f3c" src="../_images/07_early_dev.png" /></p>
+<figure><p><img alt="e8fab727136f4029a8edb25062037f57" src="../_images/07_early_dev.png" /></p>
 <figcaption><p>Murine development. Figure credit: Emily KW Lo</p>
 </figcaption></figure><p>When stem cell biologists differentiated pluripotent stem cells, they try to mimic aspects of this process. We have been curious as to the extent that that directed diff achieves this, so back in 2017/8 we turned to scRNAseq to define the cell types that emerge in the early stages of this <em>in vitro process</em>. We used the Embryoid Body method to allow differentiating mESCs to self-organize, along with Wnt/Activin induction of the primitive streak:</p>
-<figure><p><img alt="02c68aed27604c3194f8518cc4c4df0c" src="../_images/07_eb_schematic.png" /></p>
+<figure><p><img alt="d4ac966bc16f42bfa445b09634dfc933" src="../_images/07_eb_schematic.png" /></p>
 <figcaption><p>Embryoid body protocol. From Spangler et al, Stem Cell Research 2018</p>
 </figcaption></figure><p>Note that the mESC line we used has a reported for T (a.k.a Brachyury), which allows us to monitor primitive streak induction.</p>
 <p>At day 4, we sampled cells from this process and subjected them to single cell isolation and cDNA prep via the 10X Genomics Chromium instrument.</p>
@@ -400,9 +407,9 @@ div.rendered_html tbody tr:hover {
 <li><p>What are the expression signatures of these cell types?</p></li>
 <li><p>How do they compare to cells of the <em>in vivo</em> embryo? &lt;- will address later</p></li>
 </ul>
-</div>
-<div class="section" id="Re-load-and-initial-QC">
-<h2>Re-load and initial QC<a class="headerlink" href="#Re-load-and-initial-QC" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Re-load-and-initial-QC">
+<h2>Re-load and initial QC<a class="headerlink" href="#Re-load-and-initial-QC" title="Permalink to this headline"></a></h2>
 <p>Let’s get the session started, and repeat the data loading, and qc metrics from last week</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
@@ -610,11 +617,11 @@ div.rendered_html tbody tr:hover {
 <p>5405 rows × 7 columns</p>
 </div></div>
 </div>
-</div>
-<div class="section" id="Cell-filtering">
-<h2>Cell filtering<a class="headerlink" href="#Cell-filtering" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Cell-filtering">
+<h2>Cell filtering<a class="headerlink" href="#Cell-filtering" title="Permalink to this headline"></a></h2>
 <p>Recall the doublet problem. 10x has estimated the double rate for their 3’ products:</p>
-<figure><p><img alt="9cf4bc90be1c48818a5a80e4a4113439" src="../_images/07_mutliplet_table.png" /></p>
+<figure><p><img alt="eb79e755c04444499a1a6cf65e757938" src="../_images/07_mutliplet_table.png" /></p>
 <figcaption><p>Multiplet table for 3’ v3.1 (see 10x website).</p>
 </figcaption></figure><p>Let’s filter out cells based on the following: - the top 5% of cells based on total counts to exclude possible doublets - cells with &lt; 500 genes based on n_genes_by_counts and - cells with &gt; 10% pct_counts_mt - cells with &lt; 50% ribosomal counts</p>
 <div class="nbinput docutils container">
@@ -706,9 +713,9 @@ Number of cells:  5109
 <img alt="../_images/day_07_scRNAseq_analysis_part_2_14_0.png" class="no-scaled-link" src="../_images/day_07_scRNAseq_analysis_part_2_14_0.png" style="width: 302px; height: 300px;" />
 </div>
 </div>
-</div>
-<div class="section" id="Gene-filtering">
-<h2>Gene filtering<a class="headerlink" href="#Gene-filtering" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Gene-filtering">
+<h2>Gene filtering<a class="headerlink" href="#Gene-filtering" title="Permalink to this headline"></a></h2>
 <p>We also want to exclude genes that are only detected sporadically. In this case, let’s set this threshold to at least 5 cells:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
@@ -751,7 +758,7 @@ Number of genes:  15677
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">highest_expr_genes</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span> <span class="n">n_top</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span><span class="n">palette</span><span class="o">=</span><span class="s2">&quot;Blues&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=.</span><span class="mi">3</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">highest_expr_genes</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span> <span class="n">n_top</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span><span class="n">palette</span><span class="o">=</span><span class="s2">&quot;Blues&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">.3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -866,9 +873,9 @@ array([ True,  True,  True, ...,  True,  True,  True])
 Number of genes:  15557
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Normalization">
-<h2>Normalization<a class="headerlink" href="#Normalization" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Normalization">
+<h2>Normalization<a class="headerlink" href="#Normalization" title="Permalink to this headline"></a></h2>
 <p>First, do a a total count normalization such that each barcode/cell ends up with the same total expression. It is also common practice to log the resulting values. BUT, lets keep a copy of the raw counts in a .raw slot:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
@@ -880,9 +887,9 @@ Number of genes:  15557
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Highly-variable-genes">
-<h2>Highly variable genes<a class="headerlink" href="#Highly-variable-genes" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Highly-variable-genes">
+<h2>Highly variable genes<a class="headerlink" href="#Highly-variable-genes" title="Permalink to this headline"></a></h2>
 <p>Common practice to limit some parts of analysis to those variables/genes that exhibit some degree of variation in their values across the data. We call these <em>highly variable genes</em>, or HVG for short. To find these, calculate some gene statistics, which when combined with thresholds below, determine which genes are considered HVG. These metrics are mean expression and dispersion (variance / mean). Variance is defined as the expected squared deviation of gene expression. The normalized dispersion
 is calculated by scaling based on a bin of mean expression.</p>
 <div class="nbinput docutils container">
@@ -1117,9 +1124,9 @@ is calculated by scaling based on a bin of mean expression.</p>
 <img alt="../_images/day_07_scRNAseq_analysis_part_2_30_0.png" class="no-scaled-link" src="../_images/day_07_scRNAseq_analysis_part_2_30_0.png" style="width: 559px; height: 308px;" />
 </div>
 </div>
-</div>
-<div class="section" id="Gene-scaling">
-<h2>Gene scaling<a class="headerlink" href="#Gene-scaling" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Gene-scaling">
+<h2>Gene scaling<a class="headerlink" href="#Gene-scaling" title="Permalink to this headline"></a></h2>
 <p>Often, we are more interested in <em>changes</em> in gene expression rather than absolute expression levels, and how these changes in expression contribute to variation in cell state or cell type. To focus on this aspect of expression, we will transform expression values using the z-score, which just adjust the expression of each gene by subtracting the mean, and then dividing by the standard deviation. This is also helpful for the PCA that is performed below.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
@@ -1129,9 +1136,9 @@ is calculated by scaling based on a bin of mean expression.</p>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Principal-components-analysis">
-<h2>Principal components analysis<a class="headerlink" href="#Principal-components-analysis" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Principal-components-analysis">
+<h2>Principal components analysis<a class="headerlink" href="#Principal-components-analysis" title="Permalink to this headline"></a></h2>
 <p>There are two facts that make PCA a good tool of analzying scRNAseq data. First, genes are expressed in coordinated fashion, meaning that many have correlated expression patterns. Second scRNAseq data is noisy.</p>
 <p>PCA allows us to reduce a high dimensional data set into a lower dimension in which much of the total variation is maintained. To understand PCA, you need to know linear algebra. In essence, it identifies sets of linear combinations of genes in such a way that they uncorrelated and explain most variation in the data. The function call does the following</p>
 <ul class="simple">
@@ -1318,11 +1325,11 @@ is calculated by scaling based on a bin of mean expression.</p>
 <img alt="../_images/day_07_scRNAseq_analysis_part_2_45_1.png" class="no-scaled-link" src="../_images/day_07_scRNAseq_analysis_part_2_45_1.png" style="width: 569px; height: 409px;" />
 </div>
 </div>
-</div>
-<div class="section" id="Cell-cycle-status">
-<h2>Cell cycle status<a class="headerlink" href="#Cell-cycle-status" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Cell-cycle-status">
+<h2>Cell cycle status<a class="headerlink" href="#Cell-cycle-status" title="Permalink to this headline"></a></h2>
 <p>Recall in Lecture 5 when we covered Drop-Seq, how the authors were able to predict phase of cell cycle. What is cell cycle?</p>
-<figure><p><img alt="b56214da435f4d6aa48fb8632ed611ca" src="../_images/07_cell_cycle.png" /></p>
+<figure><p><img alt="f3b385e80fa94180a5c7c608715959ef" src="../_images/07_cell_cycle.png" /></p>
 <figcaption><p>Cell cycle. Credit: Wikipedia.</p>
 </figcaption></figure><p>This was done by summarizing the expression of genes associated with distinct phases of cell cycle and normalizing this value to a background value. Let’s perform a similar analysis here. First, please fetch the table of mouse genes:</p>
 <div class="nbinput nblast docutils container">
@@ -1711,9 +1718,9 @@ n cc genes: 111
 <img alt="../_images/day_07_scRNAseq_analysis_part_2_59_1.png" class="no-scaled-link" src="../_images/day_07_scRNAseq_analysis_part_2_59_1.png" style="width: 569px; height: 409px;" />
 </div>
 </div>
-</div>
-<div class="section" id="Clustering">
-<h2>Clustering<a class="headerlink" href="#Clustering" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Clustering">
+<h2>Clustering<a class="headerlink" href="#Clustering" title="Permalink to this headline"></a></h2>
 <p>Let’s start with one of the simplest clustering methods: k-means. It is an iterative process that starts with k randomly sampled points. It assigns cells to cluster defined by the nearest point. Then, it updates the points as the center of the newly defined cluster, repeating this process unitl convergence or a specified number of times. The key concept here is that of the distance metric, which quantifies how close cells are. Eucliean distance is commonly used, as are different transformations
 of correlation measures (e.g. 1 - PCC).</p>
 <div class="nbinput nblast docutils container">
@@ -1915,7 +1922,7 @@ of correlation measures (e.g. 1 - PCC).</p>
 </div>
 </div>
 <p>One final class of clustering methods is based on deriving the k-nearest neighbor graph. <em>Walk them through the concept</em>, explain how used to transform adjacency matrix</p>
-<figure><p><img alt="550df3c79cd242ef8cf01c44c1a76ff7" src="../_images/07_knn_graph_1.png" /></p>
+<figure><p><img alt="2788c22322654ae19d6e0a9ae76f7ca9" src="../_images/07_knn_graph_1.png" /></p>
 <figcaption><p>K-nearest neighbor graph. Credit: Wikipedia.</p>
 </figcaption></figure><p>Recall the elbow plot. From this, we can pick out a reasonable n_pcs</p>
 <div class="nbinput docutils container">
@@ -1940,7 +1947,7 @@ OMP: Info #271: omp_set_nested routine deprecated, please use omp_set_max_active
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[54]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sc</span><span class="o">.</span><span class="n">tl</span><span class="o">.</span><span class="n">leiden</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span> <span class="o">.</span><span class="mi">25</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sc</span><span class="o">.</span><span class="n">tl</span><span class="o">.</span><span class="n">leiden</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span> <span class="mf">.25</span><span class="p">)</span>
 <br/><br/><br/></pre></div>
 </div>
 </div>
@@ -2019,15 +2026,15 @@ WARNING: Default of the method has been changed to &#39;t-test&#39; from &#39;t-
 <img alt="../_images/day_07_scRNAseq_analysis_part_2_76_1.png" class="no-scaled-link" src="../_images/day_07_scRNAseq_analysis_part_2_76_1.png" style="width: 705px; height: 242px;" />
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="06_scRNAseq_analysis.html" class="btn btn-neutral float-left" title="scRNAseq analysis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../homework/HW_01.html" class="btn btn-neutral float-right" title="Homework #1" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="08_cell_identity.html" class="btn btn-neutral float-right" title="Cell identity" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

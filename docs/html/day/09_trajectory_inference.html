@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>History of Stem Cells &mdash; cscb2022  documentation</title>
+  <title>Trajectory inference &mdash; cscb2022  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Comp Lesson 1: Introduction to Python" href="02_introduction_to_python_part_1.html" />
-    <link rel="prev" title="Schedule overview" href="../schedule.html" /> 
+    <link rel="next" title="Homework #1" href="../homework/HW_01.html" />
+    <link rel="prev" title="Cell identity" href="08_cell_identity.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -47,7 +47,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Lectures:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">History of Stem Cells</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_history_of_stem_cells.html">History of Stem Cells</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02_introduction_to_python_part_1.html">Comp Lesson 1: Introduction to Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03_introduction_to_python_part_2.html">Comp Lesson 2: Introduction to Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="04_Till_McCulloch.html">Till and McCulloch</a></li>
@@ -55,7 +55,7 @@
 <li class="toctree-l1"><a class="reference internal" href="06_scRNAseq_analysis.html">scRNAseq analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="07_scRNAseq_analysis_part_2.html">scRNAseq analysis part 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="08_cell_identity.html">Cell identity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="09_trajectory_inference.html">Trajectory inference</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Trajectory inference</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Homework</span></p>
 <ul>
@@ -77,9 +77,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>History of Stem Cells</li>
+      <li>Trajectory inference</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/day/01_history_of_stem_cells.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/day/09_trajectory_inference.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -111,44 +111,40 @@
     text-align: unset;
 }
 </style>
-<section id="history-of-stem-cells">
-<h1>History of Stem Cells<a class="headerlink" href="#history-of-stem-cells" title="Permalink to this headline"></a></h1>
+<section id="trajectory-inference">
+<h1>Trajectory inference<a class="headerlink" href="#trajectory-inference" title="Permalink to this headline"></a></h1>
 <ul class="simple">
-<li><p>Intro to the course</p>
-<ul>
-<li><p>Introduce the team</p></li>
-<li><p>Before and after</p></li>
-<li><p>Course mechanics</p></li>
-<li><p>Topics</p></li>
+<li><p>Background</p></li>
 </ul>
-</li>
-<li><p>Where we are today?</p>
-<ul>
-<li><p>Diabetes as an example</p></li>
-<li><p>Ramzy et al Cell Stem Cell 2021</p></li>
+<ul class="simple">
+<li><p>when to use it</p></li>
+<li><p>what to use it for</p></li>
 </ul>
-</li>
-<li><p>How did we get here?</p>
-<ul>
-<li><p>Stevens and Little 1954</p></li>
-<li><p>129 inbred strain of mice -&gt; teratoma</p></li>
+<ul class="simple">
+<li><p>How is it done?</p></li>
 </ul>
-</li>
-<li><p>What are teratomas?</p></li>
-<li><p>Defining properties of stem cells</p></li>
-<li><p>mouse embryonic stem cell derivation (Evans, Kaufman; Martin 1981)</p></li>
-<li><p>In vitro fertilization (Edwards 1978)</p></li>
-<li><p>Human embryonic stem cells (Thomson 1998)</p></li>
-<li><p>Cellular reprogramming (Weintraub 1986)</p></li>
-<li><p>Induced pluripotent stem cells (Yamanaka 2006)</p></li>
-<li><p>iPSCs for …</p>
-<ul>
-<li><p>disease modeling</p></li>
-<li><p>drug screening</p></li>
+<ul class="simple">
+<li><p>dimensionality reduction</p></li>
+<li><p>trajectory modeling</p></li>
 </ul>
-</li>
-<li><p>How to guide differentiation?</p></li>
-<li><p>What is next?</p></li>
+<ul class="simple">
+<li><p>Monocle paper</p></li>
+</ul>
+<ul class="simple">
+<li><p>Myoblast differentiation</p></li>
+<li><p>overview of method</p></li>
+<li><p>Minimal spanning tree</p></li>
+<li><p>graph diameter</p></li>
+<li><p>myofibroblasts</p></li>
+<li><p>robustness</p></li>
+<li><p>expression programs</p></li>
+<li><p>regulators via motif enrichment</p></li>
+<li><p>functional testing</p></li>
+</ul>
+<ul class="simple">
+<li><p>Slingshot</p></li>
+<li><p>Dyngen</p></li>
+<li><p>HW 2</p></li>
 </ul>
 <hr class="docutils" />
 </section>
@@ -157,8 +153,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../schedule.html" class="btn btn-neutral float-left" title="Schedule overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="02_introduction_to_python_part_1.html" class="btn btn-neutral float-right" title="Comp Lesson 1: Introduction to Python" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="08_cell_identity.html" class="btn btn-neutral float-left" title="Cell identity" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../homework/HW_01.html" class="btn btn-neutral float-right" title="Homework #1" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -12,16 +12,13 @@ Homework and final project due dates
 ------------------------------------
 
 - :ref:`Homework 1<Homework 1>`: due 11:59 pm EST, **Sunday Feb 13th**
-- :ref:`Homework 2<Homework 2>`: due 11:59 pm EST, Feb 16
-- :ref:`Homework 3<Homework 3>`: due 11:59 pm EST, Feb 16
-- :ref:`Homework 4<Homework 4>`: due 11:59 pm EST, Feb 23
-- :ref:`Homework 5<Homework 5>`: due 11:59 pm EST, Mar 2 
+- :ref:`Homework 2<Homework 2>`: due 11:59 pm EST, March 1st
+- :ref:`Homework 3<Homework 3>`: due 11:59 pm EST, 
+- :ref:`Homework 4<Homework 4>`: due 11:59 pm EST, 
+- :ref:`Homework 5<Homework 5>`: due 11:59 pm EST, 
 - :ref:`Homework 6<Homework 6>`: due 11:59 pm EST, Mar 9
 - :ref:`Homework 7<Homework 7>`: due 11:59 pm EST, Mar 16
 - :ref:`Homework 8<Homework 8>`: due 11:59 pm EST, Mar 30
-- :ref:`Homework 9<Homework 9>`: due 11:59 pm EST, Apr 6 
-- :ref:`Homework 10<Homework 10>`: due 11:59 pm EST, Apr 13
-- :ref:`Homework 11<Homework 11>`: due 11:59 pm EST, Apr 20
 - :ref:`Final project<Final project>`: due 11:59 pm EST, Apr 25
 
 ----
@@ -38,8 +35,8 @@ The schedule below is tentative. We will keep you updated as the content and sch
 #. Feb 8: :doc:`day/05_scRNAseq_data_generation`
 #. Feb 10: :doc:`day/06_scRNAseq_analysis`
 #. Feb 15: :doc:`day/07_scRNAseq_analysis_part_2`
-#. Feb 17: Cell identity Integration and classification
-#. Feb 22: Stem cell niche
+#. Feb 17: :doc:`day/08_cell_identity`
+#. Feb 22: :doc:`day/09_ctrajectory_inference`
 #. Feb 24: Spatial transcriptomics
 #. Mar 1: Intro to trajectory inference (TI)
 #. Mar 3: TI how-to
