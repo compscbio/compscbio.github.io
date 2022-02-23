@@ -409,7 +409,7 @@ MEFs are likely to have been sequenced in this experiment and you should exclude
 <p><a class="reference external" href="https://compstemcellbio.s3.amazonaws.com/2022/homework/02/genes_primed.csv">primed pluripotency</a> Genes preferentially expressed in mESCs primed for differentiation.</p>
 <p><a class="reference external" href="https://compstemcellbio.s3.amazonaws.com/2022/homework/02/genes_primitive_streak.csv">primitive streak</a> Genes preferentially expressed in the primitive streak.</p>
 <p><a class="reference external" href="https://compstemcellbio.s3.amazonaws.com/2022/homework/02/genes_mesoderm.csv">mesoderm</a> Genes preferentially expressed in the nascent mesoderm.</p>
-<p><a class="reference external" href="https://compstemcellbio.s3.amazonaws.com/2022/homework/02/genes_fibroblasts.csv">MEF</a> Genes preferentially expressed in fibroblasts.</p>
+<p><a class="reference external" href="https://compstemcellbio.s3.amazonaws.com/2022/homework/02/genes_fibroblast.csv">MEF</a> Genes preferentially expressed in fibroblasts.</p>
 <p><a class="reference external" href="https://compstemcellbio.s3.amazonaws.com/2022/resources/mouseCellCycle_050218.csv">cell cycle</a> This is the same gene list that we covered in <a class="reference external" href="https://compscbio.github.io/docs/html/day/07_scRNAseq_analysis_part_2.html">lecture 7</a></p>
 </section>
 <section id="Your-mission:-Part-1">
@@ -466,8 +466,8 @@ MEFs are likely to have been sequenced in this experiment and you should exclude
 <p>Write a function to identify genes that are correlated with cell cycle stage (S and G2M) scores. You can use Pearson correlation.</p>
 <p>Use this function to determine the set of genes that are correlated with S and G2M during each stage of differentation. I recommend using a threshold of 0.45, but feel free to explore and select your own threshold, but if you do so, please justify.</p>
 <p>Use the resulting information to answer questions (B) and (C):</p>
-<p>(B): What novel genes are associated with CC?</p>
-<p>(C):To what extent do these novel CC genes vary across stages of differentiation?</p>
+<p>(B): <em>What novel genes are associated with CC?</em></p>
+<p>(C):<em>To what extent do these novel CC genes vary across stages of differentiation?</em></p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
@@ -487,7 +487,7 @@ MEFs are likely to have been sequenced in this experiment and you should exclude
 </div>
 </div>
 <p>Bonus mission:</p>
-<p>Write a function that will generate a heatmap of your novel CC genes and order cells by predicted phase of CC.</p>
+<p>Write a function that will generate a heatmap of your novel CC genes and that orders and displays cells by predicted phase of CC.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
