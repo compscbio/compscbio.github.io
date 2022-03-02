@@ -104,6 +104,7 @@ Policies
    day/07_scRNAseq_analysis_part_2
    day/08_cell_identity
    day/09_trajectory_inference
+   day/10_TI_part_2
    day/10_spatial_transcriptomics
    day/11_trajectory_inference_intro
    day/12_trajectory_inference_howto
@@ -128,7 +129,7 @@ Policies
 
    homework/HW_01
    homework/HW_02
-   homework/03/index
+   homework/HW_03
    homework/04/index
    homework/05/index
    homework/06/index

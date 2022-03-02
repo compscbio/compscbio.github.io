@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Homework #1 &mdash; cscb2022  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>Homework #1 &mdash; cscb2022  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Homework #2" href="HW_02.html" />
-    <link rel="prev" title="Trajectory inference" href="../day/09_trajectory_inference.html" /> 
+    <link rel="prev" title="How to do TI analysis" href="../day/10_TI_part_2.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -30,8 +27,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> cscb2022
-            <img src="../_static/CSCB_logo2.png" class="logo" alt="Logo"/>
+            <a href="../index.html" class="icon icon-home"> cscb2022<img src="../_static/CSCB_logo2.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -41,13 +37,13 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Schedule</span></p>
+              <p class="caption"><span class="caption-text">Schedule</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../schedule.html">Schedule overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../schedule.html#homework-and-final-project-due-dates">Homework and final project due dates</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../schedule.html#lecture-schedule">Lecture schedule</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Lectures:</span></p>
+<p class="caption"><span class="caption-text">Lectures:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../day/01_history_of_stem_cells.html">History of Stem Cells</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../day/02_introduction_to_python_part_1.html">Comp Lesson 1: Introduction to Python</a></li>
@@ -58,8 +54,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../day/07_scRNAseq_analysis_part_2.html">scRNAseq analysis part 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../day/08_cell_identity.html">Cell identity</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../day/09_trajectory_inference.html">Trajectory inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day/10_TI_part_2.html">How to do TI analysis</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Homework</span></p>
+<p class="caption"><span class="caption-text">Homework</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Homework #1</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#Goal:-Ensure-that-you-…">Goal: Ensure that you …</a></li>
@@ -82,6 +79,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="HW_02.html">Homework #2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HW_03.html">Homework 3</a></li>
 </ul>
 
         </div>
@@ -378,20 +376,20 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<section id="Homework-#1">
-<h1>Homework #1<a class="headerlink" href="#Homework-#1" title="Permalink to this headline"></a></h1>
+<div class="section" id="Homework-#1">
+<h1>Homework #1<a class="headerlink" href="#Homework-#1" title="Permalink to this headline">¶</a></h1>
 <p>Due 11:59 pm EST, <strong>Sunday Feb 13th, 2022</strong> Email your solutions (both .ipnb and .html files) to: <a class="reference external" href="mailto:compscbio&#37;&#52;&#48;gmail&#46;com">compscbio<span>&#64;</span>gmail<span>&#46;</span>com</a>.</p>
-<section id="Goal:-Ensure-that-you-…">
-<h2>Goal: Ensure that you …<a class="headerlink" href="#Goal:-Ensure-that-you-…" title="Permalink to this headline"></a></h2>
+<div class="section" id="Goal:-Ensure-that-you-…">
+<h2>Goal: Ensure that you …<a class="headerlink" href="#Goal:-Ensure-that-you-…" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>have basic, practical knowledge of Python</p></li>
 <li><p>are able to install Python packages</p></li>
 <li><p>are able to use and create Jupyter notebooks</p></li>
 <li><p>can apply this knowledge to explore one aspect of self-renewal</p></li>
 </ul>
-<hr></section>
-<section id="Preamble:-functions">
-<h2>Preamble: functions<a class="headerlink" href="#Preamble:-functions" title="Permalink to this headline"></a></h2>
+<hr></div>
+<div class="section" id="Preamble:-functions">
+<h2>Preamble: functions<a class="headerlink" href="#Preamble:-functions" title="Permalink to this headline">¶</a></h2>
 <p>In class, we did not cover the syntax for defining your own functions. Let’s cover this now. Note that we use the <code class="docutils literal notranslate"><span class="pre">randint</span></code> function from the random module, and so need to import this module. Typically, you should import all of the modules that you will need at the start of your session. So, I am going to put some other import statements here that we won’t need until later in the homework. Please install modules, as needed, using either <code class="docutils literal notranslate"><span class="pre">pip</span></code> or anaconda.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -455,9 +453,9 @@ howdy
 </div>
 <p>When you create a function, you need to use the <code class="docutils literal notranslate"><span class="pre">def</span></code> keyword, then supply your function name, followed by the names of arguments that need to be passed to the function enclosed in parenthesis, followed by <code class="docutils literal notranslate"><span class="pre">:</span></code>. Then the following indented suite of code is where you define what the function will do. The first line should be text enclosed in three pairs of double quotes. This is what will be returned when <code class="docutils literal notranslate"><span class="pre">help(yourFunction)</span></code> is invoked. Therefore, give some thought to this text and make it
 a pithy description of your function. If you do not end the function suite with an explicit call to <code class="docutils literal notranslate"><span class="pre">return</span></code>, the the function will by default return <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
-<hr></section>
-<section id="Part-1:-Write-a-function-prose_generator.">
-<h2>Part 1: Write a function <code class="docutils literal notranslate"><span class="pre">prose_generator</span></code>.<a class="headerlink" href="#Part-1:-Write-a-function-prose_generator." title="Permalink to this headline"></a></h2>
+<hr></div>
+<div class="section" id="Part-1:-Write-a-function-prose_generator.">
+<h2>Part 1: Write a function <code class="docutils literal notranslate"><span class="pre">prose_generator</span></code>.<a class="headerlink" href="#Part-1:-Write-a-function-prose_generator." title="Permalink to this headline">¶</a></h2>
 <p>The first thing that you must do for this homeowrk is to define a function that writes a number of English sentences. The user will be asked to specify the number of sentences. The function will also need to take in as input lists of nouns and predicates. The function will construct and print out sentences of the pattern: (noun, predicate), by randomly selecting words from the corresponding lists. Below, we get you started with the skeleton of the function.</p>
 <p>To get full credit for Part 1, your answer must include a function that takes as input the number of sentences to create, and lists of user-supplied nouns and predicates. The lists can be entered either by prompting the user, or by specifying a file(s) that contains the words. If the former, define your examples in your notebook. If the latter, inlcude them as supplemental files with your submission. Your function must randomly select from these lists to make sentences that start with the noun
 and end with the predicate. Finally, your function must output the specified number of sentences.</p>
@@ -485,9 +483,9 @@ and end with the predicate. Finally, your function must output the specified num
 </pre></div>
 </div>
 </div>
-<HR></section>
-<section id="Part-2:-Improve-your-function">
-<h2>Part 2: Improve your function<a class="headerlink" href="#Part-2:-Improve-your-function" title="Permalink to this headline"></a></h2>
+<HR></div>
+<div class="section" id="Part-2:-Improve-your-function">
+<h2>Part 2: Improve your function<a class="headerlink" href="#Part-2:-Improve-your-function" title="Permalink to this headline">¶</a></h2>
 <p>Your function probably does not have much error checking so far. And, it is possible that a random sentence will be generated more than once. I don’t know about you, but I find it mildly annoying when people say the same thing repeatedly. So, your second task is to modify your function (or create a new one) so that the following conditions are met:</p>
 <ol class="upperalpha simple">
 <li><p>That the nouns are actually nouns.</p></li>
@@ -597,9 +595,9 @@ True
 False
 </pre></div></div>
 </div>
-<HR></section>
-<section id="Part-3:-Use-Pandas-(+-Numpy),-and-Seaborn-(+-Matplotlib)">
-<h2>Part 3: Use Pandas (+ Numpy), and Seaborn (+ Matplotlib)<a class="headerlink" href="#Part-3:-Use-Pandas-(+-Numpy),-and-Seaborn-(+-Matplotlib)" title="Permalink to this headline"></a></h2>
+<HR></div>
+<div class="section" id="Part-3:-Use-Pandas-(+-Numpy),-and-Seaborn-(+-Matplotlib)">
+<h2>Part 3: Use Pandas (+ Numpy), and Seaborn (+ Matplotlib)<a class="headerlink" href="#Part-3:-Use-Pandas-(+-Numpy),-and-Seaborn-(+-Matplotlib)" title="Permalink to this headline">¶</a></h2>
 <p>Next week (actually this week), we are going to start using Scanpy to analyze scRNAseq data. The Scanpy package is excellent at making it easy to analyze this type of data. But when you are just getting started, this can almost be <em>too</em> easy because it hides a lot of important details. The goal of this section is to expose you to some aspects of cleaning and selecting data, and to some basic visualization functions. This will give you a better idea of what is happening under-the-hood with
 packages such as Scanpy (or Seurat in R).</p>
 <p>In this section, you need to:</p>
@@ -639,8 +637,8 @@ packages such as Scanpy (or Seurat in R).</p>
 <li><p><a class="reference external" href="https://seaborn.pydata.org/generated/seaborn.heatmap.html">https://seaborn.pydata.org/generated/seaborn.heatmap.html</a></p></li>
 </ul>
 <p>If it sounds like a lot, don’t worry it will be fun!</p>
-<section id="3A:-Load-the-data">
-<h3>3A: Load the data<a class="headerlink" href="#3A:-Load-the-data" title="Permalink to this headline"></a></h3>
+<div class="section" id="3A:-Load-the-data">
+<h3>3A: Load the data<a class="headerlink" href="#3A:-Load-the-data" title="Permalink to this headline">¶</a></h3>
 <p>Download the expression matrix and meta-data from the links above. Use the Pandas <code class="docutils literal notranslate"><span class="pre">read_csv()</span></code> to load these. This will create a Pandas DataFrame.</p>
 <p>This mouse data comes from one of our papers, where we compiled previously published RNA-Seq data for classification purposes. There are 16 cell/tissue types, each represented by approximately 60 or more individual samples. Later, in Step 3C, you should also load the metadata, which indicates the cell/tissue type for each sample.</p>
 <div class="nbinput nblast docutils container">
@@ -651,9 +649,9 @@ packages such as Scanpy (or Seurat in R).</p>
 </pre></div>
 </div>
 </div>
-</section>
-<section id="3B:-Filter-out-genes-whose-maximum-expression-&lt;-2">
-<h3>3B: Filter out genes whose maximum expression &lt; 2<a class="headerlink" href="#3B:-Filter-out-genes-whose-maximum-expression-<-2" title="Permalink to this headline"></a></h3>
+</div>
+<div class="section" id="3B:-Filter-out-genes-whose-maximum-expression-&lt;-2">
+<h3>3B: Filter out genes whose maximum expression &lt; 2<a class="headerlink" href="#3B:-Filter-out-genes-whose-maximum-expression-<-2" title="Permalink to this headline">¶</a></h3>
 <p>You might consider using the <code class="docutils literal notranslate"><span class="pre">pd.loc</span></code> and <code class="docutils literal notranslate"><span class="pre">pd.max()</span></code> functions</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[138]:
@@ -664,9 +662,9 @@ packages such as Scanpy (or Seurat in R).</p>
 </div>
 </div>
 <p>Limit genes to those that have maximum expression &gt; 2</p>
-</section>
-<section id="3C:-Make-a-box-and-whiskers-plot-of-the-gene-Pou5f1,-grouped-by-cell/tissue-type.">
-<h3>3C: Make a box and whiskers plot of the gene Pou5f1, grouped by cell/tissue type.<a class="headerlink" href="#3C:-Make-a-box-and-whiskers-plot-of-the-gene-Pou5f1,-grouped-by-cell/tissue-type." title="Permalink to this headline"></a></h3>
+</div>
+<div class="section" id="3C:-Make-a-box-and-whiskers-plot-of-the-gene-Pou5f1,-grouped-by-cell/tissue-type.">
+<h3>3C: Make a box and whiskers plot of the gene Pou5f1, grouped by cell/tissue type.<a class="headerlink" href="#3C:-Make-a-box-and-whiskers-plot-of-the-gene-Pou5f1,-grouped-by-cell/tissue-type." title="Permalink to this headline">¶</a></h3>
 <p>To do this you will need to load the meta-data, linked to above. You might want to use the <code class="docutils literal notranslate"><span class="pre">pd.concat()</span></code> and <code class="docutils literal notranslate"><span class="pre">sns.boxplot()</span></code> functions.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
@@ -677,9 +675,9 @@ packages such as Scanpy (or Seurat in R).</p>
 </pre></div>
 </div>
 </div>
-</section>
-<section id="3D:-Determine-the-top-5-genes-expressed-per-cell/tissue-type">
-<h3>3D: Determine the top 5 genes expressed per cell/tissue type<a class="headerlink" href="#3D:-Determine-the-top-5-genes-expressed-per-cell/tissue-type" title="Permalink to this headline"></a></h3>
+</div>
+<div class="section" id="3D:-Determine-the-top-5-genes-expressed-per-cell/tissue-type">
+<h3>3D: Determine the top 5 genes expressed per cell/tissue type<a class="headerlink" href="#3D:-Determine-the-top-5-genes-expressed-per-cell/tissue-type" title="Permalink to this headline">¶</a></h3>
 <p>Once you have done so, make a heatmap showing expression of these genes across all samples. To get full credit for this, you need to</p>
 <ul class="simple">
 <li><p>exclude duplicate genes (i.e. genes that are in the top 5 in more than one cell/tissue type)</p></li>
@@ -694,9 +692,9 @@ packages such as Scanpy (or Seurat in R).</p>
 </pre></div>
 </div>
 </div>
-</section>
-<section id="3E:-Compute-the-similarity-between-samples.">
-<h3>3E: Compute the similarity between samples.<a class="headerlink" href="#3E:-Compute-the-similarity-between-samples." title="Permalink to this headline"></a></h3>
+</div>
+<div class="section" id="3E:-Compute-the-similarity-between-samples.">
+<h3>3E: Compute the similarity between samples.<a class="headerlink" href="#3E:-Compute-the-similarity-between-samples." title="Permalink to this headline">¶</a></h3>
 <p>Compute the Pearson correaltion coefficient between all pairs of samples. Plot this as a heatmap. Make sure the samples are ordered by cell/tissue type. You might want to use the Pandas <code class="docutils literal notranslate"><span class="pre">corr()</span></code> function. Be careful of what your are computing correlation of.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
@@ -706,21 +704,21 @@ packages such as Scanpy (or Seurat in R).</p>
 </pre></div>
 </div>
 </div>
-<hr></section>
-</section>
-<section id="Part-4:-Modeling-Birth-and-death-of-CFUs">
-<h2>Part 4: Modeling Birth and death of CFUs<a class="headerlink" href="#Part-4:-Modeling-Birth-and-death-of-CFUs" title="Permalink to this headline"></a></h2>
-<p>Recall the self-renewal assay from Siminovitch, Till and McCulloch 1963 (right) <img alt="446ee9d5cbf94b929ed9ad064b83d2d6" class="no-scaled-link" src="../_images/CFUs_selfrenewal.png" style="width: 200px;" /> In this assay, nodules were dissected, cells were dispersed, resuspended, and tranplanted into secondary recipients. Then after 10 days (or later depending on the experiment), the number of spleen nodules were counted per recipient. Recall that the number of nodules (or colonies) per spleen was highly heterogeneous. To the authors, this indicated that heterogeneity was “… a feature
+<hr></div>
+</div>
+<div class="section" id="Part-4:-Modeling-Birth-and-death-of-CFUs">
+<h2>Part 4: Modeling Birth and death of CFUs<a class="headerlink" href="#Part-4:-Modeling-Birth-and-death-of-CFUs" title="Permalink to this headline">¶</a></h2>
+<p>Recall the self-renewal assay from Siminovitch, Till and McCulloch 1963 (right) <img alt="4bafc2c8afd547aba227c324658e5960" class="no-scaled-link" src="../_images/CFUs_selfrenewal.png" style="width: 200px;" /> In this assay, nodules were dissected, cells were dispersed, resuspended, and tranplanted into secondary recipients. Then after 10 days (or later depending on the experiment), the number of spleen nodules were counted per recipient. Recall that the number of nodules (or colonies) per spleen was highly heterogeneous. To the authors, this indicated that heterogeneity was “… a feature
 either of colony-forming cells or of the process of colony-formation.”</p>
-<p><img alt="3f463553a205410c93e500d461869ea5" class="no-scaled-link" src="../_images/birth_death.png" style="width: 200px;" /> In a follow-up <a class="reference external" href="https://blackboard.jhu.edu/bbcswebdav/pid-11413450-dt-content-rid-113157130_2/xid-113157130_2">paper: Till, McCulloch, and Siminovitch, 1963</a>, this trio proposed that the heterotengeity could be due to inherent stochasticity in each colony-forming cell. In other words, a colony forming cell “… either give[s] rise to progeny like itself (“birth”), or [is] removed in some way (“death”), and these two events occur in a random fashion.” This is
+<p><img alt="bfd7e8ad215149cb99ffcd59bfd60e3a" class="no-scaled-link" src="../_images/birth_death.png" style="width: 200px;" /> In a follow-up <a class="reference external" href="https://blackboard.jhu.edu/bbcswebdav/pid-11413450-dt-content-rid-113157130_2/xid-113157130_2">paper: Till, McCulloch, and Siminovitch, 1963</a>, this trio proposed that the heterotengeity could be due to inherent stochasticity in each colony-forming cell. In other words, a colony forming cell “… either give[s] rise to progeny like itself (“birth”), or [is] removed in some way (“death”), and these two events occur in a random fashion.” This is
 often referred to as a “Birth-and-death process”. They reasoned that a cell will give birth to another colony forming cell with Probability = p2 or to a differentiated cells with Probability = p0 (see panel at left). They further reasoned that if this model is correct, then simulations using the model must be aligned with their empircal observations.</p>
 <p>The goal of Part 4 is for you to replicate some of what the authors did to test this reasoning:</p>
 <blockquote>
 <div><p>A test of this assumption was made by the use of the Monte Carlo method. In this method, the choice between occurrence or nonoccurrence of a random event is made by drawing a number from a table of random digits. Consider as an example the case in which the birth and death probabilities, p2 and p0, are arbitrarily set equal to 0.6 and 0.4, respectively. Let the six digits, 0, 1, 2, 3, 4, and 5 signify a “birth” and the four digits 6, 7, 8, and 9 signify a “death.” If the first random number
 to be drawn was a 5, then the model would show a birth, or an increase from one cell to two cells. Each subsequent choice of a number would determine the fate of a cell in a similar manner.</p>
 </div></blockquote>
-<section id="Part-4A:-Write-a-function-to-simulate-the-number-of-colony-forming-units.">
-<h3>Part 4A: Write a function to simulate the number of colony forming units.<a class="headerlink" href="#Part-4A:-Write-a-function-to-simulate-the-number-of-colony-forming-units." title="Permalink to this headline"></a></h3>
+<div class="section" id="Part-4A:-Write-a-function-to-simulate-the-number-of-colony-forming-units.">
+<h3>Part 4A: Write a function to simulate the number of colony forming units.<a class="headerlink" href="#Part-4A:-Write-a-function-to-simulate-the-number-of-colony-forming-units." title="Permalink to this headline">¶</a></h3>
 <p>Your task is to precisley mimic what the authors state above: write a function that takes as input:</p>
 <ul class="simple">
 <li><p>the number of time steps, or generations</p></li>
@@ -743,9 +741,9 @@ to be drawn was a 5, then the model would show a birth, or an increase from one 
 </pre></div>
 </div>
 </div>
-</section>
-<section id="Part-4B:-Compare-in-silico-experiments-to-empirical-data">
-<h3>Part 4B: Compare <em>in silico</em> experiments to empirical data<a class="headerlink" href="#Part-4B:-Compare-in-silico-experiments-to-empirical-data" title="Permalink to this headline"></a></h3>
+</div>
+<div class="section" id="Part-4B:-Compare-in-silico-experiments-to-empirical-data">
+<h3>Part 4B: Compare <em>in silico</em> experiments to empirical data<a class="headerlink" href="#Part-4B:-Compare-in-silico-experiments-to-empirical-data" title="Permalink to this headline">¶</a></h3>
 <p>Use your function to determine how values of P2 influence the distribution of CFUs, and how this compares to real data. To do this, you will need to call your function many times. For this homework, let’s stay close to the original paper (n=52 recipient spleens). You will also need the original <a class="reference external" href="https://compstemcellbio.s3.amazonaws.com/2022/homework/01/hw1_cfu_data.csv">data</a>, which you can load with the usual <code class="docutils literal notranslate"><span class="pre">pd.read_csv()</span></code> function. We recommend testing 3 - 5 values for P2. As you will
 see from the original paper, the simulated and experimentally derived data were compared by examining cumulative distribution functions. You can readily plot these using the Seaborn <code class="docutils literal notranslate"><span class="pre">ecdfplot()</span></code> function.</p>
 <p>Bonus points: Compare these distrubitions to the Gamma distribution mentioned in the paper.</p>
@@ -757,15 +755,15 @@ see from the original paper, the simulated and experimentally derived data were 
 </pre></div>
 </div>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../day/09_trajectory_inference.html" class="btn btn-neutral float-left" title="Trajectory inference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../day/10_TI_part_2.html" class="btn btn-neutral float-left" title="How to do TI analysis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="HW_02.html" class="btn btn-neutral float-right" title="Homework #2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

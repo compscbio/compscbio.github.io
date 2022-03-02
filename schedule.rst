@@ -13,7 +13,7 @@ Homework and final project due dates
 
 - :ref:`Homework 1<Homework 1>`: due 11:59 pm EST, **Sunday Feb 13th**
 - :ref:`Homework 2<Homework 2>`: due 11:59 pm EST, March 1st
-- :ref:`Homework 3<Homework 3>`: due 11:59 pm EST, 
+- :ref:`Homework 3<Homework 3>`: due 11:59 pm EST, March 9th
 - :ref:`Homework 4<Homework 4>`: due 11:59 pm EST, 
 - :ref:`Homework 5<Homework 5>`: due 11:59 pm EST, 
 - :ref:`Homework 6<Homework 6>`: due 11:59 pm EST, Mar 9
@@ -37,18 +37,18 @@ The schedule below is tentative. We will keep you updated as the content and sch
 #. Feb 15: :doc:`day/07_scRNAseq_analysis_part_2`
 #. Feb 17: :doc:`day/08_cell_identity`
 #. Feb 22: :doc:`day/09_trajectory_inference`
-#. Feb 24: TI how-to
-#. Mar 1: Intro to Stemness
-#. Mar 3: How to do Stemness analysis
-#. Mar 8: Intro to RNA velocity
+#. Feb 24: Free
+#. Mar 1: :doc:`day/10_TI_part_2`
+#. Mar 3: Stemness analysis
+#. Mar 8: Intro to RNA velocity (Guest: Kathleen Noller)
 #. Mar 10: How to do RNA velocity analysis
-#. Mar 15: Intro to lineage tracing
+#. Mar 15: Intro to lineage tracing (Guest: Ray Cheng)
 #. Mar 17: How to analyze lineage tracing data
 #. Mar 29: Stem cell niche
 #. Mar 31: Spatial transcriptomics
-#. Apr 5: Gene regulatory networks
+#. Apr 5: Gene regulatory networks (Guest: Emily Su)
 #. Apr 7: Cell fate engineering
-#. Apr 12: Cell fate simulations
+#. Apr 12: Cell fate simulations (Guest: Dan Peng)
 #. Apr 14: single cell ATAC-seq
 #. Apr 19: Cancer stem cells
 #. Apr 21: Stem cell controversies

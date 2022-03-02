@@ -1,0 +1,130 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Homework 3\n",
+    "\n",
+    "Due 11:59 pm EST, Wednesday March 9th, 2022.\n",
+    "\n",
+    "Email your solutions (both .ipnb and .html files) to: compscbio@gmail.com.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Background:\n",
+    "\n",
+    "Your recent success in exploring cell cycle during directed differentiation has proven to be both a curse and a blessing. While it has raised your stature in the lab and department, it also means that expectations have also gone up. Accordingly, your PI has now asked you to analyze a data set from the lab of a colleague, who focuses on hematopoiesis.\n",
+    "\n",
+    "You are asked to analyze scRNAseq data of hematopoietic stem/progenitor cells isolated from the bone marrow of old and young mice. You have done some background reading <a href=\"https://pubmed.ncbi.nlm.nih.gov/20650622/\">Beerman et al 2010</a> and learned that old mice tend to have fewer erythrocytes than young mice. In this project, you will perform trajectory inference analysis to try to understand why this might be the case. \n",
+    "\n",
+    "More background reading <a href=\"https://pubmed.ncbi.nlm.nih.gov/26095048/\">Petras et al Cell Stem Cell 2015)</a> explains the various sub-populations of the sequenced population (Lineage-, Sca-1+, Kit+ or LSK cells): <img src=\"_Static/LSKs.png\" width=\"200\" align=\"right\">. This tells you that you should focus on MPP2 and its progeny in your analysis. Fortunately, a well-annotated reference data set has been made available to you (see below), which you think you can use to identify the sub-populations to exclude superfluous cells.\n",
+    "\n",
+    "You have also gleaned some gene sets that are preferentially expressed in different lineages as follows:\n",
+    "\n",
+    "- Hematopoietic stem and progenitors: Procr, Mllt3, Hlf, Fgd5, Hoxa9\n",
+    "- Megakaryocyte progenitors: Pf4, Itga2b\n",
+    "- Erythroid progenitors: Klf1, Gata1, Epor\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### The data\n",
+    "[Reference scRNAseq in the form of an h5ad file](https://compstemcellbio.s3.amazonaws.com/2022/homework/03/adHSC_reference_030222.h5ad)\n",
+    "This is the raw counts data. The cell type annotation is in `.obs[\"cell_type\"]`. This data was derived originally from <a href=\"https://pubmed.ncbi.nlm.nih.gov/30971824/\">Tikhonova et al Nature 2019</a>.\n",
+    "\n",
+    "[scRNAseq of young LSKs](https://compstemcellbio.s3.amazonaws.com/2022/homework/03/adYoungHSC_03022022.h5ad)\n",
+    "Raw counts data from LSK cells of young mice. This data and that from the old animals (below) was derived from <a href=\"https://pubmed.ncbi.nlm.nih.gov/33526011/\">Herault et al BMC Bio 2021</a>.\n",
+    "\n",
+    "[scRNAseq of old LSKs](https://compstemcellbio.s3.amazonaws.com/2022/homework/03/adOldHSC_03022022.h5ad)\n",
+    "Raw counts data from LSK cells of old mice.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Your mission: Part 1\n",
+    "\n",
+    "Use the provided reference data to assign putative identities to your data.\n",
+    "\n",
+    "Option 1: Use <a href=\"https://github.com/pcahan1/PySingleCellNet\">PySingleCellNet</a> to train a classifier, validate it on held out data, and apply it to your collaborator's data to infer cell types. Note that you *should not* clean or normalize the reference data prior to training the classifier.\n",
+    "\n",
+    "Option 2: Use the annotated reference data to generate gene sets that mark each LSK sub-population. Then, use these gene sets to score your collaborator's data to infer cell types."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Part 1 code, figures and explanatory text goes here and in subsequent cells. Show all code."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Your mission: Part 2\n",
+    "\n",
+    "Perform trajectory analysis on each data set separately. Be careful to exclude superfluous cells prior to analysis. In other words, only use MPP2 and EryPr cells. Use `diffmap`, and judiciously illustrate the DCs that reflect differentiation."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Part 2 code, figures and explanatory text goes here and in subsequent cells. Show all code."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Your mission: Part 3\n",
+    "\n",
+    "Interpret your results. What do the branches represent? How do the trajectories differ between samples? \n",
+    "How might these difference(s) contribute to the lower number of erythroid cells in old mice?\n",
+    "You may explore and support your reasoning by further analysis and visualizations, including clustering, PAGA, differential expression, and cell cycle scoring. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Part 3 code, figures and explanatory text goes here and in subsequent cells. Show all code."
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.1"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
