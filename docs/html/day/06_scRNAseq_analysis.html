@@ -70,6 +70,7 @@
 <li class="toctree-l1"><a class="reference internal" href="08_cell_identity.html">Cell identity</a></li>
 <li class="toctree-l1"><a class="reference internal" href="09_trajectory_inference.html">Trajectory inference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="10_TI_part_2.html">How to do TI analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_stemness.html">How to do ‘Stemness’ analysis</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Homework</span></p>
 <ul>
@@ -420,7 +421,7 @@ Saving pipestance info to &quot;tiny/tiny.mri.tgz&quot;
 <li><p>handles reads mapping to &gt;1 locus</p></li>
 </ul>
 <p>How does it handle reads that hit different parts of the genome?</p>
-<p><img alt="a2890a7dac5c4bd3b66ab68e298bfd1f" src="../_images/gex-processing-introns.png" /></p>
+<p><img alt="e80d579197a346428f3f9d9cc59dfaae" src="../_images/gex-processing-introns.png" /></p>
 <ul class="simple">
 <li><p>aligned reads for UMI counting, by default, are ’ transcriptomic’ (blue) reads</p></li>
 <li><p>Often useful an more appropriate to include exonic and intronic aligned reads, too</p></li>
@@ -444,11 +445,11 @@ Saving pipestance info to &quot;tiny/tiny.mri.tgz&quot;
 <li><p>ID true positives with total UMI threshold determine based on total UMIs in top fraction of expected numvber of barcodes</p></li>
 <li><p>Select set of true negatives and compare complexity of remaining barcodes to it</p></li>
 </ul>
-<p><img alt="6202c59c6386425aa977184337b0e995" src="../_images/knee-plot-old-cell-calling.png" /></p>
-<p><img alt="fe1e3e734f524a7b92b0ea2c80fa4c1b" src="../_images/knee-plot-new-cell-calling.png" /></p>
+<p><img alt="210551f2d70541a5a5e9c5f958352c3e" src="../_images/knee-plot-old-cell-calling.png" /></p>
+<p><img alt="6cab14af153041f59bcbebb8e30800f1" src="../_images/knee-plot-new-cell-calling.png" /></p>
 <section id="CellRanger-output-status-(web-summary)">
 <h3>CellRanger output status (web summary)<a class="headerlink" href="#CellRanger-output-status-(web-summary)" title="Permalink to this headline"></a></h3>
-<p><img alt="f8f4182e2f7f494cb5cf4da185bfa541" src="../_images/web-summary-gex-3.1a.png" /></p>
+<p><img alt="e9d7953a7c654b47978fae1d7bf9d6b2" src="../_images/web-summary-gex-3.1a.png" /></p>
 </section>
 </section>
 <section id="Sequencing-saturation:">
@@ -515,7 +516,7 @@ AnnData object with n_obs × n_vars = 5405 × 27998
 </pre></div></div>
 </div>
 <p>What is an anndata?</p>
-<p><img alt="59f67683ab0d4fe7afcbf3b8f625b3c8" src="../_images/anndata.png" /></p>
+<p><img alt="6b50150988834891b4b02df4f2b624c0" src="../_images/anndata.png" /></p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
