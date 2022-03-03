@@ -39,7 +39,7 @@ The schedule below is tentative. We will keep you updated as the content and sch
 #. Feb 22: :doc:`day/09_trajectory_inference`
 #. Feb 24: Free
 #. Mar 1: :doc:`day/10_TI_part_2`
-#. Mar 3: Stemness analysis
+#. Mar 3: :doc:`day/11_stemness`
 #. Mar 8: Intro to RNA velocity (Guest: Kathleen Noller)
 #. Mar 10: How to do RNA velocity analysis
 #. Mar 15: Intro to lineage tracing (Guest: Ray Cheng)

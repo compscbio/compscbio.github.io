@@ -105,6 +105,7 @@ Policies
    day/08_cell_identity
    day/09_trajectory_inference
    day/10_TI_part_2
+   day/11_stemnesss
    day/10_spatial_transcriptomics
    day/11_trajectory_inference_intro
    day/12_trajectory_inference_howto
