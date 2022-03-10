@@ -22,7 +22,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Homework #2" href="HW_02.html" />
-    <link rel="prev" title="Spliced/unspliced normalization" href="../day/13_scvelo.html" /> 
+    <link rel="prev" title="How to do RNA velcoity" href="../day/13_scvelo.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -61,13 +61,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../day/10_TI_part_2.html">How to do TI analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../day/11_stemness.html">How to do ‘Stemness’ analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../day/12_RNA_velocity.html">RNA Velocity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../day/13_scvelo.html">Spliced/unspliced normalization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../day/13_scvelo.html#Talk-about-embedding-like-UMAP">Talk about embedding like UMAP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../day/13_scvelo.html#Smoothing">Smoothing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../day/13_scvelo.html#Finally-compute-velocity">Finally compute velocity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../day/13_scvelo.html#Transition-matrix">Transition matrix</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../day/13_scvelo.html#placing-velocities-onto-embedding">placing velocities onto embedding</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../day/13_scvelo.html#Magnitude-and-“confidence”">Magnitude and “confidence”</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day/13_scvelo.html">How to do RNA velcoity</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Homework</span></p>
 <ul class="current">
@@ -721,9 +715,9 @@ packages such as Scanpy (or Seurat in R).</p>
 </section>
 <section id="Part-4:-Modeling-Birth-and-death-of-CFUs">
 <h2>Part 4: Modeling Birth and death of CFUs<a class="headerlink" href="#Part-4:-Modeling-Birth-and-death-of-CFUs" title="Permalink to this headline"></a></h2>
-<p>Recall the self-renewal assay from Siminovitch, Till and McCulloch 1963 (right) <img alt="4e2ee88a334a41219919a2d5c2932b5d" class="no-scaled-link" src="../_images/CFUs_selfrenewal.png" style="width: 200px;" /> In this assay, nodules were dissected, cells were dispersed, resuspended, and tranplanted into secondary recipients. Then after 10 days (or later depending on the experiment), the number of spleen nodules were counted per recipient. Recall that the number of nodules (or colonies) per spleen was highly heterogeneous. To the authors, this indicated that heterogeneity was “… a feature
+<p>Recall the self-renewal assay from Siminovitch, Till and McCulloch 1963 (right) <img alt="e7c501514ef34986b8c6725feee71c4d" class="no-scaled-link" src="../_images/CFUs_selfrenewal.png" style="width: 200px;" /> In this assay, nodules were dissected, cells were dispersed, resuspended, and tranplanted into secondary recipients. Then after 10 days (or later depending on the experiment), the number of spleen nodules were counted per recipient. Recall that the number of nodules (or colonies) per spleen was highly heterogeneous. To the authors, this indicated that heterogeneity was “… a feature
 either of colony-forming cells or of the process of colony-formation.”</p>
-<p><img alt="a3a3a245b4c14b12a735bbe38425f341" class="no-scaled-link" src="../_images/birth_death.png" style="width: 200px;" /> In a follow-up <a class="reference external" href="https://blackboard.jhu.edu/bbcswebdav/pid-11413450-dt-content-rid-113157130_2/xid-113157130_2">paper: Till, McCulloch, and Siminovitch, 1963</a>, this trio proposed that the heterotengeity could be due to inherent stochasticity in each colony-forming cell. In other words, a colony forming cell “… either give[s] rise to progeny like itself (“birth”), or [is] removed in some way (“death”), and these two events occur in a random fashion.” This is
+<p><img alt="1b92c5f720fe4779a6cc00da0525c723" class="no-scaled-link" src="../_images/birth_death.png" style="width: 200px;" /> In a follow-up <a class="reference external" href="https://blackboard.jhu.edu/bbcswebdav/pid-11413450-dt-content-rid-113157130_2/xid-113157130_2">paper: Till, McCulloch, and Siminovitch, 1963</a>, this trio proposed that the heterotengeity could be due to inherent stochasticity in each colony-forming cell. In other words, a colony forming cell “… either give[s] rise to progeny like itself (“birth”), or [is] removed in some way (“death”), and these two events occur in a random fashion.” This is
 often referred to as a “Birth-and-death process”. They reasoned that a cell will give birth to another colony forming cell with Probability = p2 or to a differentiated cells with Probability = p0 (see panel at left). They further reasoned that if this model is correct, then simulations using the model must be aligned with their empircal observations.</p>
 <p>The goal of Part 4 is for you to replicate some of what the authors did to test this reasoning:</p>
 <blockquote>
@@ -776,7 +770,7 @@ see from the original paper, the simulated and experimentally derived data were 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../day/13_scvelo.html" class="btn btn-neutral float-left" title="Spliced/unspliced normalization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../day/13_scvelo.html" class="btn btn-neutral float-left" title="How to do RNA velcoity" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="HW_02.html" class="btn btn-neutral float-right" title="Homework #2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

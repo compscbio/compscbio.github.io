@@ -72,13 +72,7 @@
 <li class="toctree-l1"><a class="reference internal" href="10_TI_part_2.html">How to do TI analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="11_stemness.html">How to do ‘Stemness’ analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="12_RNA_velocity.html">RNA Velocity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="13_scvelo.html">Spliced/unspliced normalization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="13_scvelo.html#Talk-about-embedding-like-UMAP">Talk about embedding like UMAP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="13_scvelo.html#Smoothing">Smoothing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="13_scvelo.html#Finally-compute-velocity">Finally compute velocity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="13_scvelo.html#Transition-matrix">Transition matrix</a></li>
-<li class="toctree-l1"><a class="reference internal" href="13_scvelo.html#placing-velocities-onto-embedding">placing velocities onto embedding</a></li>
-<li class="toctree-l1"><a class="reference internal" href="13_scvelo.html#Magnitude-and-“confidence”">Magnitude and “confidence”</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_scvelo.html">How to do RNA velcoity</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Homework</span></p>
 <ul>
@@ -429,7 +423,7 @@ Saving pipestance info to &quot;tiny/tiny.mri.tgz&quot;
 <li><p>handles reads mapping to &gt;1 locus</p></li>
 </ul>
 <p>How does it handle reads that hit different parts of the genome?</p>
-<p><img alt="31dc6cb4a128408c9e256a96547e76a5" src="../_images/gex-processing-introns.png" /></p>
+<p><img alt="3ac3342a776e4287b38199499806b3f7" src="../_images/gex-processing-introns.png" /></p>
 <ul class="simple">
 <li><p>aligned reads for UMI counting, by default, are ’ transcriptomic’ (blue) reads</p></li>
 <li><p>Often useful an more appropriate to include exonic and intronic aligned reads, too</p></li>
@@ -453,11 +447,11 @@ Saving pipestance info to &quot;tiny/tiny.mri.tgz&quot;
 <li><p>ID true positives with total UMI threshold determine based on total UMIs in top fraction of expected numvber of barcodes</p></li>
 <li><p>Select set of true negatives and compare complexity of remaining barcodes to it</p></li>
 </ul>
-<p><img alt="0210523899f248518d94fee9bd975890" src="../_images/knee-plot-old-cell-calling.png" /></p>
-<p><img alt="db80792429b9448981d0b13798ec868f" src="../_images/knee-plot-new-cell-calling.png" /></p>
+<p><img alt="a0acd21911444ff8a9862032c478d595" src="../_images/knee-plot-old-cell-calling.png" /></p>
+<p><img alt="70b360037eb94b3d8e87db33a1420852" src="../_images/knee-plot-new-cell-calling.png" /></p>
 <section id="CellRanger-output-status-(web-summary)">
 <h3>CellRanger output status (web summary)<a class="headerlink" href="#CellRanger-output-status-(web-summary)" title="Permalink to this headline"></a></h3>
-<p><img alt="2c09919990b94199ac263948acfb03c5" src="../_images/web-summary-gex-3.1a.png" /></p>
+<p><img alt="cce10cbdd9e14462958d59cb3e2b0aec" src="../_images/web-summary-gex-3.1a.png" /></p>
 </section>
 </section>
 <section id="Sequencing-saturation:">
@@ -524,7 +518,7 @@ AnnData object with n_obs × n_vars = 5405 × 27998
 </pre></div></div>
 </div>
 <p>What is an anndata?</p>
-<p><img alt="dfb7fdfc042c4ac7b2d8c22b0cf1529a" src="../_images/anndata.png" /></p>
+<p><img alt="7bd86152562548adaa66e28d9bab7d6f" src="../_images/anndata.png" /></p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>

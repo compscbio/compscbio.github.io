@@ -40,7 +40,7 @@ The schedule below is tentative. We will keep you updated as the content and sch
 #. Feb 24: Free
 #. Mar 1: :doc:`day/10_TI_part_2`
 #. Mar 3: :doc:`day/11_stemness`
-#. Mar 8: :doc:`day/12_RNA_velocity` (Guest speaker: KathleenN oller)
+#. Mar 8: :doc:`day/12_RNA_velocity` (Guest speaker: Kathleen Noller)
 #. Mar 10: :doc:`day/13_scvelo`
 #. Mar 15: Intro to lineage tracing (Guest speaker: Ray Cheng)
 #. Mar 17: How to analyze lineage tracing data

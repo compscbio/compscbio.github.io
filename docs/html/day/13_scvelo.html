@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Spliced/unspliced normalization &mdash; cscb2022  documentation</title>
+  <title>How to do RNA velcoity &mdash; cscb2022  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -61,13 +61,21 @@
 <li class="toctree-l1"><a class="reference internal" href="10_TI_part_2.html">How to do TI analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="11_stemness.html">How to do ‘Stemness’ analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="12_RNA_velocity.html">RNA Velocity</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Spliced/unspliced normalization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#Talk-about-embedding-like-UMAP">Talk about embedding like UMAP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#Smoothing">Smoothing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#Finally-compute-velocity">Finally compute velocity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#Transition-matrix">Transition matrix</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#placing-velocities-onto-embedding">placing velocities onto embedding</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#Magnitude-and-“confidence”">Magnitude and “confidence”</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How to do RNA velcoity</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Spliced/unspliced-normalization">Spliced/unspliced normalization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Talk-about-embedding-like-UMAP">Talk about embedding like UMAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Smoothing">Smoothing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Finally-compute-velocity">Finally compute velocity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Transition-matrix">Transition matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Placing-velocities-onto-embedding">Placing velocities onto embedding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Velocities-of-known-genes">Velocities of known genes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Find-genes-whose-velocities-differ-between-clusters">Find genes whose velocities differ between clusters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Cell-cycle">Cell cycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Magnitude-and-“confidence”">Magnitude and “confidence”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Cluster-analysis-of-state-transitions">Cluster analysis of state transitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Velocity-pseudotime">Velocity pseudotime</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Homework</span></p>
 <ul>
@@ -90,7 +98,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Spliced/unspliced normalization</li>
+      <li>How to do RNA velcoity</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/day/13_scvelo.ipynb.txt" rel="nofollow"> View page source</a>
       </li>
@@ -370,6 +378,9 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
+<section id="How-to-do-RNA-velcoity">
+<h1>How to do RNA velcoity<a class="headerlink" href="#How-to-do-RNA-velcoity" title="Permalink to this headline"></a></h1>
+<p>This walk-thru is based heavily on <a class="reference external" href="https://scvelo.readthedocs.io/VelocityBasics/">https://scvelo.readthedocs.io/VelocityBasics/</a></p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
@@ -398,7 +409,7 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
-<p>Describe the first data set… walk thru based <em>heavily</em> on <a class="reference external" href="https://scvelo.readthedocs.io/VelocityBasics/">https://scvelo.readthedocs.io/VelocityBasics/</a></p>
+<p>Describe the first data set…</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
@@ -435,7 +446,7 @@ AnnData object with n_obs × n_vars = 3696 × 27998
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/day_13_scvelo_4_0.png" class="no-scaled-link" src="../_images/day_13_scvelo_4_0.png" style="width: 706px; height: 233px;" />
+<img alt="../_images/day_13_scvelo_5_0.png" class="no-scaled-link" src="../_images/day_13_scvelo_5_0.png" style="width: 706px; height: 233px;" />
 </div>
 </div>
 <div class="nbinput docutils container">
@@ -450,7 +461,7 @@ AnnData object with n_obs × n_vars = 3696 × 27998
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/day_13_scvelo_5_0.png" class="no-scaled-link" src="../_images/day_13_scvelo_5_0.png" style="width: 491px; height: 481px;" />
+<img alt="../_images/day_13_scvelo_6_0.png" class="no-scaled-link" src="../_images/day_13_scvelo_6_0.png" style="width: 491px; height: 481px;" />
 </div>
 </div>
 <div class="nbinput docutils container">
@@ -722,7 +733,7 @@ AnnData object with n_obs × n_vars = 3696 × 27998
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/day_13_scvelo_11_0.png" class="no-scaled-link" src="../_images/day_13_scvelo_11_0.png" style="width: 1984px; height: 483px;" />
+<img alt="../_images/day_13_scvelo_12_0.png" class="no-scaled-link" src="../_images/day_13_scvelo_12_0.png" style="width: 1984px; height: 483px;" />
 </div>
 </div>
 <div class="nbinput docutils container">
@@ -772,7 +783,7 @@ Number of genes:  14800
 </pre></div></div>
 </div>
 <section id="Spliced/unspliced-normalization">
-<h1>Spliced/unspliced normalization<a class="headerlink" href="#Spliced/unspliced-normalization" title="Permalink to this headline"></a></h1>
+<h2>Spliced/unspliced normalization<a class="headerlink" href="#Spliced/unspliced-normalization" title="Permalink to this headline"></a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
@@ -819,7 +830,7 @@ AnnData object with n_obs × n_vars = 3696 × 2000
 </div>
 </section>
 <section id="Talk-about-embedding-like-UMAP">
-<h1>Talk about embedding like UMAP<a class="headerlink" href="#Talk-about-embedding-like-UMAP" title="Permalink to this headline"></a></h1>
+<h2>Talk about embedding like UMAP<a class="headerlink" href="#Talk-about-embedding-like-UMAP" title="Permalink to this headline"></a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
@@ -832,12 +843,12 @@ AnnData object with n_obs × n_vars = 3696 × 2000
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/day_13_scvelo_18_0.png" class="no-scaled-link" src="../_images/day_13_scvelo_18_0.png" style="width: 637px; height: 363px;" />
+<img alt="../_images/day_13_scvelo_19_0.png" class="no-scaled-link" src="../_images/day_13_scvelo_19_0.png" style="width: 637px; height: 363px;" />
 </div>
 </div>
 </section>
 <section id="Smoothing">
-<h1>Smoothing<a class="headerlink" href="#Smoothing" title="Permalink to this headline"></a></h1>
+<h2>Smoothing<a class="headerlink" href="#Smoothing" title="Permalink to this headline"></a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
@@ -893,7 +904,7 @@ AnnData object with n_obs × n_vars = 3696 × 2000
 </div>
 </section>
 <section id="Finally-compute-velocity">
-<h1>Finally compute velocity<a class="headerlink" href="#Finally-compute-velocity" title="Permalink to this headline"></a></h1>
+<h2>Finally compute velocity<a class="headerlink" href="#Finally-compute-velocity" title="Permalink to this headline"></a></h2>
 <p>walk thru phase plot below</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
@@ -938,7 +949,7 @@ AnnData object with n_obs × n_vars = 3696 × 2000
 </div>
 </section>
 <section id="Transition-matrix">
-<h1>Transition matrix<a class="headerlink" href="#Transition-matrix" title="Permalink to this headline"></a></h1>
+<h2>Transition matrix<a class="headerlink" href="#Transition-matrix" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>for embedding</p></li>
 <li><p>for velocity pt</p></li>
@@ -984,8 +995,8 @@ computing velocity graph (using 1/8 cores)
 </pre></div></div>
 </div>
 </section>
-<section id="placing-velocities-onto-embedding">
-<h1>placing velocities onto embedding<a class="headerlink" href="#placing-velocities-onto-embedding" title="Permalink to this headline"></a></h1>
+<section id="Placing-velocities-onto-embedding">
+<h2>Placing velocities onto embedding<a class="headerlink" href="#Placing-velocities-onto-embedding" title="Permalink to this headline"></a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
@@ -1008,7 +1019,7 @@ computing velocity embedding
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/day_13_scvelo_27_1.png" class="no-scaled-link" src="../_images/day_13_scvelo_27_1.png" style="width: 585px; height: 412px;" />
+<img alt="../_images/day_13_scvelo_28_1.png" class="no-scaled-link" src="../_images/day_13_scvelo_28_1.png" style="width: 585px; height: 412px;" />
 </div>
 </div>
 <div class="nbinput docutils container">
@@ -1023,7 +1034,7 @@ computing velocity embedding
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/day_13_scvelo_28_0.png" class="no-scaled-link" src="../_images/day_13_scvelo_28_0.png" style="width: 585px; height: 412px;" />
+<img alt="../_images/day_13_scvelo_29_0.png" class="no-scaled-link" src="../_images/day_13_scvelo_29_0.png" style="width: 585px; height: 412px;" />
 </div>
 </div>
 <div class="nbinput docutils container">
@@ -1038,7 +1049,7 @@ computing velocity embedding
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/day_13_scvelo_29_0.png" class="no-scaled-link" src="../_images/day_13_scvelo_29_0.png" style="width: 487px; height: 344px;" />
+<img alt="../_images/day_13_scvelo_30_0.png" class="no-scaled-link" src="../_images/day_13_scvelo_30_0.png" style="width: 487px; height: 344px;" />
 </div>
 </div>
 <p>Still just an annData, so we can do the usual things</p>
@@ -1063,7 +1074,7 @@ WARNING: Default of the method has been changed to &#39;t-test&#39; from &#39;t-
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/day_13_scvelo_31_1.png" class="no-scaled-link" src="../_images/day_13_scvelo_31_1.png" style="width: 1388px; height: 460px;" />
+<img alt="../_images/day_13_scvelo_32_1.png" class="no-scaled-link" src="../_images/day_13_scvelo_32_1.png" style="width: 1388px; height: 460px;" />
 </div>
 </div>
 <div class="nbinput nblast docutils container">
@@ -1095,10 +1106,12 @@ WARNING: Default of the method has been changed to &#39;t-test&#39; from &#39;t-
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/day_13_scvelo_33_1.png" class="no-scaled-link" src="../_images/day_13_scvelo_33_1.png" style="width: 1388px; height: 460px;" />
+<img alt="../_images/day_13_scvelo_34_1.png" class="no-scaled-link" src="../_images/day_13_scvelo_34_1.png" style="width: 1388px; height: 460px;" />
 </div>
 </div>
-<p>Velocities of known genes</p>
+</section>
+<section id="Velocities-of-known-genes">
+<h2>Velocities of known genes<a class="headerlink" href="#Velocities-of-known-genes" title="Permalink to this headline"></a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
@@ -1111,10 +1124,12 @@ WARNING: Default of the method has been changed to &#39;t-test&#39; from &#39;t-
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/day_13_scvelo_35_0.png" class="no-scaled-link" src="../_images/day_13_scvelo_35_0.png" style="width: 789px; height: 682px;" />
+<img alt="../_images/day_13_scvelo_36_0.png" class="no-scaled-link" src="../_images/day_13_scvelo_36_0.png" style="width: 789px; height: 682px;" />
 </div>
 </div>
-<p>What are genes whose velocities differ between clusters?</p>
+</section>
+<section id="Find-genes-whose-velocities-differ-between-clusters">
+<h2>Find genes whose velocities differ between clusters<a class="headerlink" href="#Find-genes-whose-velocities-differ-between-clusters" title="Permalink to this headline"></a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
 </pre></div>
@@ -1242,10 +1257,13 @@ ranking velocity genes
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/day_13_scvelo_38_0.png" class="no-scaled-link" src="../_images/day_13_scvelo_38_0.png" style="width: 797px; height: 986px;" />
+<img alt="../_images/day_13_scvelo_39_0.png" class="no-scaled-link" src="../_images/day_13_scvelo_39_0.png" style="width: 797px; height: 986px;" />
 </div>
 </div>
-<p>Does Ins1 have introns?</p>
+<p>Does Ins1 have introns? Show students Entrez Gene, and how to view the gene structure.</p>
+</section>
+<section id="Cell-cycle">
+<h2>Cell cycle<a class="headerlink" href="#Cell-cycle" title="Permalink to this headline"></a></h2>
 <p>What is the cycle in the ductal compartment???</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
@@ -1276,12 +1294,13 @@ calculating cell cycle phase
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/day_13_scvelo_42_0.png" class="no-scaled-link" src="../_images/day_13_scvelo_42_0.png" style="width: 596px; height: 324px;" />
+<img alt="../_images/day_13_scvelo_43_0.png" class="no-scaled-link" src="../_images/day_13_scvelo_43_0.png" style="width: 596px; height: 324px;" />
 </div>
 </div>
 </section>
 <section id="Magnitude-and-“confidence”">
-<h1>Magnitude and “confidence”<a class="headerlink" href="#Magnitude-and-“confidence”" title="Permalink to this headline"></a></h1>
+<h2>Magnitude and “confidence”<a class="headerlink" href="#Magnitude-and-“confidence”" title="Permalink to this headline"></a></h2>
+<p>explain these metrics and what ‘confidence’ in this context really means</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
 </pre></div>
@@ -1306,10 +1325,12 @@ calculating cell cycle phase
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/day_13_scvelo_44_1.png" class="no-scaled-link" src="../_images/day_13_scvelo_44_1.png" style="width: 798px; height: 275px;" />
+<img alt="../_images/day_13_scvelo_45_1.png" class="no-scaled-link" src="../_images/day_13_scvelo_45_1.png" style="width: 798px; height: 275px;" />
 </div>
 </div>
-<p>aggregate to cluster level</p>
+</section>
+<section id="Cluster-analysis-of-state-transitions">
+<h2>Cluster analysis of state transitions<a class="headerlink" href="#Cluster-analysis-of-state-transitions" title="Permalink to this headline"></a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
@@ -1427,10 +1448,10 @@ calculating cell cycle phase
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/day_13_scvelo_48_0.png" class="no-scaled-link" src="../_images/day_13_scvelo_48_0.png" style="width: 487px; height: 344px;" />
+<img alt="../_images/day_13_scvelo_49_0.png" class="no-scaled-link" src="../_images/day_13_scvelo_49_0.png" style="width: 487px; height: 344px;" />
 </div>
 </div>
-<p>What is the ultimate fate of a give cell?</p>
+<p>What is the ultimate fate of a given cell?</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
 </pre></div>
@@ -1445,7 +1466,7 @@ calculating cell cycle phase
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/day_13_scvelo_50_0.png" class="no-scaled-link" src="../_images/day_13_scvelo_50_0.png" style="width: 506px; height: 333px;" />
+<img alt="../_images/day_13_scvelo_51_0.png" class="no-scaled-link" src="../_images/day_13_scvelo_51_0.png" style="width: 506px; height: 333px;" />
 </div>
 </div>
 <div class="nbinput nblast docutils container">
@@ -1472,10 +1493,12 @@ calculating cell cycle phase
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/day_13_scvelo_53_0.png" class="no-scaled-link" src="../_images/day_13_scvelo_53_0.png" style="width: 506px; height: 333px;" />
+<img alt="../_images/day_13_scvelo_54_0.png" class="no-scaled-link" src="../_images/day_13_scvelo_54_0.png" style="width: 506px; height: 333px;" />
 </div>
 </div>
-<p>Velocity pseudotime</p>
+</section>
+<section id="Velocity-pseudotime">
+<h2>Velocity pseudotime<a class="headerlink" href="#Velocity-pseudotime" title="Permalink to this headline"></a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
@@ -1501,7 +1524,7 @@ computing terminal states
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/day_13_scvelo_55_1.png" class="no-scaled-link" src="../_images/day_13_scvelo_55_1.png" style="width: 506px; height: 353px;" />
+<img alt="../_images/day_13_scvelo_56_1.png" class="no-scaled-link" src="../_images/day_13_scvelo_56_1.png" style="width: 506px; height: 353px;" />
 </div>
 </div>
 <p>Again, aggregate these transitions to a cluster level with PAGA</p>
@@ -1668,7 +1691,7 @@ running PAGA using priors: [&#39;velocity_pseudotime&#39;]
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/day_13_scvelo_58_0.png" class="no-scaled-link" src="../_images/day_13_scvelo_58_0.png" style="width: 618px; height: 344px;" />
+<img alt="../_images/day_13_scvelo_59_0.png" class="no-scaled-link" src="../_images/day_13_scvelo_59_0.png" style="width: 618px; height: 344px;" />
 </div>
 </div>
 <div class="nbinput nblast docutils container">
@@ -1679,6 +1702,7 @@ running PAGA using priors: [&#39;velocity_pseudotime&#39;]
 </pre></div>
 </div>
 </div>
+</section>
 </section>
 
 
