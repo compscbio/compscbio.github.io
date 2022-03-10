@@ -106,21 +106,18 @@ Policies
    day/09_trajectory_inference
    day/10_TI_part_2
    day/11_stemness
-   day/10_spatial_transcriptomics
-   day/11_trajectory_inference_intro
-   day/12_trajectory_inference_howto
-   day/13_stemness_intro
-   day/14_stemness_howto
-   day/15_rna_velocity_intro
-   day/16_rna_velocity_howto
-   day/17_lineage_tracing_intro
-   day/18_lineage_tracing_howto
-   day/19_gene_regulatory_networks
-   day/20_cell_fate_engineering
-   day/21_fate_simulations
-   day/22_scATACseq
-   day/23_cancer_stem_cells
-   day/24_stem_cell_controversies
+   day/12_RNA_velocity
+   day/13_scvelo
+   day/14_lineage_tracing_intro
+   day/15_lineage_tracing_howto
+   day/16_spatial_transcriptomics
+   day/17_spatial_transcriptomics
+   day/18_gene_regulatory_networks
+   day/19_cell_fate_engineering
+   day/20_fate_simulations
+   day/21_scATACseq
+   day/22_cancer_stem_cells
+   day/23_stem_cell_controversies
 
 ----
 

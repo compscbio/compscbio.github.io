@@ -40,15 +40,15 @@ The schedule below is tentative. We will keep you updated as the content and sch
 #. Feb 24: Free
 #. Mar 1: :doc:`day/10_TI_part_2`
 #. Mar 3: :doc:`day/11_stemness`
-#. Mar 8: Intro to RNA velocity (Guest: Kathleen Noller)
-#. Mar 10: How to do RNA velocity analysis
-#. Mar 15: Intro to lineage tracing (Guest: Ray Cheng)
+#. Mar 8: :doc:`day/12_RNA_velocity` (Guest speaker: KathleenN oller)
+#. Mar 10: :doc:`day/13_scvelo`
+#. Mar 15: Intro to lineage tracing (Guest speaker: Ray Cheng)
 #. Mar 17: How to analyze lineage tracing data
 #. Mar 29: Stem cell niche
 #. Mar 31: Spatial transcriptomics
-#. Apr 5: Gene regulatory networks (Guest: Emily Su)
+#. Apr 5: Gene regulatory networks (Guest speaker: Emily Su)
 #. Apr 7: Cell fate engineering
-#. Apr 12: Cell fate simulations (Guest: Dan Peng)
+#. Apr 12: Cell fate simulations (Guest speaker: Dan Peng)
 #. Apr 14: single cell ATAC-seq
 #. Apr 19: Cancer stem cells
 #. Apr 21: Stem cell controversies
