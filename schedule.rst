@@ -14,7 +14,7 @@ Homework and final project due dates
 - :ref:`Homework 1<Homework 1>`: due 11:59 pm EST, **Sunday Feb 13th**
 - :ref:`Homework 2<Homework 2>`: due 11:59 pm EST, March 1st
 - :ref:`Homework 3<Homework 3>`: due 11:59 pm EST, March 9th
-- :ref:`Homework 4<Homework 4>`: due 11:59 pm EST, 
+- :ref:`Homework 4<Homework 4>`: due 11:59 pm EST, March 18th
 - :ref:`Homework 5<Homework 5>`: due 11:59 pm EST, 
 - :ref:`Homework 6<Homework 6>`: due 11:59 pm EST, Mar 9
 - :ref:`Homework 7<Homework 7>`: due 11:59 pm EST, Mar 16

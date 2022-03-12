@@ -128,7 +128,7 @@ Policies
    homework/HW_01
    homework/HW_02
    homework/HW_03
-   homework/04/index
+   homework/HW_04
    homework/05/index
    homework/06/index
    homework/07/index
