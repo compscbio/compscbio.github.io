@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Homework #4 &mdash; cscb2022  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>Homework #5 &mdash; cscb2022  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -18,8 +18,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Homework #5" href="HW_05.html" />
-    <link rel="prev" title="Homework #3" href="HW_03.html" /> 
+    <link rel="prev" title="Homework #4" href="HW_04.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -66,14 +65,13 @@
 <li class="toctree-l1"><a class="reference internal" href="HW_01.html">Homework #1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="HW_02.html">Homework #2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="HW_03.html">Homework #3</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Homework #4</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="HW_04.html">Homework #4</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Homework #5</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#Background:">Background:</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#The-data">The data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Your-mission:">Your mission:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Bonus-mission:">Bonus mission:</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="HW_05.html">Homework #5</a></li>
 </ul>
 
         </div>
@@ -90,9 +88,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Homework #4</li>
+      <li>Homework #5</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/homework/HW_04.ipynb.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/homework/HW_05.ipynb.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -124,28 +122,26 @@
     text-align: unset;
 }
 </style>
-<div class="section" id="Homework-#4">
-<h1>Homework #4<a class="headerlink" href="#Homework-#4" title="Permalink to this headline">¶</a></h1>
-<p>Due 11:59 pm EST, Friday March 18th, 2022.</p>
+<div class="section" id="Homework-#5">
+<h1>Homework #5<a class="headerlink" href="#Homework-#5" title="Permalink to this headline">¶</a></h1>
+<p>Due 11:59 pm EST, Friday April 1st, 2022.</p>
 <p>Email your solutions (both .ipnb and .html files) to: <a class="reference external" href="mailto:compscbio&#37;&#52;&#48;gmail&#46;com">compscbio<span>&#64;</span>gmail<span>&#46;</span>com</a>.</p>
 <div class="section" id="Background:">
 <h2>Background:<a class="headerlink" href="#Background:" title="Permalink to this headline">¶</a></h2>
-<p>A post-doc in your lab has just read the Cytotrace paper and is <em>very</em> excited about it. But, as you are now a seasoned professional, your enthusiasm is a bit more modest and you decide to try it out before adding it to your rapidly expanding toolkit of sc analysis methods. You decide to see how well the Cytotrace score correlates with pseduotime computed on data for which you can reasonably anchor the starting point of the trajectory inference.</p>
+<p>That same sadistic post-doc in your lab has just read the RNA Velocity paper and is <em>even more</em> excited about it than about Cytotrace. You decide to see how well Velocity pseudotime compares to Cytotrace score derived pseudotime using data for which you can reasonably anchor the starting point of the trajectory inference.</p>
 </div>
 <div class="section" id="The-data">
 <h2>The data<a class="headerlink" href="#The-data" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li><p><a class="reference external" href="https://compstemcellbio.s3.amazonaws.com/2022/homework/04/adata_HW4_mESC_day4.h5ad">The day 4 mESC data that we keep using over and over again</a> This is the raw counts data, however, we have cleaned it (i.e. removed potential doublets, low quality cells, and mito, ribo and malat genes). In terms of pre-processing, all you have to do is deal with rarely detected genes and normalization.</p></li>
-<li><p><a class="reference external" href="https://compstemcellbio.s3.amazonaws.com/2022/homework/04/adata_HW4_mESC_from_HW2.h5ad">The day 0-4 mESC data that we used in HW2</a> This is the raw counts data. Just like the data from #1 above, we have cleaned this data. Moreover, we have removed the MEFs, so you should start your analysis at the point of dealing with undetected genes.</p></li>
+<li><p><a class="reference external" href="https://compstemcellbio.s3.amazonaws.com/2022/homework/05/adata_HW5_mESC_day4.h5ad">The day 4 mESC data that we keep using over and over again</a> This is the raw counts data, as well as spliced and unspliced counts. As in HW4, we have cleaned it (i.e. removed potential doublets, low quality cells, and mito, ribo and malat genes). In terms of pre-processing, all you have to do is deal with rarely detected genes and normalization.</p></li>
+<li><p>There is <em>no</em> second data set for this homework.</p></li>
 </ol>
 </div>
 <div class="section" id="Your-mission:">
 <h2>Your mission:<a class="headerlink" href="#Your-mission:" title="Permalink to this headline">¶</a></h2>
-<p>Produce one figure per data set that illustrate the relationship between pseudotime and Cytotrace time (i.e. 1- Cytotrace score). The idea here is to see how well Cytotrace works on data that you know well. You will need to perform pseudotime analysis using diffusion maps, and judicisouly select a root based on cluster annotation. You may wish to color your scatterplots by cluster (or cell type), or facet them, to get a sense of how the relationships vary by cell type.</p>
-</div>
-<div class="section" id="Bonus-mission:">
-<h2>Bonus mission:<a class="headerlink" href="#Bonus-mission:" title="Permalink to this headline">¶</a></h2>
-<p>You wonder whether the overall trends that you have observed with the differentiating mESCs extend to other lineages. Therefore, you decide to perform a similar analysis using the young and old HSC data from HW3.</p>
+<p>Run your usual pre-processing, clustering and annotation. Perform Cytotrace analysis. Then run RNA velocity and plot the velocity embeddings on either (1) the 1st and 3rd principal components, or (2) the UMAP embedding (which you need to figure out how to make from the scanpy documentation). Then compute velocity pseudotime. Finally, as you did in HW4, compute diffusion based pseudotime.</p>
+<p>Determine how these three pseudotimes compare and produce an appropiate multi-panel figure to display them.</p>
+<p>Is there a relationship between velocity confidence and discreptancies between velocity pseudotime and Cytotrace pseudotime and/or diffusion pseudotime?</p>
 </div>
 </div>
 
@@ -153,8 +149,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="HW_03.html" class="btn btn-neutral float-left" title="Homework #3" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="HW_05.html" class="btn btn-neutral float-right" title="Homework #5" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="HW_04.html" class="btn btn-neutral float-left" title="Homework #4" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

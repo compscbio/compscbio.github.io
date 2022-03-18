@@ -15,10 +15,10 @@ Homework and final project due dates
 - :ref:`Homework 2<Homework 2>`: due 11:59 pm EST, March 1st
 - :ref:`Homework 3<Homework 3>`: due 11:59 pm EST, March 9th
 - :ref:`Homework 4<Homework 4>`: due 11:59 pm EST, March 18th
-- :ref:`Homework 5<Homework 5>`: due 11:59 pm EST, 
-- :ref:`Homework 6<Homework 6>`: due 11:59 pm EST, Mar 9
-- :ref:`Homework 7<Homework 7>`: due 11:59 pm EST, Mar 16
-- :ref:`Homework 8<Homework 8>`: due 11:59 pm EST, Mar 30
+- :ref:`Homework 5<Homework 5>`: due 11:59 pm EST, April 1st
+- :ref:`Homework 6<Homework 6>`: due 11:59 pm EST, April 8th
+- :ref:`Homework 7<Homework 7>`: due 11:59 pm EST, April 15th
+- :ref:`Homework 8<Homework 8>`: due 11:59 pm EST, April 22nd
 - :ref:`Final project<Final project>`: due 11:59 pm EST, Apr 25
 
 ----
@@ -42,8 +42,8 @@ The schedule below is tentative. We will keep you updated as the content and sch
 #. Mar 3: :doc:`day/11_stemness`
 #. Mar 8: :doc:`day/12_RNA_velocity` (Guest speaker: Kathleen Noller)
 #. Mar 10: :doc:`day/13_scvelo`
-#. Mar 15: Intro to lineage tracing (Guest speaker: Ray Cheng)
-#. Mar 17: How to analyze lineage tracing data
+#. Mar 15: :doc:`day/14_Lineage_tracing`
+#. Mar 17: :doc:`day/15_Pluripotency`
 #. Mar 29: Stem cell niche
 #. Mar 31: Spatial transcriptomics
 #. Apr 5: Gene regulatory networks (Guest speaker: Emily Su)

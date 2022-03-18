@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RNA Velocity &mdash; cscb2022  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>Lineage tracing &mdash; cscb2022  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -18,8 +18,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="RNA velocity analysis" href="13_scvelo.html" />
-    <link rel="prev" title="How to do ‘Stemness’ analysis" href="11_stemness.html" /> 
+    <link rel="next" title="Pluripotency" href="15_Pluripotency.html" />
+    <link rel="prev" title="RNA velocity analysis" href="13_scvelo.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -56,9 +56,9 @@
 <li class="toctree-l1"><a class="reference internal" href="09_trajectory_inference.html">Trajectory inference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="10_TI_part_2.html">How to do TI analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="11_stemness.html">How to do ‘Stemness’ analysis</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">RNA Velocity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_RNA_velocity.html">RNA Velocity</a></li>
 <li class="toctree-l1"><a class="reference internal" href="13_scvelo.html">RNA velocity analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="14_Lineage_tracing.html">Lineage tracing</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lineage tracing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="15_Pluripotency.html">Pluripotency</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Homework</span></p>
@@ -84,9 +84,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>RNA Velocity</li>
+      <li>Lineage tracing</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/day/12_RNA_velocity.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/day/14_Lineage_tracing.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -118,34 +118,14 @@
     text-align: unset;
 }
 </style>
-<div class="section" id="rna-velocity">
-<h1>RNA Velocity<a class="headerlink" href="#rna-velocity" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="lineage-tracing">
+<h1>Lineage tracing<a class="headerlink" href="#lineage-tracing" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><p>Guest Lecture by Kathleen Noller</p></li>
-<li><p>Review of trajectory inference (TI)</p></li>
-<li><p>What is RNA Velocity (RV)?</p></li>
-<li><p>RV vs TI</p></li>
-<li><p>Splicing and transcription</p></li>
-<li><p>Measuring spliced vs unspliced transcripts</p></li>
-<li><p>RV model &amp; assumptions</p></li>
-</ul>
-<blockquote>
-<div><ul class="simple">
-<li><p>ds/du = u - gamma * s</p></li>
-<li><p>u = unspliced mRNA</p></li>
-<li><p>s = spliced RNA</p></li>
-<li><p>gamma = degradation rate</p></li>
-<li><p>assumes constant splicing rate</p></li>
-</ul>
-</div></blockquote>
-<ul class="simple">
-<li><p>Phase portrait</p></li>
-<li><p>Example: bulk RNAseq and cell cycle</p></li>
-<li><p>Example: scRNAseq Schwann progenitors</p></li>
-<li><p>Example: scRNAseq mouse hippocampus</p></li>
-<li><p>Splicing and degradation rates</p></li>
-<li><p>scVelo</p></li>
-<li><p>Dynamo</p></li>
+<li><p>Guest Lecture by Ray Cheng</p></li>
+<li><p>Lineage tracing concepts</p></li>
+<li><p>Single-cell Lineage Tracing Methods</p></li>
+<li><p>Single-cell Lineage Tracing Experimental Design</p></li>
+<li><p>Clonal Tree Reconstruction</p></li>
 </ul>
 <hr class="docutils" />
 </div>
@@ -154,8 +134,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="11_stemness.html" class="btn btn-neutral float-left" title="How to do ‘Stemness’ analysis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="13_scvelo.html" class="btn btn-neutral float-right" title="RNA velocity analysis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="13_scvelo.html" class="btn btn-neutral float-left" title="RNA velocity analysis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="15_Pluripotency.html" class="btn btn-neutral float-right" title="Pluripotency" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

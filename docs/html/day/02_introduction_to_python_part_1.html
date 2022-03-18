@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Comp Lesson 1: Introduction to Python &mdash; cscb2022  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>Comp Lesson 1: Introduction to Python &mdash; cscb2022  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -30,8 +27,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> cscb2022
-            <img src="../_static/CSCB_logo2.png" class="logo" alt="Logo"/>
+            <a href="../index.html" class="icon icon-home"> cscb2022<img src="../_static/CSCB_logo2.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -41,13 +37,13 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Schedule</span></p>
+              <p class="caption"><span class="caption-text">Schedule</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../schedule.html">Schedule overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../schedule.html#homework-and-final-project-due-dates">Homework and final project due dates</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../schedule.html#lecture-schedule">Lecture schedule</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Lectures:</span></p>
+<p class="caption"><span class="caption-text">Lectures:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="01_history_of_stem_cells.html">History of Stem Cells</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Comp Lesson 1: Introduction to Python</a><ul>
@@ -87,13 +83,16 @@
 <li class="toctree-l1"><a class="reference internal" href="11_stemness.html">How to do ‘Stemness’ analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="12_RNA_velocity.html">RNA Velocity</a></li>
 <li class="toctree-l1"><a class="reference internal" href="13_scvelo.html">RNA velocity analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_Lineage_tracing.html">Lineage tracing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_Pluripotency.html">Pluripotency</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Homework</span></p>
+<p class="caption"><span class="caption-text">Homework</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../homework/HW_01.html">Homework #1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../homework/HW_02.html">Homework #2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../homework/HW_03.html">Homework #3</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../homework/HW_04.html">Homework #4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/HW_05.html">Homework #5</a></li>
 </ul>
 
         </div>
@@ -390,34 +389,34 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<section id="Comp-Lesson-1:-Introduction-to-Python">
-<h1>Comp Lesson 1: Introduction to Python<a class="headerlink" href="#Comp-Lesson-1:-Introduction-to-Python" title="Permalink to this headline"></a></h1>
-<HR><section id="Good-afternoon">
-<h2>Good afternoon<a class="headerlink" href="#Good-afternoon" title="Permalink to this headline"></a></h2>
+<div class="section" id="Comp-Lesson-1:-Introduction-to-Python">
+<h1>Comp Lesson 1: Introduction to Python<a class="headerlink" href="#Comp-Lesson-1:-Introduction-to-Python" title="Permalink to this headline">¶</a></h1>
+<HR><div class="section" id="Good-afternoon">
+<h2>Good afternoon<a class="headerlink" href="#Good-afternoon" title="Permalink to this headline">¶</a></h2>
 <p>Goal today is to give you a whirlwind introduction to the Python programming language. If you know Python already, today will be boring for you. I will not be offended if you chose to open your devices and do other work now. Because, in some ways, this will be a grueling introduction of line by line code, I will have a brief break (I wouldn’t be surprised if our numbers dwindle as we go along – no worries). Goal is to get you set up and comfortable exploring Python. As part of this the first
 Homework will test that you can install new packages, find functionality that you need, write your own functions, use Jupyther Notebooks, load, analzye, visualize data, and along the way, demonstrate some use of basic Python operations/flow control/data types.</p>
-</section>
-<section id="Installation">
-<h2>Installation<a class="headerlink" href="#Installation" title="Permalink to this headline"></a></h2>
-<section id="Mac">
-<h3>Mac<a class="headerlink" href="#Mac" title="Permalink to this headline"></a></h3>
+</div>
+<div class="section" id="Installation">
+<h2>Installation<a class="headerlink" href="#Installation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="Mac">
+<h3>Mac<a class="headerlink" href="#Mac" title="Permalink to this headline">¶</a></h3>
 <p>If you are on a Mac, please make sure that XCode is installed!!! This takes awhile, and can be done through the App store. The pre-installed Python is old, not to be used here, but don’t remove it!</p>
-</section>
-<section id="Windows">
-<h3>Windows<a class="headerlink" href="#Windows" title="Permalink to this headline"></a></h3>
+</div>
+<div class="section" id="Windows">
+<h3>Windows<a class="headerlink" href="#Windows" title="Permalink to this headline">¶</a></h3>
 <p>If you are using Windows, note that you will need to use Chrome or Firefox (note Edge) for Jupyter Notebooks.</p>
-</section>
-<section id="How-to-install">
-<h3>How to install<a class="headerlink" href="#How-to-install" title="Permalink to this headline"></a></h3>
+</div>
+<div class="section" id="How-to-install">
+<h3>How to install<a class="headerlink" href="#How-to-install" title="Permalink to this headline">¶</a></h3>
 <p>There are several ways to install Python locally on your computer.</p>
 <p>Installation method 1 (old school): You can download a binary of Python directly from the official <a class="reference external" href="https://www.python.org/">Python site</a> corresponding to your platform. Once you follow the corresponding instructions for the installation process, you can launch the Python interpreter as described below. You should also install Jupyter Lab or Jupyter Notebook from <a class="reference external" href="https://jupyter.org/install">here</a> using the pip python package manager.</p>
 <p>Installation method 2 (recommended): is to use the Anaconda package manager. If you already have Anacona froma Python &lt; 3.8, please <a class="reference external" href="https://docs.anaconda.com/anaconda/install/uninstall/">uninstall it</a>.</p>
 <p>Now, to install Anaconda (and up-to-date version of Python, too), just download the installler from <a class="reference external" href="https://www.anaconda.com/distribution/">here</a> and follow the instructions to install Python 3.8. Go ahead and submit your hopkins email address when you register. As the install proceeds, make sure that you install Anaconda to <em>your</em> home directory, not to root.</p>
 <p>Option: Install <a class="reference external" href="https://nodejs.dev/">node.js</a> for additional Jupyter features.</p>
-</section>
-</section>
-<section id="Launch">
-<h2>Launch<a class="headerlink" href="#Launch" title="Permalink to this headline"></a></h2>
+</div>
+</div>
+<div class="section" id="Launch">
+<h2>Launch<a class="headerlink" href="#Launch" title="Permalink to this headline">¶</a></h2>
 <p>Each line of python code is translated into instructions for your machine. This is different than compiled languages like C, in which a program is translated into machine format prior to execution. The Python interpreter is what does this translation. If Python is installed, you can launch the interpreter Unix-like systems from the command line … (walk through process of finding Terminal, etc)</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Python
 </pre></div>
@@ -446,9 +445,9 @@ jupyter notebook
 </div>
 <p><a class="reference external" href="https://colab.research.google.com/">Google Colab</a> is a cloud-backed compute platform. To save your notebooks you will need to do so either to Google Drive or to Github. If you intend to use the latter, then you must get a Github account (free).</p>
 <p>You will use Jupyter Notebooks to complete your homework. You can either install Python and Jupyter on your own system, or, you can use Google Colab. You will need to turn in .ipynb and .html files. Saving a Notebook to .html is easy with Jupyter (show how). There are several ways to do so from Colab, including this <a class="reference external" href="https://python.plainenglish.io/how-to-convert-google-colab-notebook-ipynb-to-html-ccfeda199246">method</a>.</p>
-</section>
-<section id="Python-fundamentals">
-<h2>Python fundamentals<a class="headerlink" href="#Python-fundamentals" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="Python-fundamentals">
+<h2>Python fundamentals<a class="headerlink" href="#Python-fundamentals" title="Permalink to this headline">¶</a></h2>
 <p>Let’s start with the canonical 1st line of code when you are learning a new language, <em>Hellow, World!</em></p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[86]:
@@ -668,8 +667,8 @@ int
 <li><p>set: same as dictionary except entries are unique</p></li>
 </ul>
 <p>NB: These collections are allowed to contain values of different types. For now, let’s just look at lists and tuples.</p>
-<section id="Tuples">
-<h3>Tuples<a class="headerlink" href="#Tuples" title="Permalink to this headline"></a></h3>
+<div class="section" id="Tuples">
+<h3>Tuples<a class="headerlink" href="#Tuples" title="Permalink to this headline">¶</a></h3>
 <p>Tuples are created with the “,” operator:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[96]:
@@ -722,9 +721,9 @@ int
 &#39;OnlyOne&#39;
 </pre></div></div>
 </div>
-</section>
-<section id="Lists">
-<h3>Lists<a class="headerlink" href="#Lists" title="Permalink to this headline"></a></h3>
+</div>
+<div class="section" id="Lists">
+<h3>Lists<a class="headerlink" href="#Lists" title="Permalink to this headline">¶</a></h3>
 <p>Lists are created by enclosing comma separated sequences with square brackets:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[99]:
@@ -939,8 +938,8 @@ tuple
 <span class="ansi-red-fg">TypeError</span>: &#39;tuple&#39; object does not support item assignment
 </pre></div></div>
 </div>
-<section id="Logical-operations">
-<h4>Logical operations<a class="headerlink" href="#Logical-operations" title="Permalink to this headline"></a></h4>
+<div class="section" id="Logical-operations">
+<h4>Logical operations<a class="headerlink" href="#Logical-operations" title="Permalink to this headline">¶</a></h4>
 <p>All programming languages have operators (functions) that return true or false values. There are 4 types of these operators in Python:</p>
 <ul class="simple">
 <li><p>identity operators</p></li>
@@ -949,10 +948,10 @@ tuple
 <li><p>logical operatiors</p></li>
 </ul>
 <p>Let’s start with identity operators first:</p>
-</section>
-</section>
-<section id="Identity-operators">
-<h3>Identity operators<a class="headerlink" href="#Identity-operators" title="Permalink to this headline"></a></h3>
+</div>
+</div>
+<div class="section" id="Identity-operators">
+<h3>Identity operators<a class="headerlink" href="#Identity-operators" title="Permalink to this headline">¶</a></h3>
 <p>When you sue these, you want to know if two obects are equivalent in some sense. Here, we want to know whether variables point to the same object or not.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[111]:
@@ -992,9 +991,9 @@ True
 </pre></div></div>
 </div>
 <p>These comparisons can be counter-intuitive, but they are fast: just checking whether variables point to the same location in memory</p>
-</section>
-<section id="Comparison-operators">
-<h3>Comparison operators<a class="headerlink" href="#Comparison-operators" title="Permalink to this headline"></a></h3>
+</div>
+<div class="section" id="Comparison-operators">
+<h3>Comparison operators<a class="headerlink" href="#Comparison-operators" title="Permalink to this headline">¶</a></h3>
 <p>Most often, we want to know whether variables have the same <em>value</em>. We can use the typical comparison operators for this and related tasks:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[113]:
@@ -1085,8 +1084,8 @@ True
 True
 </pre></div></div>
 </div>
-<section id="Membership-operators">
-<h4>Membership operators<a class="headerlink" href="#Membership-operators" title="Permalink to this headline"></a></h4>
+<div class="section" id="Membership-operators">
+<h4>Membership operators<a class="headerlink" href="#Membership-operators" title="Permalink to this headline">¶</a></h4>
 <p>Very handy – we can quickly test whether a value is <em>in</em> a collection with membership operators:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[117]:
@@ -1150,9 +1149,9 @@ Normal mammalian hemopoietic tissue produces a continuous supply of differentiat
 True
 </pre></div></div>
 </div>
-</section>
-<section id="Logical-operators">
-<h4>Logical operators<a class="headerlink" href="#Logical-operators" title="Permalink to this headline"></a></h4>
+</div>
+<div class="section" id="Logical-operators">
+<h4>Logical operators<a class="headerlink" href="#Logical-operators" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p>and</p></li>
 <li><p>or</p></li>
@@ -1227,9 +1226,9 @@ True
 False
 </pre></div></div>
 </div>
-</section>
-<section id="Control-Flow">
-<h4>Control Flow<a class="headerlink" href="#Control-Flow" title="Permalink to this headline"></a></h4>
+</div>
+<div class="section" id="Control-Flow">
+<h4>Control Flow<a class="headerlink" href="#Control-Flow" title="Permalink to this headline">¶</a></h4>
 <p>Most programs will alter their behavior based on input or outcomes of prior computations. And often, the same set of computations will be repeated. To implement these behaviors, Python has some flow control statements, including the following:</p>
 <ul class="simple">
 <li><p>if</p></li>
@@ -1340,10 +1339,10 @@ I do not like gastrulation
 </pre></div>
 </div>
 </div>
-</section>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
+</div>
 
 
            </div>

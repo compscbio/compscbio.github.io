@@ -108,8 +108,8 @@ Policies
    day/11_stemness
    day/12_RNA_velocity
    day/13_scvelo
-   day/14_lineage_tracing_intro
-   day/15_lineage_tracing_howto
+   day/14_Lineage_tracing
+   day/15_Pluripotency
    day/16_spatial_transcriptomics
    day/17_spatial_transcriptomics
    day/18_gene_regulatory_networks
@@ -129,7 +129,7 @@ Policies
    homework/HW_02
    homework/HW_03
    homework/HW_04
-   homework/05/index
+   homework/HW_05
    homework/06/index
    homework/07/index
    homework/08/index
