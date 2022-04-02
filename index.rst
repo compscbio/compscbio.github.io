@@ -110,8 +110,8 @@ Policies
    day/13_scvelo
    day/14_Lineage_tracing
    day/15_Pluripotency
-   day/16_spatial_transcriptomics
-   day/17_spatial_transcriptomics
+   day/16_Spatial_Cell-to-Cell
+   day/17_Lineage_Tracing_Analysis
    day/18_gene_regulatory_networks
    day/19_cell_fate_engineering
    day/20_fate_simulations
