@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spatial transcriptomics &amp; Cell-to-cell communication &mdash; cscb2022  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> cscb2022
+            <img src="../_static/CSCB_logo2.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Schedule</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../schedule.html">Schedule overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../schedule.html#homework-and-final-project-due-dates">Homework and final project due dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../schedule.html#lecture-schedule">Lecture schedule</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lectures:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="01_history_of_stem_cells.html">History of Stem Cells</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_introduction_to_python_part_1.html">Comp Lesson 1: Introduction to Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_introduction_to_python_part_2.html">Comp Lesson 2: Introduction to Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_Till_McCulloch.html">Till and McCulloch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_scRNAseq_data_generation.html">scRNAseq data generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_scRNAseq_analysis.html">scRNAseq analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_scRNAseq_analysis_part_2.html">scRNAseq analysis part 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_cell_identity.html">Cell identity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_trajectory_inference.html">Trajectory inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_TI_part_2.html">How to do TI analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_stemness.html">How to do ‘Stemness’ analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_RNA_velocity.html">RNA Velocity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_scvelo.html">RNA velocity analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_Lineage_tracing.html">Lineage tracing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_Pluripotency.html">Pluripotency</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Homework</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../homework/HW_01.html">Homework #1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/HW_02.html">Homework #2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/HW_03.html">Homework #3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/HW_04.html">Homework #4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/HW_05.html">Homework #5</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">cscb2022</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Spatial transcriptomics &amp; Cell-to-cell communication</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/day/16_Spatial_Cell-to-Cell.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<section id="spatial-transcriptomics-cell-to-cell-communication">
+<h1>Spatial transcriptomics &amp; Cell-to-cell communication<a class="headerlink" href="#spatial-transcriptomics-cell-to-cell-communication" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>Spatial transcriptomics</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>Probes on slide</p></li>
+<li><p>PDAC</p></li>
+<li><p>CNV inference from scRNAseq to identify tumor cells</p></li>
+<li><p>H&amp;E staining</p></li>
+<li><p>Integration of spatial and scRNAseq with MIA (hypergeometric test)</p></li>
+<li><p>Parameter sweep</p></li>
+<li><p>MIA maps of PDAC</p></li>
+<li><p>Infammatory fibroblast signal in cancer regions</p></li>
+<li><p>Sub-clustering / sub-regioning</p></li>
+<li><p>Stress response predicted to derive from fibroblasts in cancer regions</p></li>
+<li><p>Spots encompass dozens of cells</p></li>
+</ul>
+<ul class="simple">
+<li><p>Cell-to-cell communication</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>Types of cell signaling events</p></li>
+<li><p>Downstream consequences of signaling</p></li>
+<li><p>Goal of Cell-to-cell interaction analysis:</p>
+<ul>
+<li><p>What cells are interacting?</p></li>
+<li><p>How are they interacting?</p></li>
+<li><p>What are the consequences of the interactions?</p></li>
+</ul>
+</li>
+<li><p>CCC in kidney development</p></li>
+<li><p>Kumar et al Cell Reports 2018</p>
+<ul>
+<li><p>ID interactions that correlate with tumor growth</p></li>
+</ul>
+</li>
+<li><p>SingleCellSignalR (Cabello-Aguilar et al 2020)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<hr class="docutils" />
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Patrick Cahan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LFQLTP4DZG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-LFQLTP4DZG', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

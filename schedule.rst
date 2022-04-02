@@ -44,13 +44,13 @@ The schedule below is tentative. We will keep you updated as the content and sch
 #. Mar 10: :doc:`day/13_scvelo`
 #. Mar 15: :doc:`day/14_Lineage_tracing`
 #. Mar 17: :doc:`day/15_Pluripotency`
-#. Mar 29: Stem cell niche
-#. Mar 31: Spatial transcriptomics
+#. Mar 29: :doc: `day/16_Spatial_Cell-to_Cell`
+#. Mar 31: :doc: `day/17_Lineage_tracing`
 #. Apr 5: Gene regulatory networks (Guest speaker: Emily Su)
-#. Apr 7: Cell fate engineering
+#. Apr 7: Cell-cell communications and ST analysis
 #. Apr 12: Cell fate simulations (Guest speaker: Dan Peng)
-#. Apr 14: single cell ATAC-seq
-#. Apr 19: Cancer stem cells
+#. Apr 14: Cell fate engineering
+#. Apr 19: scATAC-seq
 #. Apr 21: Stem cell controversies
 #. Apr 26: Final project presentations
 #. Apr 28: Final project presentations
