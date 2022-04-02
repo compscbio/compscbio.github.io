@@ -78,6 +78,7 @@
 <li class="toctree-l1"><a class="reference internal" href="14_Lineage_tracing.html">Lineage tracing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="15_Pluripotency.html">Pluripotency</a></li>
 <li class="toctree-l1"><a class="reference internal" href="16_Spatial_Cell-to-Cell.html">Spatial transcriptomics &amp; Cell-to-cell communication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17_Lineage_Tracing_Analysis.html">Lineage Tracing Analysis</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Homework</span></p>
 <ul>
@@ -405,10 +406,10 @@ div.rendered_html tbody tr:hover {
 <section id="Background">
 <h2>Background<a class="headerlink" href="#Background" title="Permalink to this headline"></a></h2>
 <p>First, let’s start with a bit of background on the data that we have been using. In lecture 1, we talked about gastrulation:</p>
-<figure><p><img alt="ea2275fe52754b75863814f1e223951e" src="../_images/07_early_dev.png" /></p>
+<figure><p><img alt="3d71b02a945c441fa063ca96d2163cd9" src="../_images/07_early_dev.png" /></p>
 <figcaption><p>Murine development. Figure credit: Emily KW Lo</p>
 </figcaption></figure><p>When stem cell biologists differentiated pluripotent stem cells, they try to mimic aspects of this process. We have been curious as to the extent that that directed diff achieves this, so back in 2017/8 we turned to scRNAseq to define the cell types that emerge in the early stages of this <em>in vitro process</em>. We used the Embryoid Body method to allow differentiating mESCs to self-organize, along with Wnt/Activin induction of the primitive streak:</p>
-<figure><p><img alt="747e168db6c447068e2c3cb202310206" src="../_images/07_eb_schematic.png" /></p>
+<figure><p><img alt="b50e1e598f1e4d32b3d268dd430dac52" src="../_images/07_eb_schematic.png" /></p>
 <figcaption><p>Embryoid body protocol. From Spangler et al, Stem Cell Research 2018</p>
 </figcaption></figure><p>Note that the mESC line we used has a reported for T (a.k.a Brachyury), which allows us to monitor primitive streak induction.</p>
 <p>At day 4, we sampled cells from this process and subjected them to single cell isolation and cDNA prep via the 10X Genomics Chromium instrument.</p>
@@ -632,7 +633,7 @@ div.rendered_html tbody tr:hover {
 <section id="Cell-filtering">
 <h2>Cell filtering<a class="headerlink" href="#Cell-filtering" title="Permalink to this headline"></a></h2>
 <p>Recall the doublet problem. 10x has estimated the double rate for their 3’ products:</p>
-<figure><p><img alt="4237f4bb88c345d787d6a5509ef40390" src="../_images/07_mutliplet_table.png" /></p>
+<figure><p><img alt="46ec17e4f5f546b0b59cd3cf1308bf10" src="../_images/07_mutliplet_table.png" /></p>
 <figcaption><p>Multiplet table for 3’ v3.1 (see 10x website).</p>
 </figcaption></figure><p>Let’s filter out cells based on the following: - the top 5% of cells based on total counts to exclude possible doublets - cells with &lt; 500 genes based on n_genes_by_counts and - cells with &gt; 10% pct_counts_mt - cells with &lt; 50% ribosomal counts</p>
 <div class="nbinput docutils container">
@@ -1340,7 +1341,7 @@ is calculated by scaling based on a bin of mean expression.</p>
 <section id="Cell-cycle-status">
 <h2>Cell cycle status<a class="headerlink" href="#Cell-cycle-status" title="Permalink to this headline"></a></h2>
 <p>Recall in Lecture 5 when we covered Drop-Seq, how the authors were able to predict phase of cell cycle. What is cell cycle?</p>
-<figure><p><img alt="f16b4e9318d143a5a272eed7808193ac" src="../_images/07_cell_cycle.png" /></p>
+<figure><p><img alt="fd5b39028b2c4a57945eff0f6a67e090" src="../_images/07_cell_cycle.png" /></p>
 <figcaption><p>Cell cycle. Credit: Wikipedia.</p>
 </figcaption></figure><p>This was done by summarizing the expression of genes associated with distinct phases of cell cycle and normalizing this value to a background value. Let’s perform a similar analysis here. First, please fetch the table of mouse genes:</p>
 <div class="nbinput nblast docutils container">
@@ -1933,7 +1934,7 @@ of correlation measures (e.g. 1 - PCC).</p>
 </div>
 </div>
 <p>One final class of clustering methods is based on deriving the k-nearest neighbor graph. <em>Walk them through the concept</em>, explain how used to transform adjacency matrix</p>
-<figure><p><img alt="8d2a367bc49843a9bcb1d8f4a98b77a7" src="../_images/07_knn_graph_1.png" /></p>
+<figure><p><img alt="8f0d3c3e65f6462cab81d9fbcc0ecc4c" src="../_images/07_knn_graph_1.png" /></p>
 <figcaption><p>K-nearest neighbor graph. Credit: Wikipedia.</p>
 </figcaption></figure><p>Recall the elbow plot. From this, we can pick out a reasonable n_pcs</p>
 <div class="nbinput docutils container">

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>&lt;no title&gt; &mdash; cscb2022  documentation</title>
+  <title>Lineage Tracing Analysis &mdash; cscb2022  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -48,7 +48,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../schedule.html#lecture-schedule">Lecture schedule</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Lectures:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="01_history_of_stem_cells.html">History of Stem Cells</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02_introduction_to_python_part_1.html">Comp Lesson 1: Introduction to Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03_introduction_to_python_part_2.html">Comp Lesson 2: Introduction to Python</a></li>
@@ -65,6 +65,7 @@
 <li class="toctree-l1"><a class="reference internal" href="14_Lineage_tracing.html">Lineage tracing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="15_Pluripotency.html">Pluripotency</a></li>
 <li class="toctree-l1"><a class="reference internal" href="16_Spatial_Cell-to-Cell.html">Spatial transcriptomics &amp; Cell-to-cell communication</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lineage Tracing Analysis</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Homework</span></p>
 <ul>
@@ -90,7 +91,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>&lt;no title&gt;</li>
+      <li>Lineage Tracing Analysis</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/day/17_Lineage_Tracing_Analysis.ipynb.txt" rel="nofollow"> View page source</a>
       </li>
@@ -370,15 +371,17 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
+<section id="Lineage-Tracing-Analysis">
+<h1>Lineage Tracing Analysis<a class="headerlink" href="#Lineage-Tracing-Analysis" title="Permalink to this headline"></a></h1>
 <p>Today, we will analyze sc lineage tracing data with <a class="reference external" href="https://www.nature.com/articles/s41587-022-01209-1">CoSpar Wang et al 2022</a></p>
 <p>Much of the tutorial today comes straight from <a class="reference external" href="https://cospar.readthedocs.io/en/latest/index.html">CoSpar’s documentation</a></p>
-<figure><p><img alt="47cc71eadc594b8c97d26f18c771b77f" src="../_images/cospar_schematic.png" /></p>
+<figure><p><img alt="4f0317744ada4af5a52c70cb570e7867" src="../_images/cospar_schematic.png" /></p>
 <figcaption><p>CoSpar Overview. The transition matrix T computed by maximum likelihood estimation.</p>
 </figcaption><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;/figure&gt;
 </pre></div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="ch">#!pip3 install cospar</span>
@@ -386,7 +389,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cospar</span> <span class="k">as</span> <span class="nn">cs</span>
@@ -396,7 +399,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cs</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">set_figure_params</span><span class="p">()</span>
@@ -404,13 +407,13 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <p>Data from <a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/31974159/">Weinreb et al Science 2020</a>.</p>
-<figure><p><img alt="793a3d7b588d4cc485960c351c218560" src="../_images/hspc_weinreb_schematic.png" /></p>
+<figure><p><img alt="0da147e9d3a845a491d08758f552b697" src="../_images/hspc_weinreb_schematic.png" /></p>
 <figcaption><p>Data collection strategy.</p>
 </figcaption><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;/figure&gt;
 </pre></div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adata_orig</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">read_h5ad</span><span class="p">(</span><span class="s2">&quot;adata_cospar_hspc.h5ad&quot;</span><span class="p">)</span>
@@ -427,29 +430,16 @@ div.rendered_html tbody tr:hover {
 <li><p>adata.obsm[‘X_pca’]: PCA matrix, shape (n_cell, n_pcs). [Optional. Can be generated in preprocessing.</p></li>
 <li><p>adata.obsm[‘X_emb’]: two-dimensional embedding, shape (n_cell, 2). [Optional. Can be generated in preprocessing.</p></li>
 </ul>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cs</span><span class="o">.</span><span class="n">hf</span><span class="o">.</span><span class="n">set_up_folders</span><span class="p">()</span> <span class="c1"># NB we did not run this in lecture but will be necessary</span>
 </pre></div>
 </div>
 </div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/var/folders/24/v4g076gx0mz2mwtd6ktzw8_h0000gn/T/ipykernel_45011/1119742059.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>cs<span class="ansi-blue-fg">.</span>hf<span class="ansi-blue-fg">.</span>set_up_folders<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-red-fg"># NB we did not run this in lecture but will be necessary</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;cs&#39; is not defined
-</pre></div></div>
-</div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adata_orig</span>
@@ -457,7 +447,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -469,7 +459,7 @@ AnnData object with n_obs × n_vars = 7438 × 25289
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">pca</span><span class="p">(</span><span class="n">adata_orig</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;state_info&#39;</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
@@ -484,7 +474,7 @@ AnnData object with n_obs × n_vars = 7438 × 25289
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">embedding</span><span class="p">(</span><span class="n">adata_orig</span><span class="p">,</span> <span class="n">basis</span><span class="o">=</span><span class="s2">&quot;emb&quot;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;state_info&quot;</span><span class="p">)</span>
@@ -499,7 +489,7 @@ AnnData object with n_obs × n_vars = 7438 × 25289
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">embedding</span><span class="p">(</span><span class="n">adata_orig</span><span class="p">,</span> <span class="n">basis</span><span class="o">=</span><span class="s2">&quot;emb&quot;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Ccr7&#39;</span><span class="p">])</span>
@@ -514,7 +504,7 @@ AnnData object with n_obs × n_vars = 7438 × 25289
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">embedding</span><span class="p">(</span><span class="n">adata_orig</span><span class="p">,</span> <span class="n">basis</span><span class="o">=</span><span class="s2">&quot;emb&quot;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;time_info&#39;</span><span class="p">])</span>
@@ -530,7 +520,7 @@ AnnData object with n_obs × n_vars = 7438 × 25289
 </div>
 <p>We can examine the location of clones on embeddings</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cs</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">clones_on_manifold</span><span class="p">(</span><span class="n">adata_orig</span><span class="p">,</span><span class="n">selected_clone_list</span><span class="o">=</span><span class="p">[</span><span class="mi">151</span><span class="p">],</span><span class="n">color_list</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="s1">&#39;blue&#39;</span><span class="p">])</span>
@@ -545,7 +535,7 @@ AnnData object with n_obs × n_vars = 7438 × 25289
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cs</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">clones_on_manifold</span><span class="p">(</span><span class="n">adata_orig</span><span class="p">,</span><span class="n">selected_clone_list</span><span class="o">=</span><span class="p">[</span><span class="mi">200</span><span class="p">],</span><span class="n">color_list</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="s1">&#39;blue&#39;</span><span class="p">])</span>
@@ -560,7 +550,7 @@ AnnData object with n_obs × n_vars = 7438 × 25289
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cs</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">clones_on_manifold</span><span class="p">(</span><span class="n">adata_orig</span><span class="p">,</span><span class="n">selected_clone_list</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">color_list</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="s1">&#39;blue&#39;</span><span class="p">])</span>
@@ -576,7 +566,7 @@ AnnData object with n_obs × n_vars = 7438 × 25289
 </div>
 <p>How often are clones shared across cell types? This analysis done for given time point</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selected_times</span><span class="o">=</span><span class="s1">&#39;4&#39;</span>
@@ -595,7 +585,7 @@ Results saved as dictionary at adata.uns[&#39;fate_coupling_X_clone&#39;]
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -611,7 +601,7 @@ Results saved as dictionary at adata.uns[&#39;fate_coupling_X_clone&#39;]
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selected_times</span><span class="o">=</span><span class="s1">&#39;6&#39;</span>
@@ -630,7 +620,7 @@ Results saved as dictionary at adata.uns[&#39;fate_coupling_X_clone&#39;]
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -647,7 +637,7 @@ Results saved as dictionary at adata.uns[&#39;fate_coupling_X_clone&#39;]
 </div>
 <p>We can look at barcode distributions across cell types, too</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selected_times</span><span class="o">=</span><span class="s1">&#39;4&#39;</span>
@@ -665,7 +655,7 @@ Data saved at adata.uns[&#39;barcode_heatmap&#39;]
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -681,7 +671,7 @@ Data saved at adata.uns[&#39;barcode_heatmap&#39;]
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adata</span><span class="o">=</span><span class="n">cs</span><span class="o">.</span><span class="n">tmap</span><span class="o">.</span><span class="n">infer_Tmap_from_multitime_clones</span><span class="p">(</span><span class="n">adata_orig</span><span class="p">,</span><span class="n">clonal_time_points</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;2&#39;</span><span class="p">,</span><span class="s1">&#39;4&#39;</span><span class="p">,</span><span class="s1">&#39;6&#39;</span><span class="p">],</span><span class="n">later_time_point</span><span class="o">=</span><span class="s1">&#39;6&#39;</span><span class="p">,</span>
@@ -722,11 +712,11 @@ Iteration 1, Use smooth_round=20
 Iteration 2, Use smooth_round=15
 Iteration 3, Use smooth_round=10
 Convergence (CoSpar, iter_N=3): corr(previous_T, current_T)=0.974
------------Total used time: 19.995919227600098 s ------------
+-----------Total used time: 17.448920965194702 s ------------
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adata</span>
@@ -734,7 +724,7 @@ Convergence (CoSpar, iter_N=3): corr(previous_T, current_T)=0.974
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -745,17 +735,26 @@ AnnData object with n_obs × n_vars = 7438 × 25289
     obsm: &#39;X_clone&#39;, &#39;X_emb&#39;, &#39;X_pca&#39;
 </pre></div></div>
 </div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adata</span><span class="o">.</span><span class="n">uns</span><span class="p">[</span><span class="s1">&#39;transition_map&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 </div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(3392, 4046)
+</pre></div></div>
+</div>
 <p>Now, given an state, we can examine it’s likely trajectory using the transition matrix just computed</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selected_state_id_list</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
@@ -773,7 +772,7 @@ AnnData object with n_obs × n_vars = 7438 × 25289
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selected_state_id_list</span><span class="o">=</span><span class="p">[</span><span class="mi">100</span><span class="p">]</span>
@@ -792,7 +791,7 @@ AnnData object with n_obs × n_vars = 7438 × 25289
 </div>
 <p>Similarly, we can compute transition profiles for end states (where did they originate)?</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selected_state_id_list</span><span class="o">=</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span>
@@ -810,7 +809,7 @@ AnnData object with n_obs × n_vars = 7438 × 25289
 </div>
 <p>Now let’s examine a fate map. Given a cluster/state/end-point, where did it originate?</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cs</span><span class="o">.</span><span class="n">tl</span><span class="o">.</span><span class="n">fate_map</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span><span class="n">selected_fates</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Neutrophil&#39;</span><span class="p">,</span><span class="s1">&#39;Monocyte&#39;</span><span class="p">],</span>
@@ -837,7 +836,7 @@ Results saved at adata.obs[&#39;fate_map_transition_map_Monocyte&#39;]
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cs</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">fate_map</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span><span class="n">selected_fates</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Monocyte&#39;</span><span class="p">],</span>
@@ -854,7 +853,7 @@ Results saved at adata.obs[&#39;fate_map_transition_map_Monocyte&#39;]
 </div>
 <p>Compute fate potency as the normalized sum of potential endpoints</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cs</span><span class="o">.</span><span class="n">tl</span><span class="o">.</span><span class="n">fate_potency</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span><span class="n">source</span><span class="o">=</span><span class="s1">&#39;transition_map&#39;</span><span class="p">,</span>
@@ -868,18 +867,18 @@ Results saved at adata.obs[&#39;fate_map_transition_map_Monocyte&#39;]
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
+Results saved at adata.obs[&#39;fate_map_transition_map_Mast&#39;]
 Results saved at adata.obs[&#39;fate_map_transition_map_Erythroid&#39;]
-Results saved at adata.obs[&#39;fate_map_transition_map_Lymphoid&#39;]
+Results saved at adata.obs[&#39;fate_map_transition_map_Ccr7_DC&#39;]
 Results saved at adata.obs[&#39;fate_map_transition_map_Eos&#39;]
+Results saved at adata.obs[&#39;fate_map_transition_map_Lymphoid&#39;]
 Results saved at adata.obs[&#39;fate_map_transition_map_pDC&#39;]
 Results saved at adata.obs[&#39;fate_map_transition_map_undiff&#39;]
-Results saved at adata.obs[&#39;fate_map_transition_map_Neutrophil&#39;]
-Results saved at adata.obs[&#39;fate_map_transition_map_Monocyte&#39;]
-Results saved at adata.obs[&#39;fate_map_transition_map_Mast&#39;]
 Results saved at adata.obs[&#39;fate_map_transition_map_Baso&#39;]
-Results saved at adata.obs[&#39;fate_map_transition_map_Ccr7_DC&#39;]
+Results saved at adata.obs[&#39;fate_map_transition_map_Monocyte&#39;]
 Results saved at adata.obs[&#39;fate_map_transition_map_Neu_Mon&#39;]
 Results saved at adata.obs[&#39;fate_map_transition_map_Meg&#39;]
+Results saved at adata.obs[&#39;fate_map_transition_map_Neutrophil&#39;]
 Results saved at adata.obs[&#39;fate_potency_transition_map&#39;]
 </pre></div></div>
 </div>
@@ -892,7 +891,7 @@ Results saved at adata.obs[&#39;fate_potency_transition_map&#39;]
 </div>
 <p>Now let’s examine fate bias between two cell types/states/endpoints a and b. Computed as Pr(endstate = a) / Pr(endstate=a) + Pr(endstate=b)</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cs</span><span class="o">.</span><span class="n">tl</span><span class="o">.</span><span class="n">fate_bias</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span><span class="n">selected_fates</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Neutrophil&#39;</span><span class="p">,</span><span class="s1">&#39;Monocyte&#39;</span><span class="p">],</span><span class="n">source</span><span class="o">=</span><span class="s1">&#39;transition_map&#39;</span><span class="p">,</span><span class="n">pseudo_count</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">sum_fate_prob_thresh</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
@@ -919,7 +918,7 @@ Results saved at adata.obs[&#39;fate_bias_transition_map_Neutrophil*Monocyte&#39
 </div>
 <p>Fate coupling from transition matrix</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selected_fates</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Ccr7_DC&#39;</span><span class="p">,</span><span class="s1">&#39;Mast&#39;</span><span class="p">,</span><span class="s1">&#39;Meg&#39;</span><span class="p">,</span><span class="s1">&#39;pDC&#39;</span><span class="p">,</span><span class="s1">&#39;Eos&#39;</span><span class="p">,</span><span class="s1">&#39;Lymphoid&#39;</span><span class="p">,</span><span class="s1">&#39;Erythroid&#39;</span><span class="p">,</span><span class="s1">&#39;Baso&#39;</span><span class="p">,</span>  <span class="s1">&#39;Neutrophil&#39;</span><span class="p">,</span> <span class="s1">&#39;Monocyte&#39;</span><span class="p">]</span>
@@ -937,7 +936,7 @@ Results saved as dictionary at adata.uns[&#39;fate_coupling_transition_map&#39;]
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -953,7 +952,7 @@ Results saved as dictionary at adata.uns[&#39;fate_coupling_transition_map&#39;]
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># compared to from clonal data alone</span>
@@ -971,7 +970,7 @@ Results saved as dictionary at adata.uns[&#39;fate_coupling_X_clone&#39;]
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -988,7 +987,7 @@ Results saved as dictionary at adata.uns[&#39;fate_coupling_X_clone&#39;]
 </div>
 <p>Now reconstruct the hierarchy</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cs</span><span class="o">.</span><span class="n">tl</span><span class="o">.</span><span class="n">fate_hierarchy</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span><span class="n">selected_fates</span><span class="o">=</span><span class="n">selected_fates</span><span class="p">,</span><span class="n">source</span><span class="o">=</span><span class="s1">&#39;transition_map&#39;</span><span class="p">)</span>
@@ -1026,7 +1025,7 @@ Results saved as dictionary at adata.uns[&#39;fate_hierarchy_transition_map&#39;
 </div>
 <p>What distinguishes progenitors likely to become monocytes from those that are likely to become neutrophils?</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -1069,7 +1068,7 @@ Results saved at adata.obs[f&#39;progenitor_transition_map_Monocyte&#39;] and ad
 <p><code class="docutils literal notranslate"><span class="pre">adata.obs[f'progenitor_{source}_{fate_name}']</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">adata.obs[f'diff_trajectory_{source}_{fate_name}']</span></code></p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">cell_group_A</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">adata</span><span class="o">.</span><span class="n">obs</span><span class="p">[</span><span class="s1">&#39;diff_trajectory_transition_map_Neutrophil&#39;</span><span class="p">])</span>
@@ -1079,7 +1078,7 @@ Results saved at adata.obs[f&#39;progenitor_transition_map_Monocyte&#39;] and ad
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dge_gene_A</span>
@@ -1087,7 +1086,7 @@ Results saved at adata.obs[f&#39;progenitor_transition_map_Monocyte&#39;] and ad
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -1223,7 +1222,7 @@ Results saved at adata.obs[f&#39;progenitor_transition_map_Monocyte&#39;] and ad
 </div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dge_gene_B</span>
@@ -1231,7 +1230,7 @@ Results saved at adata.obs[f&#39;progenitor_transition_map_Monocyte&#39;] and ad
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -1367,7 +1366,7 @@ Results saved at adata.obs[f&#39;progenitor_transition_map_Monocyte&#39;] and ad
 </div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">embedding</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span> <span class="n">basis</span><span class="o">=</span><span class="s2">&quot;emb&quot;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Mmp8&#39;</span><span class="p">,</span> <span class="s1">&#39;Ngp&#39;</span><span class="p">])</span>
@@ -1382,7 +1381,7 @@ Results saved at adata.obs[f&#39;progenitor_transition_map_Monocyte&#39;] and ad
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gene_list</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">dge_gene_A</span><span class="p">[</span><span class="s1">&#39;gene&#39;</span><span class="p">][:</span><span class="mi">20</span><span class="p">])</span><span class="o">+</span><span class="nb">list</span><span class="p">(</span><span class="n">dge_gene_B</span><span class="p">[</span><span class="s1">&#39;gene&#39;</span><span class="p">][:</span><span class="mi">20</span><span class="p">])</span> <span class="c1">#select the top 20 genes from both populations</span>
@@ -1402,8 +1401,8 @@ Results saved at adata.obs[f&#39;progenitor_transition_map_Monocyte&#39;] and ad
 </div>
 </div>
 <p>To identify undifferentiated cells that are biased towards either of these lineages, do the following:</p>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">cell_group_A</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">adata</span><span class="o">.</span><span class="n">obs</span><span class="p">[</span><span class="s1">&#39;progenitor_transition_map_Neutrophil&#39;</span><span class="p">])</span>
@@ -1411,29 +1410,319 @@ Results saved at adata.obs[f&#39;progenitor_transition_map_Monocyte&#39;] and ad
 <br/></pre></div>
 </div>
 </div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/var/folders/24/v4g076gx0mz2mwtd6ktzw8_h0000gn/T/ipykernel_45011/1313473147.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>cell_group_A<span class="ansi-blue-fg">=</span>np<span class="ansi-blue-fg">.</span>array<span class="ansi-blue-fg">(</span>adata<span class="ansi-blue-fg">.</span>obs<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;diff_trajectory_transition_map_Neutrophil&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> cell_group_B<span class="ansi-blue-fg">=</span>np<span class="ansi-blue-fg">.</span>array<span class="ansi-blue-fg">(</span>adata<span class="ansi-blue-fg">.</span>obs<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;diff_trajectory_transition_map_Monocyte&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;np&#39; is not defined
-</pre></div></div>
-</div>
 <p>Perform differential gene expression analysis between these two groups of undiff cells. You may need to adjust FDR_cutoff.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dge_gene_A</span><span class="p">,</span> <span class="n">dge_gene_B</span><span class="o">=</span><span class="n">cs</span><span class="o">.</span><span class="n">tl</span><span class="o">.</span><span class="n">differential_genes</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span><span class="n">cell_group_A</span><span class="o">=</span><span class="n">cell_group_A</span><span class="p">,</span><span class="n">cell_group_B</span><span class="o">=</span><span class="n">cell_group_B</span><span class="p">,</span><span class="n">FDR_cutoff</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
 <br/></pre></div>
 </div>
 </div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dge_gene_A</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>index</th>
+      <th>gene</th>
+      <th>Qvalue</th>
+      <th>mean_1</th>
+      <th>mean_2</th>
+      <th>ratio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>16</td>
+      <td>Ly6a</td>
+      <td>9.039739e-11</td>
+      <td>0.304916</td>
+      <td>1.487901</td>
+      <td>-0.930972</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>113</td>
+      <td>Cd74</td>
+      <td>8.016464e-04</td>
+      <td>0.049357</td>
+      <td>0.590306</td>
+      <td>-0.599799</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>265</td>
+      <td>Lpl</td>
+      <td>1.855205e-02</td>
+      <td>0.514680</td>
+      <td>1.288570</td>
+      <td>-0.595433</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>15</td>
+      <td>Ifi203</td>
+      <td>3.450286e-11</td>
+      <td>0.263296</td>
+      <td>0.855959</td>
+      <td>-0.554973</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>129</td>
+      <td>Ctsc</td>
+      <td>1.435103e-03</td>
+      <td>1.143432</td>
+      <td>2.044259</td>
+      <td>-0.506169</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>83</th>
+      <td>241</td>
+      <td>Nrros</td>
+      <td>1.383268e-02</td>
+      <td>1.127532</td>
+      <td>1.403783</td>
+      <td>-0.176126</td>
+    </tr>
+    <tr>
+      <th>84</th>
+      <td>115</td>
+      <td>Rps23</td>
+      <td>8.607369e-04</td>
+      <td>11.237831</td>
+      <td>12.805717</td>
+      <td>-0.173918</td>
+    </tr>
+    <tr>
+      <th>85</th>
+      <td>221</td>
+      <td>Rpl7</td>
+      <td>1.126278e-02</td>
+      <td>6.221563</td>
+      <td>6.941932</td>
+      <td>-0.137179</td>
+    </tr>
+    <tr>
+      <th>86</th>
+      <td>264</td>
+      <td>mt-Nd1</td>
+      <td>1.835382e-02</td>
+      <td>33.804676</td>
+      <td>36.876221</td>
+      <td>-0.122011</td>
+    </tr>
+    <tr>
+      <th>87</th>
+      <td>314</td>
+      <td>Rpl4</td>
+      <td>3.784367e-02</td>
+      <td>8.111238</td>
+      <td>8.714950</td>
+      <td>-0.092559</td>
+    </tr>
+  </tbody>
+</table>
+<p>88 rows × 6 columns</p>
+</div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dge_gene_B</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>index</th>
+      <th>gene</th>
+      <th>Qvalue</th>
+      <th>mean_1</th>
+      <th>mean_2</th>
+      <th>ratio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>61</td>
+      <td>S100a9</td>
+      <td>3.328465e-05</td>
+      <td>2.505955</td>
+      <td>0.577988</td>
+      <td>1.151722</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>46</td>
+      <td>S100a8</td>
+      <td>3.593216e-06</td>
+      <td>2.456529</td>
+      <td>0.629346</td>
+      <td>1.085031</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Elane</td>
+      <td>8.796332e-27</td>
+      <td>5.110261</td>
+      <td>1.924245</td>
+      <td>1.063170</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>Gstm1</td>
+      <td>5.398384e-28</td>
+      <td>3.022064</td>
+      <td>0.980477</td>
+      <td>1.022088</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>Mpo</td>
+      <td>9.856078e-28</td>
+      <td>2.592695</td>
+      <td>0.801986</td>
+      <td>0.995479</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>249</th>
+      <td>266</td>
+      <td>Hdlbp</td>
+      <td>1.902594e-02</td>
+      <td>0.445726</td>
+      <td>0.342975</td>
+      <td>0.106362</td>
+    </tr>
+    <tr>
+      <th>250</th>
+      <td>318</td>
+      <td>Adrbk1</td>
+      <td>3.892046e-02</td>
+      <td>0.552127</td>
+      <td>0.445955</td>
+      <td>0.102224</td>
+    </tr>
+    <tr>
+      <th>251</th>
+      <td>339</td>
+      <td>Cebpa</td>
+      <td>4.920242e-02</td>
+      <td>0.292482</td>
+      <td>0.204556</td>
+      <td>0.101643</td>
+    </tr>
+    <tr>
+      <th>252</th>
+      <td>270</td>
+      <td>Canx</td>
+      <td>1.991304e-02</td>
+      <td>0.748365</td>
+      <td>0.635935</td>
+      <td>0.095892</td>
+    </tr>
+    <tr>
+      <th>253</th>
+      <td>329</td>
+      <td>Pcgf5</td>
+      <td>4.420974e-02</td>
+      <td>0.150279</td>
+      <td>0.077339</td>
+      <td>0.094511</td>
+    </tr>
+  </tbody>
+</table>
+<p>254 rows × 6 columns</p>
+</div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">embedding</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span> <span class="n">basis</span><span class="o">=</span><span class="s2">&quot;emb&quot;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Ly6a&#39;</span><span class="p">,</span> <span class="s1">&#39;S100a9&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/day_17_Lineage_Tracing_Analysis_56_0.png" class="no-scaled-link" src="../_images/day_17_Lineage_Tracing_Analysis_56_0.png" style="width: 1143px; height: 372px;" />
+</div>
+</div>
+</section>
 
 
            </div>
