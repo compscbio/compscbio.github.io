@@ -130,7 +130,7 @@ Policies
    homework/HW_03
    homework/HW_04
    homework/HW_05
-   homework/06/index
+   homework/HW_06
    homework/07/index
    homework/08/index
    homework/final_project/index
