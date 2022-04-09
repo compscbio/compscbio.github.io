@@ -17,8 +17,8 @@ Homework and final project due dates
 - :ref:`Homework 4<Homework 4>`: due 11:59 pm EST, March 18th
 - :ref:`Homework 5<Homework 5>`: due 11:59 pm EST, April 1st
 - :ref:`Homework 6<Homework 6>`: due 11:59 pm EST, April 8th
-- :ref:`Homework 7<Homework 7>`: due 11:59 pm EST, April 15th
-- :ref:`Homework 8<Homework 8>`: due 11:59 pm EST, April 22nd
+- :ref:`Homework 7<Homework 7>`: due 11:59 pm EST, April 22nd
+- :ref:`Homework 8<Homework 8>`: due TBD
 - :ref:`Final project<Final project>`: due 11:59 pm EST, Apr 25
 
 ----
@@ -42,14 +42,14 @@ The schedule below is tentative. We will keep you updated as the content and sch
 #. Mar 3: :doc:`day/11_stemness`
 #. Mar 8: :doc:`day/12_RNA_velocity` (Guest speaker: Kathleen Noller)
 #. Mar 10: :doc:`day/13_scvelo`
-#. Mar 15: :doc:`day/14_Lineage_tracing`
+#. Mar 15: :doc:`day/14_Lineage_tracing` (Guest speaker: Ray Cheng)
 #. Mar 17: :doc:`day/15_Pluripotency`
-#. Mar 29: :doc:`day/16_Spatial_Cell-to_Cell`
-#. Mar 31: :doc:`day/17_Lineage_tracing`
-#. Apr 5: Gene regulatory networks (Guest speaker: Emily Su)
-#. Apr 7: Cell-cell communications and ST analysis
+#. Mar 29: :doc:`day/16_Spatial_Cell-to-Cell`
+#. Mar 31: :doc:`day/17_Lineage_tracing_analysis`
+#. Apr 5: :doc:`day/18_Gene_regulatory_networks` (Guest speaker: Emily Su)
+#. Apr 7: :doc:`day/19_Cell_fate_engineering`
 #. Apr 12: Cell fate simulations (Guest speaker: Dan Peng)
-#. Apr 14: Cell fate engineering
+#. Apr 14: Cell fate analysis (Guest speaker: Eric Kernfeld)
 #. Apr 19: scATAC-seq
 #. Apr 21: Stem cell controversies
 #. Apr 26: Final project presentations
