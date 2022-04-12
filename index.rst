@@ -112,11 +112,11 @@ Policies
    day/15_Pluripotency
    day/16_Spatial_Cell-to-Cell
    day/17_Lineage_Tracing_Analysis
-   day/18_gene_regulatory_networks
-   day/19_cell_fate_engineering
-   day/20_fate_simulations
-   day/21_scATACseq
-   day/22_cancer_stem_cells
+   day/18_Gene_regulatory_networks
+   day/19_Cell_fate_engineering
+   day/20_Fate_simulations
+   day/21_Simulation_analysis
+   day/22_scATACseq
    day/23_stem_cell_controversies
 
 ----
@@ -133,7 +133,7 @@ Policies
    homework/HW_06
    homework/HW_07
    homework/08/index
-   homework/final_project/index
+   homework/Final_project
 
 ----
 

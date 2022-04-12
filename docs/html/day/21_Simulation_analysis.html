@@ -1,0 +1,1870 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulation analysis &mdash; cscb2022  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Homework #1" href="../homework/HW_01.html" />
+    <link rel="prev" title="Cell fate engineering" href="19_Cell_fate_engineering.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> cscb2022<img src="../_static/CSCB_logo2.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Schedule</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../schedule.html">Schedule overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../schedule.html#homework-and-final-project-due-dates">Homework and final project due dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../schedule.html#lecture-schedule">Lecture schedule</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Lectures:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="01_history_of_stem_cells.html">History of Stem Cells</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_introduction_to_python_part_1.html">Comp Lesson 1: Introduction to Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_introduction_to_python_part_2.html">Comp Lesson 2: Introduction to Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_Till_McCulloch.html">Till and McCulloch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_scRNAseq_data_generation.html">scRNAseq data generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_scRNAseq_analysis.html">scRNAseq analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_scRNAseq_analysis_part_2.html">scRNAseq analysis part 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_cell_identity.html">Cell identity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_trajectory_inference.html">Trajectory inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_TI_part_2.html">How to do TI analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_stemness.html">How to do ‘Stemness’ analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_RNA_velocity.html">RNA Velocity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_scvelo.html">RNA velocity analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_Lineage_tracing.html">Lineage tracing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_Pluripotency.html">Pluripotency</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16_Spatial_Cell-to-Cell.html">Spatial transcriptomics &amp; Cell-to-cell communication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17_Lineage_Tracing_Analysis.html">Lineage Tracing Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="18_Gene_regulatory_networks.html">Gene regulatory networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="19_Cell_fate_engineering.html">Cell fate engineering</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Simulation analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Troubleshooting-with-CellOracle">Troubleshooting with CellOracle</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Homework</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../homework/HW_01.html">Homework #1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/HW_02.html">Homework #2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/HW_03.html">Homework #3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/HW_04.html">Homework #4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/HW_05.html">Homework #5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/HW_06.html">Homework #6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/HW_07.html">Homework #7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/Final_project.html">Final project</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">cscb2022</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Simulation analysis</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/day/21_Simulation_analysis.ipynb.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    /*background: #f5f5f5;*/
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+    margin: 0;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt .copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Simulation-analysis">
+<h1>Simulation analysis<a class="headerlink" href="#Simulation-analysis" title="Permalink to this headline">¶</a></h1>
+<p>This notebook is a minimal example of a simulated perturbation in <a class="reference external" href="https://github.com/morris-lab/CellOracle">CellOracle</a>. Compared to the official docs, there is little new material; rather, we strip down the docs to make them easier to grasp.</p>
+<p>Read more about CellOracle <a class="reference external" href="https://www.biorxiv.org/content/10.1101/2020.02.17.947416v3">here</a></p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">scanpy</span> <span class="k">as</span> <span class="nn">sc</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">celloracle</span> <span class="k">as</span> <span class="nn">co</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;once&#39;</span><span class="p">)</span>
+
+<span class="n">co</span><span class="o">.</span><span class="n">check_python_requirements</span><span class="p">()</span>
+<span class="n">co</span><span class="o">.</span><span class="n">test_R_libraries_installation</span><span class="p">()</span>
+
+<span class="o">%</span><span class="k">config</span> InlineBackend.figure_format = &#39;retina&#39;
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;savefig.dpi&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">300</span>
+<span class="n">save_folder</span> <span class="o">=</span> <span class="s2">&quot;figures&quot;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">save_folder</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/celloracle/trajectory/markov_simulation.py:17: NumbaWarning: <span class="ansi-bold">
+Compilation is falling back to object mode WITH looplifting enabled because Function &#34;_walk&#34; failed type inference due to: </span><span class="ansi-bold">Undecided type $22load_method.7 := &lt;undecided&gt;</span>
+<span class="ansi-bold">During: resolving caller type: $22load_method.7</span>
+<span class="ansi-bold">During: typing of call at /home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/celloracle/trajectory/markov_simulation.py (40)
+</span>
+<span class="ansi-bold">
+File &#34;../../../../../.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/celloracle/trajectory/markov_simulation.py&#34;, line 40:</span>
+<span class="ansi-bold">def _walk(start_cell_id_array, transition_prob, n_steps):
+    &lt;source elided&gt;
+
+</span><span class="ansi-bold">    li.append(list(ids_now))
+</span>    <span class="ansi-bold">^</span>
+
+  @jit(i8[:,:](i8[:], f8[:,:], i8))
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/celloracle/trajectory/markov_simulation.py:17: NumbaWarning: <span class="ansi-bold">
+Compilation is falling back to object mode WITHOUT looplifting enabled because Function &#34;_walk&#34; failed type inference due to: </span><span class="ansi-bold">Cannot determine Numba type of &lt;class &#39;numba.core.dispatcher.LiftedLoop&#39;&gt;</span>
+<span class="ansi-bold">
+File &#34;../../../../../.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/celloracle/trajectory/markov_simulation.py&#34;, line 44:</span>
+<span class="ansi-bold">def _walk(start_cell_id_array, transition_prob, n_steps):
+    &lt;source elided&gt;
+    # walk for n_steps
+</span><span class="ansi-bold">    for i in range(n_steps):
+</span>    <span class="ansi-bold">^</span>
+
+  @jit(i8[:,:](i8[:], f8[:,:], i8))
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/numba/core/object_mode_passes.py:151: NumbaWarning: <span class="ansi-bold">Function &#34;_walk&#34; was compiled in object mode without forceobj=True, but has lifted loops.
+</span><span class="ansi-bold">
+File &#34;../../../../../.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/celloracle/trajectory/markov_simulation.py&#34;, line 34:</span>
+<span class="ansi-bold">def _walk(start_cell_id_array, transition_prob, n_steps):
+    &lt;source elided&gt;
+    &#34;&#34;&#34;
+</span><span class="ansi-bold">    n_cells = transition_prob.shape[0]
+</span>    <span class="ansi-bold">^</span>
+
+  warnings.warn(errors.NumbaWarning(warn_msg,
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/numba/core/object_mode_passes.py:161: NumbaDeprecationWarning: <span class="ansi-bold">
+Fall-back from the nopython compilation path to the object mode compilation path has been detected, this is deprecated behaviour.
+
+For more information visit https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit
+</span><span class="ansi-bold">
+File &#34;../../../../../.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/celloracle/trajectory/markov_simulation.py&#34;, line 34:</span>
+<span class="ansi-bold">def _walk(start_cell_id_array, transition_prob, n_steps):
+    &lt;source elided&gt;
+    &#34;&#34;&#34;
+</span><span class="ansi-bold">    n_cells = transition_prob.shape[0]
+</span>    <span class="ansi-bold">^</span>
+
+  warnings.warn(errors.NumbaDeprecationWarning(msg,
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+R path: /usr/bin/R
+Build process aborts.
+checking_installation: igraph -&gt; NG
+ R library, igraph is unavailable. Please check installation.
+Build process aborts.
+checking_installation: linkcomm -&gt; NG
+ R library, linkcomm is unavailable. Please check installation.
+Build process aborts.
+checking_installation: rnetcarto -&gt; NG
+ R library, rnetcarto is unavailable. Please check installation.
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/celloracle/network_analysis/use_r_scripts.py:75: ResourceWarning: unclosed file &lt;_io.BufferedReader name=44&gt;
+  print(f&#34; R library, {i} is unavailable. Please check installation.&#34;)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/ipykernel/pylab/config.py:79: DeprecationWarning: InlineBackend._figure_format_changed is deprecated in traitlets 4.1: use @observe and @unobserve instead.
+  def _figure_format_changed(self, name, old, new):
+</pre></div></div>
+</div>
+<p>We use the example dataset from <a class="reference external" href="https://www.cell.com/cell/pdfExtended/S0092-8674(15)01493-2">Paul et al 2015</a> and a pre-built default base network derived from motif analysis of ATAC data.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adata</span> <span class="o">=</span> <span class="n">co</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">load_Paul2015_data</span><span class="p">()</span>
+<span class="n">adata</span><span class="o">.</span><span class="n">obs</span><span class="p">[</span><span class="s2">&quot;fake_cluster&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;all_one_cluster&quot;</span>
+<span class="n">base_GRN</span> <span class="o">=</span> <span class="n">co</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">load_mouse_scATAC_atlas_base_GRN</span><span class="p">()</span>
+<span class="n">base_GRN</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/ipykernel/ipkernel.py:283: DeprecationWarning: `should_run_async` will not call `transform_cell` automatically in the future. Please pass the result to `transformed_cell` argument and any exception that happen during thetransform in `preprocessing_exc_tuple` in IPython 7.17 and above.
+  and should_run_async(code)
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/h5ad.py:238: OldFormatWarning: Element &#39;/X&#39; was written without encoding metadata.
+  d[k] = read_elem(f[k])
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/h5ad.py:238: OldFormatWarning: Element &#39;/layers&#39; was written without encoding metadata.
+  d[k] = read_elem(f[k])
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:92: OldFormatWarning: Element &#39;/layers/raw_count&#39; was written without encoding metadata.
+  return {k: read_elem(v) for k, v in elem.items()}
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:584: OldFormatWarning: Element &#39;/obs/__categories/paul15_clusters&#39; was written without encoding metadata.
+  categories = read_elem(categories_dset)
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:587: OldFormatWarning: Element &#39;/obs/paul15_clusters&#39; was written without encoding metadata.
+  read_elem(dataset), categories, ordered=ordered
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:590: OldFormatWarning: Element &#39;/obs/n_counts_all&#39; was written without encoding metadata.
+  return read_elem(dataset)
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:590: OldFormatWarning: Element &#39;/obs/n_counts&#39; was written without encoding metadata.
+  return read_elem(dataset)
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:584: OldFormatWarning: Element &#39;/obs/__categories/louvain&#39; was written without encoding metadata.
+  categories = read_elem(categories_dset)
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:587: OldFormatWarning: Element &#39;/obs/louvain&#39; was written without encoding metadata.
+  read_elem(dataset), categories, ordered=ordered
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:584: OldFormatWarning: Element &#39;/obs/__categories/cell_type&#39; was written without encoding metadata.
+  categories = read_elem(categories_dset)
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:587: OldFormatWarning: Element &#39;/obs/cell_type&#39; was written without encoding metadata.
+  read_elem(dataset), categories, ordered=ordered
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:584: OldFormatWarning: Element &#39;/obs/__categories/louvain_annot&#39; was written without encoding metadata.
+  categories = read_elem(categories_dset)
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:587: OldFormatWarning: Element &#39;/obs/louvain_annot&#39; was written without encoding metadata.
+  read_elem(dataset), categories, ordered=ordered
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:590: OldFormatWarning: Element &#39;/obs/dpt_pseudotime&#39; was written without encoding metadata.
+  return read_elem(dataset)
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:590: OldFormatWarning: Element &#39;/obs/index&#39; was written without encoding metadata.
+  return read_elem(dataset)
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/h5ad.py:238: OldFormatWarning: Element &#39;/obsm&#39; was written without encoding metadata.
+  d[k] = read_elem(f[k])
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:92: OldFormatWarning: Element &#39;/obsm/X_diffmap&#39; was written without encoding metadata.
+  return {k: read_elem(v) for k, v in elem.items()}
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:92: OldFormatWarning: Element &#39;/obsm/X_draw_graph_fa&#39; was written without encoding metadata.
+  return {k: read_elem(v) for k, v in elem.items()}
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:92: OldFormatWarning: Element &#39;/obsm/X_pca&#39; was written without encoding metadata.
+  return {k: read_elem(v) for k, v in elem.items()}
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/h5ad.py:238: OldFormatWarning: Element &#39;/obsp&#39; was written without encoding metadata.
+  d[k] = read_elem(f[k])
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/h5ad.py:238: OldFormatWarning: Element &#39;/uns&#39; was written without encoding metadata.
+  d[k] = read_elem(f[k])
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:92: OldFormatWarning: Element &#39;/uns/cell_type_colors&#39; was written without encoding metadata.
+  return {k: read_elem(v) for k, v in elem.items()}
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:92: OldFormatWarning: Element &#39;/uns/diffmap_evals&#39; was written without encoding metadata.
+  return {k: read_elem(v) for k, v in elem.items()}
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:92: OldFormatWarning: Element &#39;/uns/draw_graph&#39; was written without encoding metadata.
+  return {k: read_elem(v) for k, v in elem.items()}
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:92: OldFormatWarning: Element &#39;/uns/draw_graph/params&#39; was written without encoding metadata.
+  return {k: read_elem(v) for k, v in elem.items()}
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:92: OldFormatWarning: Element &#39;/uns/draw_graph/params/layout&#39; was written without encoding metadata.
+  return {k: read_elem(v) for k, v in elem.items()}
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:92: OldFormatWarning: Element &#39;/uns/draw_graph/params/random_state&#39; was written without encoding metadata.
+  return {k: read_elem(v) for k, v in elem.items()}
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:92: OldFormatWarning: Element &#39;/uns/iroot&#39; was written without encoding metadata.
+  return {k: read_elem(v) for k, v in elem.items()}
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:92: OldFormatWarning: Element &#39;/uns/louvain&#39; was written without encoding metadata.
+  return {k: read_elem(v) for k, v in elem.items()}
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:92: OldFormatWarning: Element &#39;/uns/louvain/params&#39; was written without encoding metadata.
+  return {k: read_elem(v) for k, v in elem.items()}
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:92: OldFormatWarning: Element &#39;/uns/louvain/params/random_state&#39; was written without encoding metadata.
+  return {k: read_elem(v) for k, v in elem.items()}
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:92: OldFormatWarning: Element &#39;/uns/louvain/params/resolution&#39; was written without encoding metadata.
+  return {k: read_elem(v) for k, v in elem.items()}
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:92: OldFormatWarning: Element &#39;/uns/louvain_annot_colors&#39; was written without encoding metadata.
+  return {k: read_elem(v) for k, v in elem.items()}
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:92: OldFormatWarning: Element &#39;/uns/louvain_colors&#39; was written without encoding metadata.
+  return {k: read_elem(v) for k, v in elem.items()}
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:92: OldFormatWarning: Element &#39;/uns/louvain_sizes&#39; was written without encoding metadata.
+  return {k: read_elem(v) for k, v in elem.items()}
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:92: OldFormatWarning: Element &#39;/uns/neighbors&#39; was written without encoding metadata.
+  return {k: read_elem(v) for k, v in elem.items()}
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:92: OldFormatWarning: Element &#39;/uns/neighbors/params&#39; was written without encoding metadata.
+  return {k: read_elem(v) for k, v in elem.items()}
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:92: OldFormatWarning: Element &#39;/uns/neighbors/params/method&#39; was written without encoding metadata.
+  return {k: read_elem(v) for k, v in elem.items()}
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:92: OldFormatWarning: Element &#39;/uns/neighbors/params/n_neighbors&#39; was written without encoding metadata.
+  return {k: read_elem(v) for k, v in elem.items()}
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:92: OldFormatWarning: Element &#39;/uns/paga&#39; was written without encoding metadata.
+  return {k: read_elem(v) for k, v in elem.items()}
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:92: OldFormatWarning: Element &#39;/uns/paga/groups&#39; was written without encoding metadata.
+  return {k: read_elem(v) for k, v in elem.items()}
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:92: OldFormatWarning: Element &#39;/uns/paga/pos&#39; was written without encoding metadata.
+  return {k: read_elem(v) for k, v in elem.items()}
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:92: OldFormatWarning: Element &#39;/uns/paul15_clusters_colors&#39; was written without encoding metadata.
+  return {k: read_elem(v) for k, v in elem.items()}
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:92: OldFormatWarning: Element &#39;/uns/pca&#39; was written without encoding metadata.
+  return {k: read_elem(v) for k, v in elem.items()}
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:92: OldFormatWarning: Element &#39;/uns/pca/variance&#39; was written without encoding metadata.
+  return {k: read_elem(v) for k, v in elem.items()}
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:92: OldFormatWarning: Element &#39;/uns/pca/variance_ratio&#39; was written without encoding metadata.
+  return {k: read_elem(v) for k, v in elem.items()}
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:590: OldFormatWarning: Element &#39;/var/n_counts&#39; was written without encoding metadata.
+  return read_elem(dataset)
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:590: OldFormatWarning: Element &#39;/var/index&#39; was written without encoding metadata.
+  return read_elem(dataset)
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/h5ad.py:238: OldFormatWarning: Element &#39;/varm&#39; was written without encoding metadata.
+  d[k] = read_elem(f[k])
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:92: OldFormatWarning: Element &#39;/varm/PCs&#39; was written without encoding metadata.
+  return {k: read_elem(v) for k, v in elem.items()}
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/h5ad.py:269: OldFormatWarning: Element &#39;/raw/X&#39; was written without encoding metadata.
+  raw[&#34;X&#34;] = read_x(f[&#34;raw/X&#34;])
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:590: OldFormatWarning: Element &#39;/raw/var/n_counts&#39; was written without encoding metadata.
+  return read_elem(dataset)
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/anndata/_io/specs/methods.py:590: OldFormatWarning: Element &#39;/raw/var/index&#39; was written without encoding metadata.
+  return read_elem(dataset)
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>peak_id</th>
+      <th>gene_short_name</th>
+      <th>9430076c15rik</th>
+      <th>Ac002126.6</th>
+      <th>Ac012531.1</th>
+      <th>Ac226150.2</th>
+      <th>Afp</th>
+      <th>Ahr</th>
+      <th>Ahrr</th>
+      <th>Aire</th>
+      <th>...</th>
+      <th>Znf784</th>
+      <th>Znf8</th>
+      <th>Znf816</th>
+      <th>Znf85</th>
+      <th>Zscan10</th>
+      <th>Zscan16</th>
+      <th>Zscan22</th>
+      <th>Zscan26</th>
+      <th>Zscan31</th>
+      <th>Zscan4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>chr10_100050979_100052296</td>
+      <td>4930430F08Rik</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>chr10_101006922_101007748</td>
+      <td>SNORA17</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>chr10_101144061_101145000</td>
+      <td>Mgat4c</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>chr10_10148873_10149183</td>
+      <td>9130014G24Rik</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>chr10_10149425_10149815</td>
+      <td>9130014G24Rik</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 1095 columns</p>
+</div></div>
+</div>
+<p>How to get the expression data and the base network into the CellOracle object. Undo the comments to toggle common errors on and off.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">oracle</span> <span class="o">=</span> <span class="n">co</span><span class="o">.</span><span class="n">Oracle</span><span class="p">()</span>
+<span class="c1"># adata.X = adata.raw.X</span>
+<span class="n">oracle</span><span class="o">.</span><span class="n">import_anndata_as_raw_count</span><span class="p">(</span><span class="n">adata</span><span class="o">=</span><span class="n">adata</span><span class="p">,</span>
+                                   <span class="n">cluster_column_name</span><span class="o">=</span><span class="s2">&quot;fake_cluster&quot;</span><span class="p">,</span> <span class="c1">#bad</span>
+<span class="c1">#                                    cluster_column_name=&quot;louvain_annot&quot;, #good</span>
+                                   <span class="n">embedding_name</span><span class="o">=</span><span class="s2">&quot;X_draw_graph_fa&quot;</span><span class="p">)</span>
+<span class="n">oracle</span><span class="o">.</span><span class="n">import_TF_data</span><span class="p">(</span><span class="n">TF_info_matrix</span><span class="o">=</span><span class="n">base_GRN</span><span class="p">)</span>
+<span class="n">oracle</span><span class="o">.</span><span class="n">addTFinfo_dictionary</span><span class="p">({</span><span class="s2">&quot;Foxn1&quot;</span><span class="p">:[</span><span class="s1">&#39;Ccl25&#39;</span><span class="p">,</span> <span class="s1">&#39;Psmb11&#39;</span><span class="p">,</span> <span class="s1">&#39;Pdlim1&#39;</span><span class="p">,</span> <span class="s1">&#39;Mfsd12&#39;</span><span class="p">,</span> <span class="s1">&#39;Mreg&#39;</span><span class="p">,</span> <span class="s1">&#39;Fam57a&#39;</span><span class="p">,</span> <span class="s1">&#39;Ppp1r16b&#39;</span><span class="p">]})</span>
+</pre></div>
+</div>
+</div>
+<p>If you want to put everything in one cluster, it requires setting certain other undocumented aspects of object state.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adata</span><span class="o">.</span><span class="n">obs</span><span class="p">[</span><span class="s2">&quot;fake_cluster&quot;</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;all_one_cluster&quot;</span>
+<span class="n">adata</span><span class="o">.</span><span class="n">obs</span><span class="o">.</span><span class="n">fake_cluster</span> <span class="o">=</span> <span class="n">adata</span><span class="o">.</span><span class="n">obs</span><span class="o">.</span><span class="n">fake_cluster</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="n">adata</span><span class="o">.</span><span class="n">uns</span><span class="p">[</span><span class="s2">&quot;fake_cluster_colors&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;#1f77b4&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/ipykernel/ipkernel.py:283: DeprecationWarning: `should_run_async` will not call `transform_cell` automatically in the future. Please pass the result to `transformed_cell` argument and any exception that happen during thetransform in `preprocessing_exc_tuple` in IPython 7.17 and above.
+  and should_run_async(code)
+</pre></div></div>
+</div>
+<p>Then we can train up some models and simulate a knockout.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">oracle</span><span class="o">.</span><span class="n">perform_PCA</span><span class="p">()</span>
+<span class="n">n_comps</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">n_cell</span> <span class="o">=</span> <span class="n">oracle</span><span class="o">.</span><span class="n">adata</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">k</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mf">0.025</span><span class="o">*</span><span class="n">n_cell</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Auto-selected k is :</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">oracle</span><span class="o">.</span><span class="n">knn_imputation</span><span class="p">(</span><span class="n">n_pca_dims</span><span class="o">=</span><span class="n">n_comps</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="n">k</span><span class="p">,</span> <span class="n">balanced</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">b_sight</span><span class="o">=</span><span class="n">k</span><span class="o">*</span><span class="mi">8</span><span class="p">,</span>
+                      <span class="n">b_maxl</span><span class="o">=</span><span class="n">k</span><span class="o">*</span><span class="mi">4</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/ipykernel/ipkernel.py:283: DeprecationWarning: `should_run_async` will not call `transform_cell` automatically in the future. Please pass the result to `transformed_cell` argument and any exception that happen during thetransform in `preprocessing_exc_tuple` in IPython 7.17 and above.
+  and should_run_async(code)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Auto-selected k is :66
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/celloracle/trajectory/neighbors.py:402: DeprecationWarning: Please use `csr_matrix` from the `scipy.sparse` namespace, the `scipy.sparse.csr` namespace is deprecated.
+  if type(mknn) is not sparse.csr.csr_matrix:
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span> <span class="c1">#Otherwise, np.int nightmare</span>
+<span class="n">links</span> <span class="o">=</span> <span class="n">oracle</span><span class="o">.</span><span class="n">get_links</span><span class="p">(</span><span class="n">cluster_name_for_GRN_unit</span><span class="o">=</span><span class="s2">&quot;louvain_annot&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+                         <span class="n">verbose_level</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">test_mode</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/home/ekernf01/.local/share/r-miniconda/envs/cscb/lib/python3.9/site-packages/ipykernel/ipkernel.py:283: DeprecationWarning: `should_run_async` will not call `transform_cell` automatically in the future. Please pass the result to `transformed_cell` argument and any exception that happen during thetransform in `preprocessing_exc_tuple` in IPython 7.17 and above.
+  and should_run_async(code)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "9c1751eceef24d4aba425828938f93a8", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+inferring GRN for Ery_0...
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "804ae0dcd80d44958a71349038cb8ca6", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+inferring GRN for Ery_1...
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "14992cce34494d01b70266b3f4541ab8", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+inferring GRN for Ery_2...
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "2237f318340d4e028806495b021634cb", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+inferring GRN for Ery_3...
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "288fd4b21da7422395e3f2b5c1a5c03c", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+inferring GRN for Ery_4...
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "00223ae49ae3444f8e32cd083f6bbdd5", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+inferring GRN for Ery_5...
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "bac98f68d2834a50855aba2121afe225", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+inferring GRN for Ery_6...
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "16ef9631a2f14cd39cf0b5a59ffd675e", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+inferring GRN for Ery_7...
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "7b04139da8be4b17b0c237aae2eae225", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+inferring GRN for Ery_8...
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "aa1c65a9a02a4ce194c6493d8d9c7712", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+inferring GRN for Ery_9...
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "7fa0ff462ed145f78ba5413dc8caa4a6", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+inferring GRN for GMP_0...
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "579993dd3454408b9df22b21c66c16ae", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+inferring GRN for GMP_1...
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "7874d6d97a8f4d009f83e169a089a7f7", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+inferring GRN for GMP_2...
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "8c818b2da7ae4bffb5eddaa95febc980", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+inferring GRN for GMPl_0...
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "d6ed1096d3984c999d91e0a4a8c37f06", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+inferring GRN for GMPl_1...
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "8a1b9e6334a845748591aaaa82ef1bb8", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+inferring GRN for Gran_0...
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "a5c7061997be4df1a73cdf1b6cedbe3b", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+inferring GRN for Gran_1...
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "7f875727717f47448ec4843e13db065e", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+inferring GRN for Gran_2...
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "ca98de6c3a8c4dda92eb6aad4e5c2302", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+inferring GRN for Gran_3...
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "a259e7263ba643dcb65dbf3ddb8fb6e7", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+inferring GRN for MEP_0...
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "88dba37838bd468a811f0a4a1246c51a", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+inferring GRN for Mk_0...
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "e0095198d2a34c2fa4ab6d8231c1af9a", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+inferring GRN for Mo_0...
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "901f9fcce2b9453d8a385b52369b60fd", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+inferring GRN for Mo_1...
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "556aeb8978f54d7bae549a49b48ae1ef", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+inferring GRN for Mo_2...
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "cc2ba3175d0b470bafa53c3f20604b02", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">links</span><span class="o">.</span><span class="n">links_dict</span><span class="p">[</span><span class="s2">&quot;Ery_0&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>source</th>
+      <th>target</th>
+      <th>coef_mean</th>
+      <th>coef_abs</th>
+      <th>p</th>
+      <th>-logp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Mef2c</td>
+      <td>0610007L01Rik</td>
+      <td>-0.000324</td>
+      <td>0.000324</td>
+      <td>0.741978</td>
+      <td>0.129609</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Gata1</td>
+      <td>0610007L01Rik</td>
+      <td>0.002261</td>
+      <td>0.002261</td>
+      <td>0.149212</td>
+      <td>0.826197</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Fli1</td>
+      <td>0610007L01Rik</td>
+      <td>0.002797</td>
+      <td>0.002797</td>
+      <td>0.057084</td>
+      <td>1.243489</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Rara</td>
+      <td>0610007L01Rik</td>
+      <td>0.000354</td>
+      <td>0.000354</td>
+      <td>0.660728</td>
+      <td>0.179977</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Klf6</td>
+      <td>0610007L01Rik</td>
+      <td>-0.002702</td>
+      <td>0.002702</td>
+      <td>0.125995</td>
+      <td>0.899648</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">links</span><span class="o">.</span><span class="n">filter_links</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.001</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="s2">&quot;coef_abs&quot;</span><span class="p">,</span> <span class="n">threshold_number</span><span class="o">=</span><span class="mi">2000</span><span class="p">)</span>
+<span class="n">oracle</span><span class="o">.</span><span class="n">get_cluster_specific_TFdict_from_Links</span><span class="p">(</span><span class="n">links_object</span><span class="o">=</span><span class="n">links</span><span class="p">)</span>
+<span class="n">oracle</span><span class="o">.</span><span class="n">fit_GRN_for_simulation</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">use_cluster_specific_TFdict</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+fitting GRN again...
+calculating GRN in Ery_0
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "e6fd01e1247249b59d2c46311e9b0c9b", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+genes_in_gem: 1999
+models made for 491 genes
+calculating GRN in Ery_1
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "08d1dc39f6e7437bb5350f8aef834d20", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+genes_in_gem: 1999
+models made for 510 genes
+calculating GRN in Ery_2
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "d094e883cd9f4e65976e92c2a358ce8f", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+genes_in_gem: 1999
+models made for 548 genes
+calculating GRN in Ery_3
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "bc6534eb47854a898aba5bc62526d360", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+genes_in_gem: 1999
+models made for 552 genes
+calculating GRN in Ery_4
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "a56996982eff4f14b2cae87539233e23", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+genes_in_gem: 1999
+models made for 573 genes
+calculating GRN in Ery_5
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "4d3722070f2c4fd58d9635e2b39ddf75", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+genes_in_gem: 1999
+models made for 579 genes
+calculating GRN in Ery_6
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "1fcd33aaae634f7f8989197acb35d85b", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+genes_in_gem: 1999
+models made for 604 genes
+calculating GRN in Ery_7
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "7bd1148ac5854808910f2f1483711047", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+genes_in_gem: 1999
+models made for 538 genes
+calculating GRN in Ery_8
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "1a2ec028c5a04576a33690be4d07a2a4", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+genes_in_gem: 1999
+models made for 566 genes
+calculating GRN in Ery_9
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "42a0bfa68026492f944db874fc52f6bb", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+genes_in_gem: 1999
+models made for 594 genes
+calculating GRN in GMP_0
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "fd2b8e5ed93445bba2f7ae6076e532c2", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+genes_in_gem: 1999
+models made for 458 genes
+calculating GRN in GMP_1
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "1ea145b3484f442bb479ccfcff000abb", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+genes_in_gem: 1999
+models made for 509 genes
+calculating GRN in GMP_2
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "55c402ee5f8143bebb14b5e7e3ebbce3", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+genes_in_gem: 1999
+models made for 483 genes
+calculating GRN in GMPl_0
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "c8be09f10901401eb0cf718078aa3fba", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+genes_in_gem: 1999
+models made for 515 genes
+calculating GRN in GMPl_1
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "e6753170ca6f45628a505f5005d5c18d", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+genes_in_gem: 1999
+models made for 491 genes
+calculating GRN in Gran_0
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "5edb7710a6e94ff1a60dbc8499a521a8", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+genes_in_gem: 1999
+models made for 494 genes
+calculating GRN in Gran_1
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "fa5d0ad4b31a43e58b70018cd9dbf33d", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+genes_in_gem: 1999
+models made for 497 genes
+calculating GRN in Gran_2
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "6fd4c229a597490f887fb6602a7362bc", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+genes_in_gem: 1999
+models made for 536 genes
+calculating GRN in Gran_3
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "791a15b88cfc4208a53870a6933c3ece", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+genes_in_gem: 1999
+models made for 543 genes
+calculating GRN in MEP_0
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "6a1eff406b094563acbbcf161fcd105e", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+genes_in_gem: 1999
+models made for 522 genes
+calculating GRN in Mk_0
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "c600d1e9ea6e40d38001d9faa44e4036", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+genes_in_gem: 1999
+models made for 480 genes
+calculating GRN in Mo_0
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "13678a7491fc4f1fa48c1332f1c3d766", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+genes_in_gem: 1999
+models made for 504 genes
+calculating GRN in Mo_1
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "d0d0590bc2544f40a22af2c16f23618a", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+genes_in_gem: 1999
+models made for 534 genes
+calculating GRN in Mo_2
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "f7e4084ece3c42daa972d36e612a98e9", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+genes_in_gem: 1999
+models made for 512 genes
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">oracle</span><span class="o">.</span><span class="n">simulate_shift</span><span class="p">(</span><span class="n">perturb_condition</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Gata1&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">},</span> <span class="n">n_propagation</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="c1"># Fold change is stored here.</span>
+<span class="n">oracle</span><span class="o">.</span><span class="n">adata</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="s1">&#39;delta_X&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+array([[ 0.00000000e+00,  3.19123961e-03,  0.00000000e+00, ...,
+         0.00000000e+00,  0.00000000e+00,  0.00000000e+00],
+       [ 0.00000000e+00,  6.39196081e-05,  0.00000000e+00, ...,
+         0.00000000e+00,  0.00000000e+00,  0.00000000e+00],
+       [ 0.00000000e+00,  0.00000000e+00,  0.00000000e+00, ...,
+         0.00000000e+00,  0.00000000e+00,  0.00000000e+00],
+       ...,
+       [ 0.00000000e+00,  3.55902294e-03,  0.00000000e+00, ...,
+         0.00000000e+00,  0.00000000e+00,  0.00000000e+00],
+       [ 0.00000000e+00,  0.00000000e+00,  0.00000000e+00, ...,
+         0.00000000e+00,  0.00000000e+00,  0.00000000e+00],
+       [ 0.00000000e+00,  0.00000000e+00, -1.51553339e-04, ...,
+         0.00000000e+00,  0.00000000e+00,  0.00000000e+00]])
+</pre></div></div>
+</div>
+<p>This is not necessary but it’s a nice visual: perturbation response displayed as a vector field.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">oracle</span><span class="o">.</span><span class="n">estimate_transition_prob</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>
+                                <span class="n">knn_random</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                <span class="n">sampled_fraction</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">oracle</span><span class="o">.</span><span class="n">calculate_embedding_shift</span><span class="p">(</span><span class="n">sigma_corr</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
+<span class="n">oracle</span><span class="o">.</span><span class="n">calculate_p_mass</span><span class="p">(</span><span class="n">smooth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">n_grid</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">n_neighbors</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="n">oracle</span><span class="o">.</span><span class="n">calculate_mass_filter</span><span class="p">(</span><span class="n">min_mass</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">oracle</span><span class="o">.</span><span class="n">plot_cluster_whole</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">oracle</span><span class="o">.</span><span class="n">plot_simulation_flow_on_grid</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">show_background</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">sc</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">draw_graph</span><span class="p">(</span><span class="n">oracle</span><span class="o">.</span><span class="n">adata</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Gata1&quot;</span><span class="p">,</span> <span class="n">oracle</span><span class="o">.</span><span class="n">cluster_column_name</span><span class="p">],</span>
+                 <span class="n">layer</span><span class="o">=</span><span class="s2">&quot;imputed_count&quot;</span><span class="p">,</span> <span class="n">use_raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;viridis&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/day_21_Simulation_analysis_15_0.png" class="no-scaled-link" src="../_images/day_21_Simulation_analysis_15_0.png" style="width: 349px; height: 259px;" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/day_21_Simulation_analysis_15_1.png" class="no-scaled-link" src="../_images/day_21_Simulation_analysis_15_1.png" style="width: 940px; height: 292px;" />
+</div>
+</div>
+<div class="section" id="Troubleshooting-with-CellOracle">
+<h2>Troubleshooting with CellOracle<a class="headerlink" href="#Troubleshooting-with-CellOracle" title="Permalink to this headline">¶</a></h2>
+<p>Here are many types of errors we have encountered while using CellOracle, with overly terse suggested solutions.</p>
+<blockquote>
+<div><p>× Encountered error while trying to install package.</p>
+<p>╰─&gt; fa2</p>
+</div></blockquote>
+<p>Install the package separately, then try the CO install again.</p>
+<blockquote>
+<div><p>ValueError: gene expression matrix (adata.X) does not seems to be raw_count because it contains negative values.</p>
+</div></blockquote>
+<p>Feed it raw or normalized data, not scaled or centered.</p>
+<blockquote>
+<div><p>CellOracle takes a long time to run.</p>
+</div></blockquote>
+<p>CellOracle is meant to work with 1,000-3,000 genes, not the full transcriptome. Did you select genes? Also consider downsampling to fewer cells. If you are worried about losing rare cell types, consider <a class="reference external" href="https://github.com/brianhie/geosketch">geometric sketching</a>.</p>
+<blockquote>
+<div><p>ValueError: Gene {blah} does not have enough regulatory connection in the GRNs. Cannot perform simulation.</p>
+</div></blockquote>
+<p>Get a bigger base GRN or don’t prune so aggressively.</p>
+<blockquote>
+<div><p>ValueError: Gene {blah} is not included in the base GRN; It is not TF or TF motif information is not available. Cannot perform simulation.</p>
+</div></blockquote>
+<p>Get a bigger base GRN.</p>
+<blockquote>
+<div><p>ValueError: {blah} is not included in the Gene expression matrix.</p>
+</div></blockquote>
+<p>When you select variable genes, make sure you keep the ones you want to perturb.</p>
+<blockquote>
+<div><p>My desired cell states are not reachable.</p>
+</div></blockquote>
+<p>CellOracle is not intended for extrapolation outside the set of cell states in the training data. The training data need to include the cell state of interest.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="19_Cell_fate_engineering.html" class="btn btn-neutral float-left" title="Cell fate engineering" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../homework/HW_01.html" class="btn btn-neutral float-right" title="Homework #1" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Patrick Cahan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LFQLTP4DZG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-LFQLTP4DZG', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

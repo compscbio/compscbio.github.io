@@ -11,15 +11,15 @@ Schedule overview
 Homework and final project due dates
 ------------------------------------
 
-- :ref:`Homework 1<Homework 1>`: due 11:59 pm EST, **Sunday Feb 13th**
-- :ref:`Homework 2<Homework 2>`: due 11:59 pm EST, March 1st
-- :ref:`Homework 3<Homework 3>`: due 11:59 pm EST, March 9th
-- :ref:`Homework 4<Homework 4>`: due 11:59 pm EST, March 18th
-- :ref:`Homework 5<Homework 5>`: due 11:59 pm EST, April 1st
-- :ref:`Homework 6<Homework 6>`: due 11:59 pm EST, April 8th
-- :ref:`Homework 7<Homework 7>`: due 11:59 pm EST, April 22nd
+- :doc:`homework/HW_01` due 11:59 pm EST, **Sunday Feb 13th**
+- :doc:`homework/HW_02`: due 11:59 pm EST, March 1st
+- :doc:`homework/HW_03`: due 11:59 pm EST, March 9th
+- :doc:`homework/HW_04`: due 11:59 pm EST, March 18th
+- :doc:`homework/HW_05`: due 11:59 pm EST, April 1st
+- :doc:`homework/HW_06`: due 11:59 pm EST, April 8th
+- :doc:`homework/HW_07`: due 11:59 pm EST, April 22nd
 - :ref:`Homework 8<Homework 8>`: due TBD
-- :ref:`Final project<Final project>`: due 11:59 pm EST, Apr 25
+- :doc:`homework/Final_project`: due 11:59 pm EST, Apr 25
 
 ----
 
@@ -45,11 +45,11 @@ The schedule below is tentative. We will keep you updated as the content and sch
 #. Mar 15: :doc:`day/14_Lineage_tracing` (Guest speaker: Ray Cheng)
 #. Mar 17: :doc:`day/15_Pluripotency`
 #. Mar 29: :doc:`day/16_Spatial_Cell-to-Cell`
-#. Mar 31: :doc:`day/17_Lineage_tracing_analysis`
+#. Mar 31: :doc:`day/17_Lineage_Tracing_Analysis`
 #. Apr 5: :doc:`day/18_Gene_regulatory_networks` (Guest speaker: Emily Su)
 #. Apr 7: :doc:`day/19_Cell_fate_engineering`
 #. Apr 12: Cell fate simulations (Guest speaker: Dan Peng)
-#. Apr 14: Cell fate analysis (Guest speaker: Eric Kernfeld)
+#. Apr 14: :doc:`21_Simulation_analysis` (Guest speaker: Eric Kernfeld)
 #. Apr 19: scATAC-seq
 #. Apr 21: Stem cell controversies
 #. Apr 26: Final project presentations

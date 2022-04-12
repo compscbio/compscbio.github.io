@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Final project &mdash; cscb2022  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Homework #7" href="HW_07.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> cscb2022<img src="../_static/CSCB_logo2.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Schedule</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../schedule.html">Schedule overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../schedule.html#homework-and-final-project-due-dates">Homework and final project due dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../schedule.html#lecture-schedule">Lecture schedule</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Lectures:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../day/01_history_of_stem_cells.html">History of Stem Cells</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day/02_introduction_to_python_part_1.html">Comp Lesson 1: Introduction to Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day/03_introduction_to_python_part_2.html">Comp Lesson 2: Introduction to Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day/04_Till_McCulloch.html">Till and McCulloch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day/05_scRNAseq_data_generation.html">scRNAseq data generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day/06_scRNAseq_analysis.html">scRNAseq analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day/07_scRNAseq_analysis_part_2.html">scRNAseq analysis part 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day/08_cell_identity.html">Cell identity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day/09_trajectory_inference.html">Trajectory inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day/10_TI_part_2.html">How to do TI analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day/11_stemness.html">How to do ‘Stemness’ analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day/12_RNA_velocity.html">RNA Velocity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day/13_scvelo.html">RNA velocity analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day/14_Lineage_tracing.html">Lineage tracing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day/15_Pluripotency.html">Pluripotency</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day/16_Spatial_Cell-to-Cell.html">Spatial transcriptomics &amp; Cell-to-cell communication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day/17_Lineage_Tracing_Analysis.html">Lineage Tracing Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day/18_Gene_regulatory_networks.html">Gene regulatory networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day/19_Cell_fate_engineering.html">Cell fate engineering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day/21_Simulation_analysis.html">Simulation analysis</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Homework</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="HW_01.html">Homework #1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HW_02.html">Homework #2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HW_03.html">Homework #3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HW_04.html">Homework #4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HW_05.html">Homework #5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HW_06.html">Homework #6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HW_07.html">Homework #7</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Final project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Deliverables:">Deliverables:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Introduction:">Introduction:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Major-Questions:">Major Questions:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Major-Questions-(Graduate-Section-Only):">Major Questions (Graduate Section Only):</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Option-1:">Option 1:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Option-2:">Option 2:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">cscb2022</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Final project</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/homework/Final_project.ipynb.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Final-project">
+<h1>Final project<a class="headerlink" href="#Final-project" title="Permalink to this headline">¶</a></h1>
+<p>Teams: 3-4 people</p>
+<p>Report Due Date: 11:59pm Monday, April 25th (the night before the first set of presentations)</p>
+<div class="section" id="Deliverables:">
+<h2>Deliverables:<a class="headerlink" href="#Deliverables:" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Folder containing all the code files (no need to include data) used for project. Include a README.txt that briefly describes the functions/purposes of each file and the order you run them in.</p></li>
+<li><p>Prepare a report that addresses all the major questions (3 for undergraduate section and 4 for graduate section). The report should be focused on detailing the methods and the exploration of the dataset. Please include labeled figures to better visualize the results and data.</p></li>
+<li><p>Prepare a 10-15 minute presentation that summarizes the method used and the results. Include your slides in your submission.</p></li>
+</ol>
+</div>
+<div class="section" id="Introduction:">
+<h2>Introduction:<a class="headerlink" href="#Introduction:" title="Permalink to this headline">¶</a></h2>
+<p>Your collaborators are working on protocols to produce engineered mouse cardiomyocytes (CM) in vitro from fibroblasts. They have generated single-cell RNA-seq data and they are hoping you can help provide detailed hypotheses about the status of their cells and about potential protocol improvements. Their single-cell data are provided in the file folder <a class="reference external" href="https://compstemcellbio.s3.amazonaws.com/2022/final_project/direct_conversion_data_subsampled.zip">direct_conversion_data</a>. These data are in
+fact from <a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/31271750/">Stone et al</a>. Batched 1, 2, 3, 4, 5, and 6 represent timepoints -1, 1, 2, 3, 7, and 14. We have subsampled the data to 5,000 cells total, which we hope will simplify analysis for people with less RAM. If you want and you have sufficient computational power, you can also use the entire Stone dataset in <a class="reference external" href="https://compstemcellbio.s3.amazonaws.com/2022/final_project/direct_conversion_data_big.zip">direct_conversion_data_full</a>.</p>
+</div>
+<div class="section" id="Major-Questions:">
+<h2>Major Questions:<a class="headerlink" href="#Major-Questions:" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>How pure are your engineered cardiomyocytes?</p></li>
+</ol>
+<p>For estimating the success of engineered cardiomyocyte from Stone et al (similarity of expression profiles to cardiac muscle cells or fibroblast), perform in silico validation of the expression profiles with <a class="reference external" href="https://compstemcellbio.s3.amazonaws.com/2022/final_project/TM_FACS_heart.h5ad">reference dataset sampled from Tabula Muris</a>. Develop a method to perform comparison between the engineered CMs and reference dataset. - You may choose to use
+<a class="reference external" href="https://github.com/pcahan1/PySingleCellNet">pySCN</a> to perform the assessment.</p>
+<ol class="arabic simple" start="2">
+<li><p>How mature are your engineered cardiomyocytes?</p></li>
+</ol>
+<p>Heart is one of the earliest organs to develop during embryogenesis. In mice, as early as embryonic day E7.0-7.5, convergence of lateral mesoderm domain called first heart field begins to beat. Cardiomyocytes rapidly proliferate up until E14, and then start maturation after.</p>
+<figure><p><img alt="050d1e119dc047efbcc86f8c80ba2109" class="no-scaled-link" src="../_images/in_vivo_cardiomyocyte.png" style="width: 500px;" /></p>
+<figcaption><p>Conceptual scheme of maturation phase of heart development. Guo et al, 2020</p>
+</figcaption></figure><p>Some of the major hallmarks of cardiomyocyte maturation include cell cycle arrest, multinucleation, growth by hypertrophy, transition to oxidative metabolism, and expression of mature sarcomeric contractile protein isoforms. <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8004589/">Padula et al, 2021</a> provides a review of the transcriptional regulations of cardiomyocyte maturation and the TF genes associated with CM maturation phenotypes.</p>
+<p>To computationally estimate the maturity of engineered CM’s across different data sources, <a class="reference external" href="https://journals.plos.org/ploscompbiol/article/authors?id=10.1371/journal.pcbi.1009305">Kannan et al</a> constructed a reference scRNA-seq resource for CM maturation by isolating CM cells from Myh6-Cre; mTmG (aMHC x mTmG) mice across 12 time points of CM maturation.</p>
+<figure><p><img alt="73aa5900ae8f44e8b76205379b78c13f" class="no-scaled-link" src="../_images/postnatal_CM_maturation.png" style="width: 600px;" /></p>
+<figcaption><ol class="upperalpha simple">
+<li><p>Mouse model used to generate perinatal maturation reference scRNA-seq dataset. B. UMAP of maturation reference dataset. Kannan et al, 2021</p></li>
+</ol>
+</figcaption></figure><p>Kannan et al have provided a detailed protocol accompanied by software and extensive meta-analysis and validation for their entropy based method. Apply the protocol of Kannan et al. or use some other method to determine the maturation time point that the engineered CMs are most similar to using the <a class="reference external" href="https://compstemcellbio.s3.amazonaws.com/2022/final_project/perinatal_reference_data.zip">perinatal_reference_data</a>. As Kannan et al. do, you should only select the cells that were classified as
+cardiomyocyte in the previous steps.</p>
+<ol class="arabic simple" start="3">
+<li><p>What genetic alterations could improve your engineered cardiomyocytes?</p></li>
+</ol>
+<p>Estimating maturity is useful as a metric, but it does not provide an immediate path forward in the form of specific hypotheses for how to improve the engineered CMs. Your collaborators want to identify candidate TFs that they could overexpress or knock out to further enhance differentiation. Set up an in silico screen with CellOracle. The essential components are: 1. A training dataset. To ensure relevant cell types are represented, we recommend the in vivo perinatal CM development timecourse
+from Kannan et al., available in file folder <a class="reference external" href="https://compstemcellbio.s3.amazonaws.com/2022/final_project/perinatal_reference_data.zip">perinatal_reference_data</a>.</p>
+<ol class="arabic simple" start="2">
+<li><p>An evaluation dataset. How well do CellOracle’s predicted fold changes correspond to what would actually happen? You can test this using a cardiomyocyte-specific knockout of the transcription factor Prdm16, which was assayed with scRNA-seq at embryonic day 13.5 in figure 6 of <a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/34915728/">Wu et al. 2022.</a>. These data have been downsampled to 5,000 barcodes and are available in the <a class="reference external" href="https://compstemcellbio.s3.amazonaws.com/2022/final_project/wu_prdm16.zip">wu_prdm16
+folder</a>. There are two biological replicates each of control and knockout samples.</p></li>
+<li><p>A base GRN. To obtain better performance across a wider range of testable perturbations, compare three options for the base network: completely dense (all possible connections), CellOracle’s default, and a custom base network derived from motif analysis of the ATAC-seq data in Figure 3 of Stone et al, available in direct_conversion_data/GSE130806_Bulk_Atac_Count_Data.bed. As controls, also include randomly generated networks matching the density of the motif-derived networks. There is a
+tutorial on motif analysis for CellOracle <a class="reference external" href="https://morris-lab.github.io/CellOracle.documentation/notebooks/01_ATAC-seq_data_processing/option2_Bulk_ATAC-seq_data/01_preprocess_Bulk_ATAC_seq_peak_data.html">here</a>. If your team has 4 or fewer members, you can skip this item. Just use the default base GRN provided with CellOracle.</p></li>
+<li><p>A summary metric. Though it’s very useful to have per-gene fold change predictions, they are hard to understand and hard to rank by usefulness. Develop a method to rank the predicted transcriptomes by how useful the perturbations will be for engineering cardiomyocytes.</p>
+<ul class="simple">
+<li><p>Look at what TF perturbation would drive the maturation of cardiomyocytes and whether or not it would specifically be beneficial to drive the maturation of cells from directed conversion experiment.</p></li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="section" id="Major-Questions-(Graduate-Section-Only):">
+<h2>Major Questions (Graduate Section Only):<a class="headerlink" href="#Major-Questions-(Graduate-Section-Only):" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="Option-1:">
+<h3>Option 1:<a class="headerlink" href="#Option-1:" title="Permalink to this headline">¶</a></h3>
+<p>What non-genetic cues might improve you engineered cardiomyocytes?</p>
+<p>Aside from overexpressing transcription factors, another method of optimizing cell fate engineering is to use drug compounds or morphogens that target signaling pathways with important roles in embryonic development. (Box 1 gives some context on morphogens.) Modify or repurpose CellOracle to allow predictions of transcriptomic changes due to activation or repression of signaling pathways. Ideally, any new method of this sort would be tested on a prediction task relevant to in vitro directed
+differentiation. One potential test dataset is <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S2211124721003405">this screen of 320 FDA-approved drugs for maturation of mouse colon organoids</a>, available in the <a class="reference external" href="https://compstemcellbio.s3.amazonaws.com/2022/final_project/compound_screen.zip">compound_screening folder</a>. In each sample, the full transcriptome is not measured, but roughly 200 genes are measured, which provides enough information to test detailed predictions from an
+extension of CellOracle. If your solution would benefit from a full-transcriptome intestinal organoid dataset, we suggest the mouse intestinal organoid scRNA-seq dataset from <a class="reference external" href="https://www.nature.com/articles/nature14966">Grün et al. 2015</a>, which uses the same protocol to culture organoids. This dataset is available in the <a class="reference external" href="https://compstemcellbio.s3.amazonaws.com/2022/final_project/grun_organoids.zip">grun_organoids folder</a>.</p>
+<hr class="docutils" />
+<p>Box 1: Morphogens. Morphogens are diffusible signals that play a role in patterning of tissues and organs during development. One example of a morphogen is Sonic HedgeHog (SHH). It is a soluble protein. It is important in dorsoventral patterning of vertebrate embryos. During formation of the spinal cord, a flat layer of ectoderm folds inward to form a tube. SHH is secreted from a plate of cells on the innermost side of the tube. It diffuses towards the outermost side. As it reaches the cells
+that will respond to it, it interacts with membrane-bound protein complexes. Through a moderately complicated series of events, it eventually activates transcription factors from the Gli family. Depending on the dose, different target genes are activated. These target genes repress each others’ expression, giving rise to sharp boundaries between discrete zones with distinct transcriptional profiles. These boundaries remain stable when SHH is removed; the cells are committed to their respective
+fates. Morphogens provide similar spatial cues throughout development of diverse body structures in diverse organisms.</p>
+<p>Morphogen diversity. Morphogens can be soluble proteins like SHH. They can also be small molecules. An example of a natural small-molecule morphogen is retinoic acid, and an example of a natural small-molecule inhibitor of SHH is cyclopamine. (Cyclopamine occurs in plants as a poison, helping defend against herbivorous animals.) Morphogens are often discussed in terms of “pathways”, which describe how the signal reaches the nucleus starting from outside the cell. Other examples of morphogen
+pathways are Notch, Wnt, bone morphogenic protein (BMP), and transforming growth factor beta (TGF-beta). Each of these has distinct roles, mechanisms, and quirks. There is a surprisingly small collection of pathways that are re-used in many contexts during development of animals with bilateral symmetry. These receive special attention in stem cell biology. But, it is also possible to screen drugs or compounds with no known role in development; they may still prove useful in directed
+differentiation protocols.</p>
+<figure><p><img alt="66579ff4e6e941d6ae4f8203e383db0a" class="no-scaled-link" src="../_images/morphogen_image1.png" style="width: 300px;" /></p>
+<figcaption><p>Difference classes of spinal neurons are patterned by different doses of SHH over a fairly short (&lt;24hr) time interval. Image credit: <a class="reference external" href="https://cshperspectives.cshlp.org/content/1/2/a002014/F2.expansion.html">https://cshperspectives.cshlp.org/content/1/2/a002014/F2.expansion.html</a></p>
+</figcaption></figure><figure><p><img alt="873148b7a78d410cadab53f2ce55b0d2" class="no-scaled-link" src="../_images/morphogen_image2.png" style="width: 300px;" /></p>
+<figcaption><p>How the SHH signal is transduced into the nucleus to alter transcription.</p>
+<p>Image credit: <a class="reference external" href="https://www.frontiersin.org/articles/10.3389/fmolb.2021.711710/full">https://www.frontiersin.org/articles/10.3389/fmolb.2021.711710/full</a></p>
+</figcaption></figure><hr class="docutils" />
+</div>
+<div class="section" id="Option-2:">
+<h3>Option 2:<a class="headerlink" href="#Option-2:" title="Permalink to this headline">¶</a></h3>
+<p>How can your computational methods be translated to help engineer human cardiomyocytes?</p>
+<p>Questions 1-3 focus on mouse cells, but your collaborators are ultimately interested in translational and medical research, so they need human CM’s. They have generated preliminary data on directed differentiation of human cells, available in <a class="reference external" href="https://compstemcellbio.s3.amazonaws.com/2022/final_project/human_engineered_cardiomyocytes.zip">human_engineered_cardiomyocytes</a> (in fact, these data are from <a class="reference external" href="https://www.cell.com/cell-stem-cell/fulltext/S1934-5909(20)30202-2">Giacomelli et al.</a>).
+Apply the same assessment and TF screening methods to human iPSCs.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="HW_07.html" class="btn btn-neutral float-left" title="Homework #7" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Patrick Cahan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LFQLTP4DZG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-LFQLTP4DZG', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

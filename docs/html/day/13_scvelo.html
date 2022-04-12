@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RNA velocity analysis &mdash; cscb2022  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>RNA velocity analysis &mdash; cscb2022  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -30,8 +27,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> cscb2022
-            <img src="../_static/CSCB_logo2.png" class="logo" alt="Logo"/>
+            <a href="../index.html" class="icon icon-home"> cscb2022<img src="../_static/CSCB_logo2.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -41,13 +37,13 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Schedule</span></p>
+              <p class="caption"><span class="caption-text">Schedule</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../schedule.html">Schedule overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../schedule.html#homework-and-final-project-due-dates">Homework and final project due dates</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../schedule.html#lecture-schedule">Lecture schedule</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Lectures:</span></p>
+<p class="caption"><span class="caption-text">Lectures:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="01_history_of_stem_cells.html">History of Stem Cells</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02_introduction_to_python_part_1.html">Comp Lesson 1: Introduction to Python</a></li>
@@ -80,8 +76,11 @@
 <li class="toctree-l1"><a class="reference internal" href="15_Pluripotency.html">Pluripotency</a></li>
 <li class="toctree-l1"><a class="reference internal" href="16_Spatial_Cell-to-Cell.html">Spatial transcriptomics &amp; Cell-to-cell communication</a></li>
 <li class="toctree-l1"><a class="reference internal" href="17_Lineage_Tracing_Analysis.html">Lineage Tracing Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="18_Gene_regulatory_networks.html">Gene regulatory networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="19_Cell_fate_engineering.html">Cell fate engineering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="21_Simulation_analysis.html">Simulation analysis</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Homework</span></p>
+<p class="caption"><span class="caption-text">Homework</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../homework/HW_01.html">Homework #1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../homework/HW_02.html">Homework #2</a></li>
@@ -89,6 +88,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../homework/HW_04.html">Homework #4</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../homework/HW_05.html">Homework #5</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../homework/HW_06.html">Homework #6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/HW_07.html">Homework #7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/Final_project.html">Final project</a></li>
 </ul>
 
         </div>
@@ -385,8 +386,8 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<section id="RNA-velocity-analysis">
-<h1>RNA velocity analysis<a class="headerlink" href="#RNA-velocity-analysis" title="Permalink to this headline"></a></h1>
+<div class="section" id="RNA-velocity-analysis">
+<h1>RNA velocity analysis<a class="headerlink" href="#RNA-velocity-analysis" title="Permalink to this headline">¶</a></h1>
 <p>This walk-thru is based heavily on <a class="reference external" href="https://scvelo.readthedocs.io/VelocityBasics/">https://scvelo.readthedocs.io/VelocityBasics/</a></p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -789,8 +790,8 @@ Number of genes:  14915
 Number of genes:  14800
 </pre></div></div>
 </div>
-<section id="Spliced/unspliced-normalization">
-<h2>Spliced/unspliced normalization<a class="headerlink" href="#Spliced/unspliced-normalization" title="Permalink to this headline"></a></h2>
+<div class="section" id="Spliced/unspliced-normalization">
+<h2>Spliced/unspliced normalization<a class="headerlink" href="#Spliced/unspliced-normalization" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
@@ -835,9 +836,9 @@ AnnData object with n_obs × n_vars = 3696 × 2000
     obsp: &#39;distances&#39;, &#39;connectivities&#39;
 </pre></div></div>
 </div>
-</section>
-<section id="Talk-about-embedding-like-UMAP">
-<h2>Talk about embedding like UMAP<a class="headerlink" href="#Talk-about-embedding-like-UMAP" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="Talk-about-embedding-like-UMAP">
+<h2>Talk about embedding like UMAP<a class="headerlink" href="#Talk-about-embedding-like-UMAP" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
@@ -853,9 +854,9 @@ AnnData object with n_obs × n_vars = 3696 × 2000
 <img alt="../_images/day_13_scvelo_19_0.png" class="no-scaled-link" src="../_images/day_13_scvelo_19_0.png" style="width: 637px; height: 363px;" />
 </div>
 </div>
-</section>
-<section id="Smoothing">
-<h2>Smoothing<a class="headerlink" href="#Smoothing" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="Smoothing">
+<h2>Smoothing<a class="headerlink" href="#Smoothing" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
@@ -909,9 +910,9 @@ AnnData object with n_obs × n_vars = 3696 × 2000
     obsp: &#39;distances&#39;, &#39;connectivities&#39;
 </pre></div></div>
 </div>
-</section>
-<section id="Finally-compute-velocity">
-<h2>Finally compute velocity<a class="headerlink" href="#Finally-compute-velocity" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="Finally-compute-velocity">
+<h2>Finally compute velocity<a class="headerlink" href="#Finally-compute-velocity" title="Permalink to this headline">¶</a></h2>
 <p>walk thru phase plot below</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
@@ -954,9 +955,9 @@ AnnData object with n_obs × n_vars = 3696 × 2000
     obsp: &#39;distances&#39;, &#39;connectivities&#39;
 </pre></div></div>
 </div>
-</section>
-<section id="Transition-matrix">
-<h2>Transition matrix<a class="headerlink" href="#Transition-matrix" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="Transition-matrix">
+<h2>Transition matrix<a class="headerlink" href="#Transition-matrix" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>for embedding</p></li>
 <li><p>for velocity pt</p></li>
@@ -1001,9 +1002,9 @@ computing velocity graph (using 1/8 cores)
     &#39;velocity_graph&#39;, sparse matrix with cosine correlations (adata.uns)
 </pre></div></div>
 </div>
-</section>
-<section id="Placing-velocities-onto-embedding">
-<h2>Placing velocities onto embedding<a class="headerlink" href="#Placing-velocities-onto-embedding" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="Placing-velocities-onto-embedding">
+<h2>Placing velocities onto embedding<a class="headerlink" href="#Placing-velocities-onto-embedding" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
@@ -1116,9 +1117,9 @@ WARNING: Default of the method has been changed to &#39;t-test&#39; from &#39;t-
 <img alt="../_images/day_13_scvelo_34_1.png" class="no-scaled-link" src="../_images/day_13_scvelo_34_1.png" style="width: 1388px; height: 460px;" />
 </div>
 </div>
-</section>
-<section id="Velocities-of-known-genes">
-<h2>Velocities of known genes<a class="headerlink" href="#Velocities-of-known-genes" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="Velocities-of-known-genes">
+<h2>Velocities of known genes<a class="headerlink" href="#Velocities-of-known-genes" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
@@ -1134,14 +1135,14 @@ WARNING: Default of the method has been changed to &#39;t-test&#39; from &#39;t-
 <img alt="../_images/day_13_scvelo_36_0.png" class="no-scaled-link" src="../_images/day_13_scvelo_36_0.png" style="width: 789px; height: 682px;" />
 </div>
 </div>
-</section>
-<section id="Find-genes-whose-velocities-differ-between-clusters">
-<h2>Find genes whose velocities differ between clusters<a class="headerlink" href="#Find-genes-whose-velocities-differ-between-clusters" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="Find-genes-whose-velocities-differ-between-clusters">
+<h2>Find genes whose velocities differ between clusters<a class="headerlink" href="#Find-genes-whose-velocities-differ-between-clusters" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scv</span><span class="o">.</span><span class="n">tl</span><span class="o">.</span><span class="n">rank_velocity_genes</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span> <span class="n">groupby</span><span class="o">=</span><span class="s1">&#39;clusters&#39;</span><span class="p">,</span> <span class="n">min_corr</span><span class="o">=</span><span class="mf">.3</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scv</span><span class="o">.</span><span class="n">tl</span><span class="o">.</span><span class="n">rank_velocity_genes</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span> <span class="n">groupby</span><span class="o">=</span><span class="s1">&#39;clusters&#39;</span><span class="p">,</span> <span class="n">min_corr</span><span class="o">=.</span><span class="mi">3</span><span class="p">)</span>
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">scv</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">adata</span><span class="o">.</span><span class="n">uns</span><span class="p">[</span><span class="s1">&#39;rank_velocity_genes&#39;</span><span class="p">][</span><span class="s1">&#39;names&#39;</span><span class="p">])</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -1268,9 +1269,9 @@ ranking velocity genes
 </div>
 </div>
 <p>Does Ins1 have introns? Show students Entrez Gene, and how to view the gene structure.</p>
-</section>
-<section id="Cell-cycle">
-<h2>Cell cycle<a class="headerlink" href="#Cell-cycle" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="Cell-cycle">
+<h2>Cell cycle<a class="headerlink" href="#Cell-cycle" title="Permalink to this headline">¶</a></h2>
 <p>What is the cycle in the ductal compartment???</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
@@ -1304,9 +1305,9 @@ calculating cell cycle phase
 <img alt="../_images/day_13_scvelo_43_0.png" class="no-scaled-link" src="../_images/day_13_scvelo_43_0.png" style="width: 596px; height: 324px;" />
 </div>
 </div>
-</section>
-<section id="Magnitude-and-“confidence”">
-<h2>Magnitude and “confidence”<a class="headerlink" href="#Magnitude-and-“confidence”" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="Magnitude-and-“confidence”">
+<h2>Magnitude and “confidence”<a class="headerlink" href="#Magnitude-and-“confidence”" title="Permalink to this headline">¶</a></h2>
 <p>explain these metrics and what ‘confidence’ in this context really means</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
@@ -1335,9 +1336,9 @@ calculating cell cycle phase
 <img alt="../_images/day_13_scvelo_45_1.png" class="no-scaled-link" src="../_images/day_13_scvelo_45_1.png" style="width: 798px; height: 275px;" />
 </div>
 </div>
-</section>
-<section id="Cluster-analysis-of-state-transitions">
-<h2>Cluster analysis of state transitions<a class="headerlink" href="#Cluster-analysis-of-state-transitions" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="Cluster-analysis-of-state-transitions">
+<h2>Cluster analysis of state transitions<a class="headerlink" href="#Cluster-analysis-of-state-transitions" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
@@ -1447,7 +1448,7 @@ calculating cell cycle phase
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scv</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">velocity_graph</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mf">.1</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scv</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">velocity_graph</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=.</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1464,7 +1465,7 @@ calculating cell cycle phase
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">scv</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">get_cell_transitions</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span> <span class="n">basis</span><span class="o">=</span><span class="s1">&#39;umap&#39;</span><span class="p">,</span> <span class="n">starting_cell</span><span class="o">=</span><span class="mi">70</span><span class="p">)</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">scv</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">velocity_graph</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;lightgrey&#39;</span><span class="p">,</span> <span class="n">edge_width</span><span class="o">=</span><span class="mf">.05</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">scv</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">velocity_graph</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;lightgrey&#39;</span><span class="p">,</span> <span class="n">edge_width</span><span class="o">=.</span><span class="mi">05</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">scv</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;ascending&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gnuplot&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
 <br/></pre></div>
 </div>
@@ -1481,7 +1482,7 @@ calculating cell cycle phase
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">scv</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">get_cell_transitions</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span> <span class="n">basis</span><span class="o">=</span><span class="s1">&#39;umap&#39;</span><span class="p">,</span> <span class="n">starting_cell</span><span class="o">=</span><span class="mi">1001</span><span class="p">)</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">scv</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">velocity_graph</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;lightgrey&#39;</span><span class="p">,</span> <span class="n">edge_width</span><span class="o">=</span><span class="mf">.05</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">scv</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">velocity_graph</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;lightgrey&#39;</span><span class="p">,</span> <span class="n">edge_width</span><span class="o">=.</span><span class="mi">05</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">scv</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;ascending&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gnuplot&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1491,7 +1492,7 @@ calculating cell cycle phase
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">scv</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">get_cell_transitions</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span> <span class="n">basis</span><span class="o">=</span><span class="s1">&#39;umap&#39;</span><span class="p">,</span> <span class="n">starting_cell</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">scv</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">velocity_graph</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;lightgrey&#39;</span><span class="p">,</span> <span class="n">edge_width</span><span class="o">=</span><span class="mf">.05</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">scv</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">velocity_graph</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;lightgrey&#39;</span><span class="p">,</span> <span class="n">edge_width</span><span class="o">=.</span><span class="mi">05</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">scv</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;ascending&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gnuplot&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1503,9 +1504,9 @@ calculating cell cycle phase
 <img alt="../_images/day_13_scvelo_54_0.png" class="no-scaled-link" src="../_images/day_13_scvelo_54_0.png" style="width: 506px; height: 333px;" />
 </div>
 </div>
-</section>
-<section id="Velocity-pseudotime">
-<h2>Velocity pseudotime<a class="headerlink" href="#Velocity-pseudotime" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="Velocity-pseudotime">
+<h2>Velocity pseudotime<a class="headerlink" href="#Velocity-pseudotime" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
@@ -1689,7 +1690,7 @@ running PAGA using priors: [&#39;velocity_pseudotime&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scv</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">paga</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span> <span class="n">basis</span><span class="o">=</span><span class="s1">&#39;umap&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">.1</span><span class="p">,</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scv</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">paga</span><span class="p">(</span><span class="n">adata</span><span class="p">,</span> <span class="n">basis</span><span class="o">=</span><span class="s1">&#39;umap&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=.</span><span class="mi">1</span><span class="p">,</span>
             <span class="n">min_edge_width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">node_size_scale</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1709,8 +1710,8 @@ running PAGA using priors: [&#39;velocity_pseudotime&#39;]
 </pre></div>
 </div>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>
