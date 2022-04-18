@@ -114,7 +114,7 @@ Policies
    day/17_Lineage_Tracing_Analysis
    day/18_Gene_regulatory_networks
    day/19_Cell_fate_engineering
-   day/20_Fate_simulations
+   day/20_Simulators
    day/21_Simulation_analysis
    day/22_scATACseq
    day/23_stem_cell_controversies

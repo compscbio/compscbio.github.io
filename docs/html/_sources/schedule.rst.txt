@@ -48,7 +48,7 @@ The schedule below is tentative. We will keep you updated as the content and sch
 #. Mar 31: :doc:`day/17_Lineage_Tracing_Analysis`
 #. Apr 5: :doc:`day/18_Gene_regulatory_networks` (Guest speaker: Emily Su)
 #. Apr 7: :doc:`day/19_Cell_fate_engineering`
-#. Apr 12: Cell fate simulations (Guest speaker: Dan Peng)
+#. Apr 12: :doc:`day/20_Simulators` (Guest speaker: Dan Peng)
 #. Apr 14: :doc:`21_Simulation_analysis` (Guest speaker: Eric Kernfeld)
 #. Apr 19: scATAC-seq
 #. Apr 21: Stem cell controversies

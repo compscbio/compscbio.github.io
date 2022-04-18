@@ -1,6 +1,7 @@
 Gene regulatory networks
 ------------------------
 
+- Guest speaker Emily Su
 - Intro to Gene regulatory networks (GRN)
 - Sampling of methods to infer GRNs from expression data
 - single cell data
