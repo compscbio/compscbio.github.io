@@ -116,8 +116,8 @@ Policies
    day/19_Cell_fate_engineering
    day/20_Simulators
    day/21_Simulation_analysis
-   day/22_scATACseq
-   day/23_stem_cell_controversies
+   day/22_Controversies
+   day/23_ATACseq
 
 ----
 

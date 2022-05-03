@@ -18,7 +18,7 @@ Homework and final project due dates
 - :doc:`homework/HW_05`: due 11:59 pm EST, April 1st
 - :doc:`homework/HW_06`: due 11:59 pm EST, April 8th
 - :doc:`homework/HW_07`: due 11:59 pm EST, April 22nd
-- :ref:`Homework 8<Homework 8>`: due TBD
+- :ref:`Homework 8<Homework 8>`: due 11:59pm EST, May 10th
 - :doc:`homework/Final_project`: due 11:59 pm EST, Apr 25
 
 ----
@@ -50,8 +50,8 @@ The schedule below is tentative. We will keep you updated as the content and sch
 #. Apr 7: :doc:`day/19_Cell_fate_engineering`
 #. Apr 12: :doc:`day/20_Simulators` (Guest speaker: Dan Peng)
 #. Apr 14: :doc:`21_Simulation_analysis` (Guest speaker: Eric Kernfeld)
-#. Apr 19: scATAC-seq
-#. Apr 21: Stem cell controversies
+#. Apr 19: :doc:`22_Controversies`
+#. Apr 21: :doc:`23_ATACseq`
 #. Apr 26: Final project presentations
 #. Apr 28: Final project presentations
 

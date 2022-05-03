@@ -19,7 +19,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Homework #2" href="HW_02.html" />
-    <link rel="prev" title="Simulation analysis" href="../day/21_Simulation_analysis.html" /> 
+    <link rel="prev" title="ATACseq" href="../day/23_ATACseq.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -66,6 +66,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../day/19_Cell_fate_engineering.html">Cell fate engineering</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../day/20_Simulators.html">Simulators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../day/21_Simulation_analysis.html">Simulation analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day/22_Controversies.html">Controversies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day/23_ATACseq.html">ATACseq</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Homework</span></p>
 <ul class="current">
@@ -724,9 +726,9 @@ packages such as Scanpy (or Seurat in R).</p>
 </div>
 <div class="section" id="Part-4:-Modeling-Birth-and-death-of-CFUs">
 <h2>Part 4: Modeling Birth and death of CFUs<a class="headerlink" href="#Part-4:-Modeling-Birth-and-death-of-CFUs" title="Permalink to this headline">¶</a></h2>
-<p>Recall the self-renewal assay from Siminovitch, Till and McCulloch 1963 (right) <img alt="a145abd8740143f297c649e4a5829c64" class="no-scaled-link" src="../_images/CFUs_selfrenewal.png" style="width: 200px;" /> In this assay, nodules were dissected, cells were dispersed, resuspended, and tranplanted into secondary recipients. Then after 10 days (or later depending on the experiment), the number of spleen nodules were counted per recipient. Recall that the number of nodules (or colonies) per spleen was highly heterogeneous. To the authors, this indicated that heterogeneity was “… a feature
+<p>Recall the self-renewal assay from Siminovitch, Till and McCulloch 1963 (right) <img alt="34a87c18ee004d6d9ca59533e815f76a" class="no-scaled-link" src="../_images/CFUs_selfrenewal.png" style="width: 200px;" /> In this assay, nodules were dissected, cells were dispersed, resuspended, and tranplanted into secondary recipients. Then after 10 days (or later depending on the experiment), the number of spleen nodules were counted per recipient. Recall that the number of nodules (or colonies) per spleen was highly heterogeneous. To the authors, this indicated that heterogeneity was “… a feature
 either of colony-forming cells or of the process of colony-formation.”</p>
-<p><img alt="7bbba68cf4fe4f64b1219e1682bbbd9f" class="no-scaled-link" src="../_images/birth_death.png" style="width: 200px;" /> In a follow-up <a class="reference external" href="https://blackboard.jhu.edu/bbcswebdav/pid-11413450-dt-content-rid-113157130_2/xid-113157130_2">paper: Till, McCulloch, and Siminovitch, 1963</a>, this trio proposed that the heterotengeity could be due to inherent stochasticity in each colony-forming cell. In other words, a colony forming cell “… either give[s] rise to progeny like itself (“birth”), or [is] removed in some way (“death”), and these two events occur in a random fashion.” This is
+<p><img alt="7bfd50a6be514201b6d42b41540072dd" class="no-scaled-link" src="../_images/birth_death.png" style="width: 200px;" /> In a follow-up <a class="reference external" href="https://blackboard.jhu.edu/bbcswebdav/pid-11413450-dt-content-rid-113157130_2/xid-113157130_2">paper: Till, McCulloch, and Siminovitch, 1963</a>, this trio proposed that the heterotengeity could be due to inherent stochasticity in each colony-forming cell. In other words, a colony forming cell “… either give[s] rise to progeny like itself (“birth”), or [is] removed in some way (“death”), and these two events occur in a random fashion.” This is
 often referred to as a “Birth-and-death process”. They reasoned that a cell will give birth to another colony forming cell with Probability = p2 or to a differentiated cells with Probability = p0 (see panel at left). They further reasoned that if this model is correct, then simulations using the model must be aligned with their empircal observations.</p>
 <p>The goal of Part 4 is for you to replicate some of what the authors did to test this reasoning:</p>
 <blockquote>
@@ -779,7 +781,7 @@ see from the original paper, the simulated and experimentally derived data were 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../day/21_Simulation_analysis.html" class="btn btn-neutral float-left" title="Simulation analysis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../day/23_ATACseq.html" class="btn btn-neutral float-left" title="ATACseq" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="HW_02.html" class="btn btn-neutral float-right" title="Homework #2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

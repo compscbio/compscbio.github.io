@@ -65,6 +65,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../day/19_Cell_fate_engineering.html">Cell fate engineering</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../day/20_Simulators.html">Simulators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../day/21_Simulation_analysis.html">Simulation analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day/22_Controversies.html">Controversies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day/23_ATACseq.html">ATACseq</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Homework</span></p>
 <ul class="current">
@@ -165,11 +167,11 @@ counts</a>). These data are in fact from <a class="reference external" href="htt
 <li><p>How mature are your engineered cardiomyocytes?</p></li>
 </ol>
 <p>Heart is one of the earliest organs to develop during embryogenesis. In mice, as early as embryonic day E7.0-7.5, convergence of lateral mesoderm domain called first heart field begins to beat. Cardiomyocytes rapidly proliferate up until E14, and then start maturation after.</p>
-<figure><p><img alt="db4ac23ad6ae4160b21a6a6766cb13ef" class="no-scaled-link" src="../_images/in_vivo_cardiomyocyte.png" style="width: 500px;" /></p>
+<figure><p><img alt="520807d5732b44dd82d8cc4482539073" class="no-scaled-link" src="../_images/in_vivo_cardiomyocyte.png" style="width: 500px;" /></p>
 <figcaption><p>Conceptual scheme of maturation phase of heart development. Guo et al, 2020</p>
 </figcaption></figure><p>Some of the major hallmarks of cardiomyocyte maturation include cell cycle arrest, multinucleation, growth by hypertrophy, transition to oxidative metabolism, and expression of mature sarcomeric contractile protein isoforms. <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8004589/">Padula et al, 2021</a> provides a review of the transcriptional regulations of cardiomyocyte maturation and the TF genes associated with CM maturation phenotypes.</p>
 <p>To computationally estimate the maturity of engineered CM’s across different data sources, <a class="reference external" href="https://journals.plos.org/ploscompbiol/article/authors?id=10.1371/journal.pcbi.1009305">Kannan et al</a> constructed a reference scRNA-seq resource for CM maturation by isolating CM cells from Myh6-Cre; mTmG (aMHC x mTmG) mice across 12 time points of CM maturation.</p>
-<figure><p><img alt="36b1c3329ee3438eabd747a5aed9d499" class="no-scaled-link" src="../_images/postnatal_CM_maturation.png" style="width: 600px;" /></p>
+<figure><p><img alt="74a18187169043b4a17fad71e9dc9a87" class="no-scaled-link" src="../_images/postnatal_CM_maturation.png" style="width: 600px;" /></p>
 <figcaption><ol class="upperalpha simple">
 <li><p>Mouse model used to generate perinatal maturation reference scRNA-seq dataset. B. UMAP of maturation reference dataset. Kannan et al, 2021</p></li>
 </ol>
@@ -207,9 +209,9 @@ fates. Morphogens provide similar spatial cues throughout development of diverse
 <p>Morphogen diversity. Morphogens can be soluble proteins like SHH. They can also be small molecules. An example of a natural small-molecule morphogen is retinoic acid, and an example of a natural small-molecule inhibitor of SHH is cyclopamine. (Cyclopamine occurs in plants as a poison, helping defend against herbivorous animals.) Morphogens are often discussed in terms of “pathways”, which describe how the signal reaches the nucleus starting from outside the cell. Other examples of morphogen
 pathways are Notch, Wnt, bone morphogenic protein (BMP), and transforming growth factor beta (TGF-beta). Each of these has distinct roles, mechanisms, and quirks. There is a surprisingly small collection of pathways that are re-used in many contexts during development of animals with bilateral symmetry. These receive special attention in stem cell biology. But, it is also possible to screen drugs or compounds with no known role in development; they may still prove useful in directed
 differentiation protocols.</p>
-<figure><p><img alt="d7360e34914e4c2880e70e7c1237561b" class="no-scaled-link" src="../_images/morphogen_image1.png" style="width: 300px;" /></p>
+<figure><p><img alt="f76f88762dc7435fb0373d3c6b1dbd42" class="no-scaled-link" src="../_images/morphogen_image1.png" style="width: 300px;" /></p>
 <figcaption><p>Difference classes of spinal neurons are patterned by different doses of SHH over a fairly short (&lt;24hr) time interval. Image credit: <a class="reference external" href="https://cshperspectives.cshlp.org/content/1/2/a002014/F2.expansion.html">https://cshperspectives.cshlp.org/content/1/2/a002014/F2.expansion.html</a></p>
-</figcaption></figure><figure><p><img alt="354ff890dcbf43239073b1c5b393f785" class="no-scaled-link" src="../_images/morphogen_image2.png" style="width: 300px;" /></p>
+</figcaption></figure><figure><p><img alt="f4611be23613473992223fc2ba3ff911" class="no-scaled-link" src="../_images/morphogen_image2.png" style="width: 300px;" /></p>
 <figcaption><p>How the SHH signal is transduced into the nucleus to alter transcription.</p>
 <p>Image credit: <a class="reference external" href="https://www.frontiersin.org/articles/10.3389/fmolb.2021.711710/full">https://www.frontiersin.org/articles/10.3389/fmolb.2021.711710/full</a></p>
 </figcaption></figure><hr class="docutils" />
